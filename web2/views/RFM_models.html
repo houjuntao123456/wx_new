@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="../mui/css/mui.min.css" rel="stylesheet" />
+    <script src="../mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="../fonts/iconfont_centent.css">
+    <link rel="stylesheet" href="../mui/css/mui.picker.min.css">
+    <script src="../js/echarts.min.js"></script>
+    <script src="../mui/js/mui.picker.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../js/jquery-ztree/3.5/css/simple/zTreeStyle.css">
+    <link rel="stylesheet" href="../js/jquery-ztree/3.5/css/metro/zTreeStyle.css">
+    <link rel="stylesheet" href="../js/jquery-ztree/3.5/css/default/zTreeStyle.css">
+    <script src="../js/jquery-ztree/3.5/js/jquery.ztree.all-3.5.js"></script>
+    <link rel="stylesheet" href="../list/all_css/all_bj.css">
+    <link rel="stylesheet" href="../list/all_css/all_popup.css">
+    <link rel="stylesheet" href="../list/all_css/RFM.css">
+
+</head>
+
+<body class="suoke">
+    <!-- 头部 -->
+    <header class="mui-bar mui-bar-nav  white_color suoke_header">
+        <a class="mui-icon mui-icon-back mui-action-back" style="color:white;"></a>
+        <h1 class="mui-title white_color" id="ttt" style="    width: 42%;margin: auto;">RFM</h1>
+        <span id="v_organization" class="all_member display_none" style="float:right;">选择组织</span>
+        <span id="store" class="all_member display_none" style="float:right;">选择门店</span>
+    </header>
+    <div class="mui-content">
+        <div id="cover"></div>
+        <div id="wuxian" class="jqban display_none">
+            <ul id="treeDemo" class="ztree"></ul>
+        </div>
+        <div id="main" style="height:450px;width:100%;margin-top:10px;"></div>
+        <!-- 规格信息图表 -->
+        <div id="stionTbale">
+            <table class="gridtable">
+                <tr>
+                    <th>类型</th>
+                    <th>人数</th>
+                    <th>百分比</th>
+                    <th>操作</th>
+                </tr>
+                <tr>
+                    <td id="actives">活跃</td>
+                    <td id="num_people">100</td>
+                    <td id="percent">100</td>
+                    <td onclick="javascript:location.href='./RFM_member.html'"><span class="cha">查看</span></td>
+                </tr>
+
+            </table>
+            <br><br><br>
+        </div>
+    </div>
+</body>
+<script src="../list/all_js/jq_tree.js"></script>
+<script src="../list/all_js/RFM_models.js"></script>
+
+</html>

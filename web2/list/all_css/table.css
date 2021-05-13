@@ -1,0 +1,27 @@
+/* gridtable */
+table.gridtable {
+    width: 100%;
+    font-family: verdana, arial, sans-serif;
+    font-size: 16px;
+    letter-spacing: 3px;
+    color: white;
+    margin: 0 auto;
+    /* border: 1px solid rgba(255, 255, 255, 0.34); */
+    border-collapse: collapse;
+}
+
+table.gridtable th {
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    background-color: #dedede00;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+table.gridtable tr td {
+    padding: 8px;
+    background-color: #dedede00;
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    word-wrap: break-word;
+    word-break: break-all;
+}

@@ -1,0 +1,8 @@
+.mui-table-view-cell a p{
+    color: white;
+}
+
+.mui-table-view-cell .mui-collapse-content .mui-row p{
+    color: white;
+    text-align: center;
+}

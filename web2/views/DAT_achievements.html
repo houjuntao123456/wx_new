@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" href="../mui/css/mui.min.css">
+	<script src="../mui/js/mui.min.js"></script>
+	<script src="../js/echarts.min.js"></script>
+	<link rel="stylesheet" href="../mui/css/mui.dtpicker.css">
+	<link rel="stylesheet" href="../mui/css/mui.picker.min.css">
+	<link rel="stylesheet" href="../css/loading.css">
+	<script src="../mui/js/mui.dtpicker.js"></script>
+	<script src="../mui/js/mui.picker.min.js"></script>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../list/all_js/all.js"></script>
+	<link rel="stylesheet" href="../list/all_css/all_bj.css">
+	<link rel="stylesheet" href="../list/all_css/all_popup.css">
+	<link rel="stylesheet" href="../list/all_css/table.css">
+	<link rel="stylesheet" href="../list/all_css/DAT_query.css">
+</head>
+
+<body class="suoke">
+	<!-- 头部 -->
+	<header class="mui-bar mui-bar-nav  white_color suoke_header">
+		<a class="mui-icon mui-icon-back mui-action-back" style="color:white;"></a>
+		<h1 class="mui-title white_color" id="dat_title">员工绩效</h1>
+	</header>
+	<div class="mui-content">
+		<div id="cover"></div>
+		<div id="wuxian" class="jqban display_none">
+			<ul id="treeDemo" class="ztree"></ul>
+		</div>
+		<div class="mui-scroll-wrapper" style="top: 44px;">
+			<div class="mui-scroll" id="">
+				<!--这里放置真实显示的DOM内容-->
+				<div>
+					<table class="gridtable sees">
+						<tr>
+							<td id="cont">员工</td>
+							<td>微会员新增</td>
+							<td>消费人数</td>
+						</tr>
+						<tr>
+							<td>5000</td>
+							<td>5000</td>
+							<td>5000</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</body>
+
+</html>
+<script>
+	mui(".gridtable").on('tap', '.see', function () {
+		location.href = "./DAT_order_details.html"
+	})
+
+	window.onload = function () {
+		switch (decodeURIComponent(getQueryVariable("type"))) {
+			case 'Z':
+				document.getElementById("dat_title").innerHTML = '组织微会员';
+				document.getElementById("cont").innerHTML="组织";
+				break;
+			case 'S':
+				document.getElementById("dat_title").innerHTML = '门店微会员';
+				document.getElementById("cont").innerHTML = "门店";
+				break;
+			case 'Y':
+				document.getElementById("dat_title").innerHTML = '员工微会员';
+				document.getElementById("cont").innerHTML = "员工";
+				break;
+			default:
+				break;
+		}
+
+	}
+</script>

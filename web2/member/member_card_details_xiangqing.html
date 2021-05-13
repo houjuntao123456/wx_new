@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>会员列表</title>
+    <link href="../mui/css/mui.min.css" rel="stylesheet" />
+    <script src="../mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="../mui/css/mui.picker.min.css">
+    <script src="../mui/js/mui.picker.min.js"></script>
+    <link rel="stylesheet" href="../fonts/iconfont_centent.css">
+    <script src="../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/loading.css">
+    <script src="../js/loading.js"></script>
+    <script src="../list/all_js/all.js"></script>
+    <link rel="stylesheet" href="../list/all_css/all_bj.css">
+    <link rel="stylesheet" href="../list/all_css/all_popup.css">
+    <link rel="stylesheet" href="./list/css/member_card_details.css">
+</head>
+
+<body class="suoke">
+    <header class="mui-bar mui-bar-nav  white_color suoke_header">
+        <a class="mui-icon mui-icon-back mui-action-back" style="color:white;"></a>
+        <h1 class="mui-title white_color" style="width: 30%; margin: 0 auto;" id="vip_title">卡劵详情</h1>
+    </header>
+    <div class="mui-content" id="ppppp">
+        <div style="width: 90%; margin: 0 auto;">
+            <img src="../images/tongyong.jpeg" alt="" width="100%">
+            <div class="xiangqing">
+                <p>卡劵名称:富贵卡</p>
+                <p>卡劵金额:999</p>
+                <p>可用门店:长沙二店</p>
+                <p>使用条件:</p>
+                <div>1.满多少钱可用</div>
+                <div>2.什么时候可以用</div>
+                <p>使用详情:</p>
+                <div>满足多少尽快发货</div>
+               
+            </div>
+        </div>
+        <br><br>
+        <div class="all_co_but">立即使用</div>
+    </div>
+
+
+</body>
+<script>
+
+    mui("#sliderSegmentedControl").on('tap', '.button_style', function () {
+        console.log(9999);
+        //   location.href="./Card_details_xiangqing.html"
+    })
+
+</script>
+
+</html>

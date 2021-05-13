@@ -1,0 +1,196 @@
+     /*CRM管理,消费画像, TAG机制,VIP互动 */
+     a:hover {
+         text-decoration: none;
+     }
+
+     li {
+         list-style: none;
+         background-color: rgba(255, 255, 255, 0);
+         text-align: center;
+     }
+
+     h2,
+     h4 {
+         font-weight: 100;
+     }
+
+     .span_size {
+         color: white;
+         font-size: 2.5rem;
+
+     }
+
+     .mui-table-view-cell p {
+         letter-spacing: 2px;
+     }
+
+     /* 控制模块的高度 */
+     li {
+         height: 80px;
+     }
+
+     p {
+         color: white;
+         padding-top: 10px;
+         /* font-size: 17px; */
+     }
+
+
+     .sdh {
+         text-align: center;
+         margin: 10px 0 0 0;
+     }
+
+     .sdh a {
+         color: black;
+     }
+
+     .photo_Apple {
+         height: 130px;
+         font-family: "黑体";
+         font-weight: bolder;
+     }
+
+     #picture {
+         width: 95%;
+         background: url(../../images/n2.png) no-repeat;
+         background-size: 100% 100%;
+         margin: 0 auto;
+         border-radius: 20px;
+         color: #ffffff;
+         overflow: hidden;
+         position: relative;
+     }
+
+     .photo_Apple div {
+         position: absolute;
+         top: 18%;
+         left: 5%;
+     }
+
+     .photo_Apple img {
+         position: absolute;
+         top: 20%;
+         right: 8%;
+         border-radius: 30px;
+         border: 2px solid white;
+     }
+
+     .lett-spac-3 {
+         letter-spacing: 3px;
+         font-size: 24px;
+     }
+
+     .DH {
+         background-image: -webkit-linear-gradient(bottom, rgb(180, 179, 179), rgb(254, 254, 254));
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         /* text-shadow: 2px 2px 4px #000; */
+     }
+
+     .dispay_none {
+         display: none;
+     }
+
+     .mui-row>.mui-col-xs-6,
+     .mui-col-sm-6 {
+         padding: 20px 0 20px 0;
+     }
+
+     .pp::after {
+         left: 33%;
+         height: 985px;
+         top: -254px;
+     }
+
+     .pp2::after {
+         left: 66%;
+         height: 985px;
+         top: -254px;
+     }
+
+     .crm_pp::after {
+         left: 33%;
+         height: 519px;
+     }
+
+     .crm_pp2::after {
+         left: 66%;
+         height: 519px;
+     }
+
+     .tag_pp::after {
+         left: 33%;
+         height: 790px;
+     }
+
+     .tag_pp2::after {
+         left: 66%;
+         height: 790px;
+     }
+
+     .dat_pp::after {
+         left: 33%;
+         top: -326px;
+         height: 1226px;
+     }
+
+     .dat_pp2::after {
+         left: 66%;
+         top: -326px;
+         height: 1226px;
+     }
+
+     .opopss {
+         text-align: center;
+         color: white;
+         border-top: 1px solid rgba(255, 255, 255, 0.185);
+         border-bottom: 1px solid rgba(255, 255, 255, 0.185);
+         padding: 8px 0px 8px 0px !important;
+     }
+
+     .opopss::after {
+         content: '\e581';
+         position: absolute;
+         top: 50%;
+         right: 10px;
+         display: inline-block;
+         font-family: Muiicons;
+         font-size: inherit;
+         line-height: 1;
+         color: rgb(255, 255, 255);
+         text-decoration: none;
+         -webkit-transform: translateY(-50%);
+         transform: translateY(-50%);
+         -webkit-font-smoothing: antialiased;
+     }
+
+     .boders::before {
+         content: "";
+         display: block;
+         position: absolute;
+         left: 100%;
+         width: 1px;
+         height: 43px;
+         top: -2px;
+         background: rgba(255, 255, 255, 0.2);
+         transform: scale(0.5);
+     }
+
+     .tixing {
+         color: white;
+         font-size: 12px;
+         line-height: 1;
+         display: inline-block;
+         padding: 3px 6px;
+         position: absolute;
+         right: 4px;
+         top: 0;
+         background-color: rgba(251, 251, 251, 0.35);
+         border-radius: 7px;
+     }
+
+     .vip_shengri::after {
+         /* left: 50%; */
+         height: 474px;
+     }

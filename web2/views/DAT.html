@@ -1,0 +1,207 @@
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="../mui/css/mui.min.css" rel="stylesheet" />
+    <script src="../mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="../fonts/iconfont_centent.css">
+    <link rel="stylesheet" href="../mui/css/mui.picker.min.css">
+    <script src="../mui/js/mui.picker.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/loading.css">
+    <script src="../js/loading.js"></script>
+    <link rel="stylesheet" href="../list/all_css/all_bj.css">
+    <link rel="stylesheet" href="../list/all_css/all_popup.css">
+    <link rel="stylesheet" href="../list/all_css/CRM_marketing.css">
+</head>
+<style>
+    .mui-table-view-cell {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+</style>
+
+<body class="suoke">
+    <!-- 头部 -->
+    <header class="mui-bar mui-bar-nav  white_color suoke_header">
+        <a class="mui-icon mui-icon-back mui-action-back" style="color:white;"></a>
+        <h1 class="mui-title white_color">DAT分析</h1>
+    </header>
+    <div class="mui-content">
+        <div class="mui-row" style="width: 90%; margin-left: auto;margin-right: auto;padding: 20px 0 20px 0;">
+            <div class="div_small_y dat_pp"></div>
+            <div class="div_small_y dat_pp2"></div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./DAT_query.html?type=Z">
+                        <span class="iconfont icon-qiyechaxun  span_size"></span>
+                        <p>组织回购查询</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./DAT_query.html?type=S">
+                        <span class="iconfont icon-beikongshuiwupingtaimenhu-tubiao_juhechaxunfuwu span_size"></span>
+                        <p>门店回购查询</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./DAT_query.html?type=Y">
+                        <span class="iconfont icon-xinxichaxun3  span_size"></span>
+                        <p>员工回购查询</p>
+                    </a>
+                </li>
+            </div>
+
+            <div class="mui-col-xs-12 mui-col-sm-12">
+                <div class="div_small_x"></div>
+                <br>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./DAT_query_new.html?type=Z">
+                        <span class="iconfont icon-zuzhijiagou  span_size"></span>
+                        <p>组织开卡新购</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./DAT_query_new.html?type=S">
+                        <span class="iconfont  icon-mendian4   span_size"></span>
+                        <p>门店开卡新购</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./DAT_query_new.html?type=Y">
+                        <span class="iconfont icon-yuangongjixiaobaobiao     span_size"></span>
+                        <p>员工开卡新购</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-12 mui-col-sm-12">
+                <div class="div_small_x"></div>
+                <br>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./DAT_query_target.html?type=Z">
+                        <span class="iconfont icon-mubiaoguanli     span_size"></span>
+                        <p>组织目标达成</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./DAT_query_target.html?type=S">
+                        <span class="iconfont icon-RectangleCopy2   span_size"></span>
+                        <p>门店目标达成</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./DAT_query_target.html?type=Y">
+                        <span class="iconfont icon-mubiao   span_size"></span>
+                        <p>员工目标达成</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-12 mui-col-sm-12">
+                <div class="div_small_x"></div>
+                <br>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./DAT_card_opening.html">
+                        <span class="iconfont icon-kaohezhibiao   span_size"></span>
+                        <p>开卡指标</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./DAT_staff_achievements.html">
+                        <span class="iconfont icon-zhibiaokuchaxun    span_size"></span>
+                        <p>员工绩效</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="../views/grade_change.html">
+                        <span class="iconfont icon-dengji1   span_size"></span>
+                        <p>等级变更</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-12 mui-col-sm-12">
+                <div class="div_small_x"></div>
+                <br>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./DAT_visit_analysis.html?type=Z">
+                        <span class="iconfont icon-fenxi4   span_size"></span>
+                        <p>组织回访分析</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./DAT_visit_analysis.html?type=S">
+                        <span class="iconfont icon-icon_xinyong_xianxing_jijin-166 span_size"></span>
+                        <p>门店回访分析</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./DAT_visit_analysis.html?type=Y">
+                        <span class="iconfont icon-gongrenfenxi  span_size"></span>
+                        <p>员工回访分析</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-12 mui-col-sm-12">
+                <div class="div_small_x"></div>
+                <br>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./DAT_achievements.html?type=Z">
+                        <span class="iconfont icon-zuzhi5  span_size"></span>
+                        <p>组织微会员</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./DAT_achievements.html?type=S">
+                        <span class="iconfont icon-mendian4    span_size"></span>
+                        <p>门店微会员</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./DAT_achievements.html?type=Y">
+                        <span class="iconfont icon-yuangongguanli    span_size"></span>
+                        <p>员工微会员</p>
+                    </a>
+                </li>
+            </div>
+        </div>
+</body>
+
+</html>

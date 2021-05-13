@@ -1,0 +1,132 @@
+ /* a:hover {
+            text-decoration: none;
+        } */
+        table,
+        table tr th,
+        table tr td {
+            border: 1px solid #e9e9e9;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        .width-40 {
+            width: 40%;
+        }
+
+        .width-25 {
+            width: 25%;
+        }
+
+        .width-15 {
+            width: 15%;
+        }
+
+        .width-10 {
+            width: 10%;
+        }
+
+        .width-20 {
+            width: 20%;
+        }
+
+        .mui-table-view-cell.mui-active {
+            background-color: #ebf0f5;
+        }
+
+        .mui-table-view-cell::after {
+            left: 0;
+            right: 0;
+            background-color: #efeff0;
+        }
+
+        .mui-table-view::after {
+            background-color: #efeff0;
+        }
+
+        .mui-navigate-right::after {
+            color: #007aff;
+        }
+
+        button,
+        .mui-btn {
+            padding: 3px 11px;
+        }
+
+        .tr-1 {
+            height: 40px;
+            line-height: 40px;
+            font-size: 15px;
+            letter-spacing: 2px;
+        }
+
+        .tr-2 {
+            height: 50px;
+            font-size: 14px;
+        }
+
+        .mui-popover {
+            height: 300px;
+        }
+
+        /* 控制弹框 */
+        #popover a {
+            text-align: center;
+        }
+
+        li {
+            list-style: none;
+            background-color: white;
+            text-align: center;
+        }
+
+        .span_size {
+            color: #3abeee;
+            font-size: 26px;
+        }
+
+        .li2 {
+            height: 50px;
+        }
+
+        /* 控制模块的高度 */
+        li {
+            height: 80px;
+        }
+
+        p {
+            color: black;
+            padding-top: 10px;
+            /* font-size: 17px; */
+        }
+
+        .lett-spac-3 {
+            letter-spacing: 3px;
+            font-size: 24px;
+        }
+
+        .ellipsiss {
+            width: 80px;
+            overflow: hidden;
+            /*自动隐藏文字*/
+            text-overflow: ellipsis;
+            /*文字隐藏后添加省略号*/
+            white-space: nowrap;
+            -webkit-line-clamp: 1;
+            /*想要显示的行数*/
+            -webkit-box-orient: vertical;
+        }
+
+        .mui-pciker-list li.highlight {
+            color: #007aff;
+            font-size: 24px;
+            font-weight: 500;
+            font-family: inherit;
+        }
+
+        .mui-pciker-list li.highlight,
+        .mui-pciker-list li.visible {
+            visibility: visible;
+            background-color: #DDDDDD;
+        }

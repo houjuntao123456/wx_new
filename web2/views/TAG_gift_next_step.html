@@ -1,0 +1,191 @@
+<html>
+
+<head>
+    <title>销售订单</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="../mui/css/mui.min.css" rel="stylesheet" />
+    <script src="../mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="../fonts/iconfont_centent.css">
+    <link rel="stylesheet" href="../mui/css/mui.picker.min.css">
+    <script src="../mui/js/mui.picker.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../list/all_css/all_bj.css">
+    <link rel="stylesheet" href="../list/all_css/all_popup.css">
+    <link rel="stylesheet" href="../list/all_css/member_profile.css">
+</head>
+
+<body class="suoke">
+    <!-- 头部 -->
+    <header class="mui-bar mui-bar-nav  white_color suoke_header">
+        <h1 class="mui-title white_color">卡劵赠送</h1>
+        <a class="mui-icon mui-icon-back mui-action-back" style="color:white;"></a>
+    </header>
+    <div class="mui-content">
+        <br>
+        <div class="me_all">
+            <div style="text-align: center;">
+
+                <span>
+                    <img src="../images/upT.png" alt="">
+                    <span class="iconfont icon-weixin2"></span>
+                </span>
+
+            </div>
+            <br>
+            <div class="mui-row">
+                <div class="mui-col-xs-4 mui-col-sm-4">
+                    会员姓名:
+                </div>
+                <div class="mui-col-xs-8 mui-col-sm-8">
+                    王二牛
+                </div>
+            </div>
+            <div class="mui-row">
+                <div class="mui-col-xs-4 mui-col-sm-4">
+                    会员手机:
+                </div>
+                <div class="mui-col-xs-8 mui-col-sm-8">
+                    1831956899
+                </div>
+            </div>
+            <div class="mui-row">
+                <div class="mui-col-xs-4 mui-col-sm-4">
+                    会员等级:
+                </div>
+                <div class="mui-col-xs-8 mui-col-sm-8">
+                    女神级
+                </div>
+            </div>
+            <div class="mui-row">
+                <div class="mui-col-xs-4 mui-col-sm-4">
+                    卡劵类型:
+                </div>
+                <div class="mui-col-xs-8 mui-col-sm-8 opop" type="L">
+                    女神级
+                </div>
+            </div>
+            <div class="mui-row">
+                <div class="mui-col-xs-4 mui-col-sm-4">
+                    选择卡劵:
+                </div>
+                <div class="mui-col-xs-8 mui-col-sm-8 opop" type="K">
+                    女神级
+                </div>
+            </div>
+
+            <div class="mui-row">
+                <div class="mui-col-xs-4 mui-col-sm-4" style="line-height: 34px;">
+                    赠送数量:
+                </div>
+                <div class="mui-col-xs-8 mui-col-sm-8">
+                    <div class="mui-numbox" data-numbox-min='0'>
+                        <!-- "-"按钮，点击可减小当前数值 -->
+                        <button class="mui-btn mui-numbox-btn-minus transparent" type="button"
+                            style="color: white;">-</button>
+                        <input class="mui-numbox-input transparent" type="number" />
+                        <!-- "+"按钮，点击可增大当前数值 -->
+                        <button class="mui-btn mui-numbox-btn-plus transparent" type="button"
+                            style="color: white;">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="mui-row">
+                <div class="mui-col-xs-12 mui-col-sm-12">
+                    赠送备注:
+                </div>
+                <div class="mui-col-xs-12 mui-col-sm-12">
+                    <textarea class="card_textarea" name="" id="" cols="30" rows="6"></textarea>
+                </div>
+            </div>
+
+
+        </div>
+        <br>
+        <div class="footerss">
+
+            <div class="mui-input-row mui-radio flex-container">
+                <span>
+                    <input id="zhengjia" name="radio1" type="radio">
+                    <label for="zhengjia">发送短信通知</label>
+                </span>
+                &nbsp;
+                <span>
+                    <input id="tejia" name="radio1" type="radio">
+                    <label for="tejia">发送微信通知</label></span>
+            </div>
+            <div>
+                <div onclick="confirm()">
+                    确定发送
+                </div>
+                <br>
+                <div onclick="JavaScript:location.reload();">
+                    重选会员
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function confirm(){
+       mui.confirm('', '赠送成功', ['确定'], function (el) {
+           console.log(9999);
+           location.href='./TAG_gift_of_securities.html';
+       })
+    }
+    var cftion = '';
+    var cftions = [{
+        value: "first",
+        text: "优惠券"
+    }, {
+        value: "second",
+        text: "折扣劵"
+    }, {
+        value: "third",
+        text: "抵用券"
+    }]
+
+    var card = '';
+    var cards = [{
+        value: "first",
+        text: "女神卡"
+    }, {
+        value: "second",
+        text: "天王卡"
+    }, {
+        value: "third",
+        text: "天神卡"
+    }]
+    mui(".me_all").on('tap', '.opop', function () {
+        let val = this;
+        switch (val.getAttribute("type")) {
+            case "L":
+                let picker1 = new mui.PopPicker();
+                picker1.setData(cftions);
+                picker1.pickers[0].setSelectedValue(cftion, 2000);
+                picker1.show(function (SelectedItem) {
+                    console.log(SelectedItem);
+                    cftion = SelectedItem[0].value;
+                    val.innerHTML = SelectedItem[0].text;
+                })
+                break;
+            default:
+             let picker2 = new mui.PopPicker();
+                picker2.setData(cards);
+                picker2.pickers[0].setSelectedValue(card, 2000);
+                picker2.show(function (SelectedItem) {
+                    console.log(SelectedItem);
+                    card = SelectedItem[0].value;
+                    val.innerHTML = SelectedItem[0].text;
+                })
+                break;
+        }
+
+
+    })
+</script>
+
+</html>

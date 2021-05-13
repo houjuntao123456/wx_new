@@ -1,0 +1,67 @@
+.dat_query .mui-row {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.336);
+
+}
+
+.dat_query .mui-row .mui-col-xs-12,
+.dat_query2 .mui-row .mui-col-xs-12,
+.dat_query3 .mui-row .mui-col-xs-12 {
+	color: white;
+	font-size: 16px;
+	padding-top: 10px;
+	padding-left: 20px;
+	line-height: 20px;
+
+}
+
+.dat_query .mui-row .mui-col-xs-12 p {
+	color: white;
+	font-size: 15px;
+	text-align: center;
+
+}
+
+.dat_query2 {
+	width: 95%;
+	margin: auto;
+}
+.dat_query8 {
+	width: 95%;
+	margin: auto;
+}
+.dat_query8 .datsss {
+	border: 1px solid rgba(255, 255, 255, 0.342);
+	border-radius: 5px;
+	margin-top: 10px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: white;
+}
+.dat_query8 .datsss .mui-col-xs-8 {
+	padding-top: 20px;
+}
+.dat_query8 .datsss p{
+	color: white;
+	text-align: left;
+	
+}
+.datsss img{
+	    width: 80px;
+	    height: 80px;
+}
+.dat_query2 .mui-row {
+	border: 1px solid rgba(255, 255, 255, 0.342);
+	border-radius: 5px;
+	margin-top: 10px;
+}
+
+.dat_query2 .mui-row .mui-col-xs-6 p,
+.dat_query2 .mui-row .mui-col-xs-12 p {
+	color: white;
+	font-size: 15px;
+	/* text-align: center; */
+
+}

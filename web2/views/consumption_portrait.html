@@ -1,0 +1,236 @@
+<html>
+
+<head>
+    <title>VIP会员精准营销方案</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="../mui/css/mui.min.css">
+    <script src="../mui/js/mui.min.js"></script>
+    <!-- <script src="../js/hidden-titile.js"></script> -->
+    <link rel="stylesheet" href="../mui/css/mui.dtpicker.css">
+    <link rel="stylesheet" href="../mui/css/mui.picker.min.css">
+    <script src="../mui/js/mui.dtpicker.js"></script>
+    <script src="../mui/js/mui.picker.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../fonts/iconfont_tubiao1.css">
+    <link rel="stylesheet" href="../css/loading.css">
+    <script src="../js/loading.js"></script>
+    <link rel="stylesheet" href="../list/all_css/consumption_portrait.css">
+</head>
+
+<body>
+    <!--  头部-->
+    <header class="mui-bar mui-bar-nav mui-bar-nav-bg" style="background-color:#007aff;">
+        <a class="mui-icon mui-icon-back mui-action-back" style="color:white;"></a>
+        <h1 class="mui-title" style="color:white;margin: 0 auto; width: 50%;">消费画像</h1>
+        <a href="#popover" class="ellipsiss" style="float: right;line-height: 44px;color: white;" id="menu">选择门店</a>
+    </header>
+    <!-- 内容 -->
+    <div class="mui-content">
+        <div id="switch_store" class="mui-row" style="height: 40px;line-height: 40px;">
+            &nbsp;<span style="padding-left: 2px; background-color: #007aff;"></span>&nbsp; <span
+                id="member_txt">形象顾问</span> <span class="mui-icon mui-icon-arrowdown"
+                style="float: right;line-height: 38px;margin-right: 5px;"></span>
+        </div>
+        <div class="mui-row">
+            <!-- 休眠预警 -->
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell">
+                    <a class="kkk" href="###">
+                        <span class="iconfont icon-yujing span_size" style="color:#00ae8f;"><span
+                                class="number mui-badge mui-badge-danger">0</span></span>
+                        <p>休眠预警</p>
+                    </a>
+                </li>
+            </div>
+            <!-- 睡眠激活 -->
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell">
+                    <a class="kkk" href="###" id="">
+                        <span class="iconfont icon-jihuo span_size" style="color:#f88b2a;"><span
+                                class="number mui-badge mui-badge-danger">0</span></span>
+                        <p>睡眠激活</p>
+
+                    </a>
+                </li>
+            </div>
+            <!-- 回购预警 -->
+            <div class="mui-col-xs-4 mui-col-sm-4" style="display: none;">
+                <li class="mui-table-view-cell">
+                    <a class="kkk" href="###">
+                        <span class="iconfont icon-renyuanyidongyujing span_size"><span
+                                class="number mui-badge mui-badge-danger">0</span></span>
+                        <p>回购预警</p>
+                    </a>
+                </li>
+            </div>
+            <!-- 回购激活 -->
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell">
+                    <a class="kkk" href="###">
+                        <span class="iconfont icon-huigou002 span_size" style="color:#ff7b93;"><span
+                                class="number mui-badge mui-badge-danger">0</span></span>
+                        <p>回购激活</p>
+                        <span id="RFM"></span>
+                    </a>
+                </li>
+            </div>
+            <!-- 高价值关注 -->
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell">
+                    <a class="kkk" href="###">
+                        <span class="iconfont icon-gaojiazhifensi span_size" style="color:#239df7;"><span
+                                class="number mui-badge mui-badge-danger">0</span></span>
+                        <p>高价值关注</p>
+                        <span id="RFM"></span>
+                    </a>
+                </li>
+            </div>
+            <!-- 低价值预警 -->
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell" id="">
+                    <a class="kkk" href="###">
+                        <span class="iconfont icon-shangpinyuji span_size" style="color:#ff4d6d;"><span
+                                class="number mui-badge mui-badge-danger">0</span></span>
+                        <p>低价值预警</p>
+                    </a>
+                </li>
+            </div>
+            <!-- 高件数关注 -->
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell" id="">
+                    <a class="kkk" href="###">
+                        <span class="iconfont icon-jianjunjia span_size" style="color:#239df7;"><span
+                                class="number mui-badge mui-badge-danger">0</span></span>
+                        <p>高件数关注</p>
+                    </a>
+                </li>
+            </div>
+            <!-- 低件数预警 -->
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell" id="">
+                    <a class="kkk" href="###">
+                        <span class="iconfont icon-ziyuan span_size" style="color:#00ad8e;"><span
+                                class="number mui-badge mui-badge-danger">0</span></span>
+                        <p>低件数预警</p>
+                    </a>
+                </li>
+            </div>
+            <!-- 高客单关注 -->
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell" id="">
+                    <a class="kkk" href="###">
+                        <span class="iconfont icon-tigaokedanjia span_size" style="color:#ff4d6d;"><span
+                                class="number mui-badge mui-badge-danger">0</span></span>
+                        <p>高客单关注</p>
+                    </a>
+                </li>
+            </div>
+            <!-- 低客单预警 -->
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell" id="">
+                    <a class="kkk" href="###">
+                        <span class="iconfont icon-ziyuan2 span_size" style="color:#239df7;"><span
+                                class="number mui-badge mui-badge-danger">0</span></span>
+                        <p>低客单预警</p>
+                    </a>
+                </li>
+            </div>
+            <!-- 高件单关注 -->
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell" id="">
+                    <a class="kkk" href="###">
+                        <span class="iconfont icon-tisheng span_size" style="color:#ff4d6d;"><span
+                                class="number mui-badge mui-badge-danger">0</span></span>
+                        <p>高件单关注</p>
+                    </a>
+                </li>
+            </div>
+            <!-- 低件单预警 -->
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell" id="">
+                    <a class="kkk" href="###">
+                        <span class="iconfont icon-iconfontzhizuobiaozhunbduan19 span_size" style="color:#239df7;"><span
+                                class="number mui-badge mui-badge-danger">0</span></span>
+                        <p>低件单预警</p>
+                    </a>
+                </li>
+            </div>
+            <!-- 高连带关注 -->
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell" id="">
+                    <a class="kkk" href="###">
+                        <span class="iconfont icon-liandai span_size" style="color:#00ad8e;"><span
+                                class="number mui-badge mui-badge-danger">0</span></span>
+                        <p>高连带关注</p>
+                    </a>
+                </li>
+            </div>
+            <!-- 低连带预警 -->
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell">
+                    <a class="kkk" href="###">
+                        <span class="iconfont icon-ziyuan1 span_size" style="color:#ff4d6d;"><span
+                                class="number mui-badge mui-badge-danger">0</span></span>
+                        <p>低连带预警</p>
+                    </a>
+                </li>
+            </div>
+            <!-- 高消费关注 -->
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell">
+                    <a class="kkk" href="###">
+                        <span class="iconfont icon-kerenxiaofei span_size" style="color:#00ad8e;"><span
+                                class="number mui-badge mui-badge-danger">0</span></span>
+                        <p>高消费关注</p>
+                    </a>
+                </li>
+            </div>
+            <!-- 低消费提升 -->
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell">
+                    <a class="kkk" href="###">
+                        <span class="iconfont icon-dixiaofei span_size" style="color:#f88b2a;"><span
+                                class="number mui-badge mui-badge-danger">0</span></span>
+                        <p>低消费提升</p>
+                        <span id="RFM"></span>
+                    </a>
+                </li>
+            </div>  
+        </div><br>
+    </div>
+    <!-- 弹框区域 -->
+    <div id="popover" class="mui-popover">
+        <div class="mui-popover-arrow"></div>
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <ul class="mui-table-view" id="popover_ul">
+                    <!-- <li class="mui-table-view-cell"><a href="#" ></a>
+                    </li>
+                    <li class="mui-table-view-cell"><a href="#">Item2</a>
+                    </li>
+                    <li class="mui-table-view-cell"><a href="#">Item3</a>
+                    </li>
+                    <li class="mui-table-view-cell"><a href="#">Item4</a>
+                    </li>
+                    <li class="mui-table-view-cell"><a href="#">Item5</a>
+                    </li>
+                    <li class="mui-table-view-cell"><a href="#">Item6</a>
+                    </li>
+                    <li class="mui-table-view-cell"><a href="#">Item7</a>
+                    </li>
+                    <li class="mui-table-view-cell"><a href="#">Item8</a>
+                    </li>
+                    <li class="mui-table-view-cell"><a href="#">Item9</a>
+                    </li>
+                    <li class="mui-table-view-cell"><a href="#">Item10</a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- 控制弹框 -->
+<script src="../list/all_js/consumption_portrait.js"></script>
+</html>

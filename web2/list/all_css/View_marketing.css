@@ -1,0 +1,127 @@
+.bode {
+    border-top: 1px solid rgba(255, 255, 255, 0.301);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.301);
+    padding: 8px 10px;
+    color: white;
+    margin-top: 5px;
+}
+
+/* 微信群发 */
+.all_member {
+    font-size: 14px;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px 15px 5px 8px;
+    letter-spacing: 0px;
+    z-index: 999;
+    position: relative;
+    line-height: 44px;
+}
+
+.all_member::after {
+    content: '\e581';
+    position: absolute;
+    top: 50%;
+    /* right: 10px; */
+    display: inline-block;
+    font-family: Muiicons;
+    font-size: inherit;
+    line-height: 1;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-font-smoothing: antialiased;
+}
+
+.textArea {
+    height: 120px;
+    border: 1px solid rgba(255, 255, 255, 0.29);
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+}
+
+.textArea::-webkit-input-placeholder {
+    margin-top:40px;
+    padding-top:40px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.726);
+}
+
+/* 使用webkit内核的浏览器 */
+.textArea:-moz-placeholder {
+    margin-top: 40px;
+    padding-top: 40px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.726);
+    ;
+}
+
+/* Firefox版本4-18 */
+.textArea::-moz-placeholder {
+    margin-top: 40px;
+    padding-top: 40px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.726);
+    ;
+}
+
+/* Firefox版本19+ */
+.textArea:-ms-input-placeholder {
+    margin-top: 40px;
+    padding-top: 40px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.726);
+    ;
+}
+.xz{
+    border: 1px solid white;
+    border-radius:5px;
+    padding: 4px 8px 4px 8px;
+}
+
+.sheet3 .mui-row{
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.342);
+    padding: 10px 5px 10px 5px;
+}
+
+.textArea_wx {
+    border: 1px solid rgba(255, 255, 255, 0.29);
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+}
+
+.textArea_wx::-webkit-input-placeholder {
+    margin-top: 10px;
+    padding-top: 10px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.726);
+}
+
+/* 使用webkit内核的浏览器 */
+.textArea_wx:-moz-placeholder {
+    margin-top: 10px;
+    padding-top: 10px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.726);
+    ;
+}
+
+/* Firefox版本4-18 */
+.textArea_wx::-moz-placeholder {
+    margin-top: 10px;
+    padding-top: 10px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.726);
+    ;
+}
+
+/* Firefox版本19+ */
+.textArea_wx:-ms-input-placeholder {
+    margin-top: 10px;
+    padding-top: 10px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.726);
+    ;
+}

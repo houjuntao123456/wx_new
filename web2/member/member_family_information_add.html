@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <title>家属信息</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="../mui/css/mui.min.css" rel="stylesheet" />
+    <script src="../mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="../mui/css/mui.picker.min.css">
+    <script src="../mui/js/mui.picker.min.js"></script>
+    <link rel="stylesheet" href="../mui/css/mui.picker.min.css">
+    <link rel="stylesheet" href="./../list/all_css/all_bj.css">
+    <link rel="stylesheet" href="../list/all_css/stored_value_record.css">
+</head>
+
+<body class="suoke">
+    <!-- 头部 -->
+    <header class="mui-bar mui-bar-nav  white_color suoke_header">
+        <a class="mui-icon mui-icon-back mui-action-back" style="color:white;"></a>
+        <h1 class="mui-title white_color">家属信息</h1>
+        <span style="float: right;
+            margin-top: 5px;
+            padding: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.43);border-radius: 5px;">
+            保存</span>
+    </header>
+    <div class="mui-content">
+        <!-- 规格信息图表 -->
+        <div id="stionTbale">
+            <table class="gridtable stwidth">
+                <tr>
+                    <td>家属关系:</td>
+                    <td class="td_sty"><input type="text" class="input_sty" placeholder="填写信息"></td>
+                </tr>
+                <tr>
+                    <td>重要日子:</td>
+                    <td class="td_sty"><input type="text" class="input_sty" placeholder="填写信息"></td>
+                </tr>
+                <tr>
+                    <td>重要时间:</td>
+                    <td class="td_sty">
+                        <div style="position: relative;text-align: center;"><label class="opop color_bbb labels"
+                                onclick="classification(this)">请选择时间</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>联系方式:</td>
+                    <td class="td_sty"><input type="text" class="input_sty" placeholder="填写信息"></td>
+                </tr>
+                <tr>
+                    <td>描述:</td>
+                    <td class="td_sty"><textarea name="" id="" cols="30" rows="10" placeholder="填写信息"></textarea></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="../list/all_js/family_information_add.js"></script>
+
+</html>

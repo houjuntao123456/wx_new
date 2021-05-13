@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" href="../mui/css/mui.min.css">
+	<script src="../mui/js/mui.min.js"></script>
+	<script src="../js/echarts.min.js"></script>
+	<link rel="stylesheet" href="../mui/css/mui.dtpicker.css">
+	<link rel="stylesheet" href="../mui/css/mui.picker.min.css">
+	<link rel="stylesheet" href="../css/loading.css">
+	<script src="../mui/js/mui.dtpicker.js"></script>
+	<script src="../mui/js/mui.picker.min.js"></script>
+	<script src="../js/jquery.min.js"></script>
+	<link rel="stylesheet" href="../js/jquery-ztree/3.5/css/simple/zTreeStyle.css">
+	<link rel="stylesheet" href="../js/jquery-ztree/3.5/css/metro/zTreeStyle.css">
+	<link rel="stylesheet" href="../js/jquery-ztree/3.5/css/default/zTreeStyle.css">
+	<script src="../js/jquery-ztree/3.5/js/jquery.ztree.all-3.5.js"></script>
+	<script src="../list/all_js/all.js"></script>
+	<link rel="stylesheet" href="../list/all_css/all_bj.css">
+	<link rel="stylesheet" href="../list/all_css/all_popup.css">
+	<link rel="stylesheet" href="../list/all_css/table.css">
+	<link rel="stylesheet" href="../list/all_css/DAT_query.css">
+	<style>
+
+	</style>
+</head>
+
+<body class="suoke">
+	<!-- 头部 -->
+	<header class="mui-bar mui-bar-nav  white_color suoke_header">
+		<a class="mui-icon mui-icon-back mui-action-back" style="color:white;"></a>
+		<h1 class="mui-title white_color" id="dat_title">员工业绩</h1>
+		<span class="mui-icon mui-icon-search" style="float: right;" onclick="serahs()">
+
+		</span>
+	</header>
+	<div class="mui-content">
+		<div id="cover"></div>
+		<div id="wuxian" class="jqban display_none">
+			<ul id="treeDemo" class="ztree"></ul>
+		</div>
+		<div class="mui-scroll-wrapper" id="pullrefresh" style="top: 44px;">
+			<div class="mui-scroll">
+				<!--这里放置真实显示的DOM内容-->
+				<div class="dat_query3" id="dat_query2">
+					<div class="mui-row">
+						<div class="mui-col-xs-12 mui-col-sm-12">总销售额:8888888</div>
+						<div class="mui-col-xs-6 mui-col-sm-6">
+							<p>回访人数:99999</p>
+							<p>归属人数:99999</p>
+							<p>消费人数:99999</p>
+						</div>
+						<div class="mui-col-xs-6 mui-col-sm-6">
+							<p  style="text-align: right;"><span class="button_style" >查看</span></p>
+							<p  style="text-align: right;"><span class="button_style" >查看</span></p>
+							<p  style="text-align: right;"><span class="button_style" >查看</span></p>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+		<!-- 搜索 -->
+		<div id="sheet3" class="suoke sheet3 mui-popover mui-popover-centers mui-popover-action"
+			style="height: 100%;position: fixed;max-height: 350px !important;">
+			<div class="mui-scroll-wrapper" style="bottom: 50px;">
+				<div class="mui-scroll">
+					<!-- 可选择菜单 -->
+					<br>
+					<div class="mui-input-group transparent">
+						<div class="mui-input-row">
+							<label><span>选择组织:</span></label>
+							<label class="opop color_bbb labels" val="organization" onclick="classification(this)"
+								id="v_organization">请选择组织</label>
+						</div>
+						<div class="mui-input-row display_none" id="dat_store">
+							<label><span>选择门店:</span></label>
+							<label class="opop color_bbb labels" val="store"
+								onclick="classification(this)">请选择门店</label>
+						</div>
+						<div class="mui-input-row display_none" id="dat_staff">
+							<label><span>选择员工:</span></label>
+							<label class="opop color_bbb labels" val="staff"
+								onclick="classification(this)">请选择员工</label>
+						</div>
+						<div class="mui-input-row display_none">
+							<label><span>查询方式:</span></label>
+							<label class="opop color_bbb labels" val="mode" onclick="classification(this)">请选择方式</label>
+						</div>
+						<div class="mui-input-row">
+							<label><span>开始时间:</span></label>
+							<label class="opop color_bbb labels" val="start" onclick="classification(this)">开始时间</label>
+						</div>
+						<div class="mui-input-row">
+							<label><span>结束时间:</span></label>
+							<label class="opop color_bbb labels" val="end" onclick="classification(this)">结束时间</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="div_small_y pp"></div>-->
+			<p class="ppps">
+				<button type="button" class="mui-btn" onclick="selects(this)">查询</button>
+			</p>
+
+		</div>
+	</div>
+</body>
+<script src="../list/all_js/jq_tree.js"></script>
+<script src="../list/all_js/DAT_visit_analysis.js"></script>
+
+</html>

@@ -1,0 +1,75 @@
+input[type=color],
+input[type=date],
+input[type=datetime-local],
+input[type=datetime],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
+select,
+textarea {
+    line-height: 21px;
+    width: 80%;
+    height: 40px;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    -webkit-user-select: text;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 3px;
+    outline: 0;
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-appearance: none;
+    color: white;
+}
+
+input::-webkit-input-placeholder {
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-family: "SimHei", "STHeiti";
+}
+
+input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    font-family: "SimHei", "STHeiti";
+}
+
+input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    font-family: "SimHei", "STHeiti";
+}
+
+input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    font-family: "SimHei", "STHeiti";
+}
+.card_off{
+    padding: 12px 0px 12px 0px;
+    color: white;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.384);
+}
+.card_off div:nth-child(1){
+    text-align: right;
+    padding-right: 5px;
+
+}
+.card_off div:nth-child(2) {
+    text-align: left;
+    padding-left: 3px;
+}

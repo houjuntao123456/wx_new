@@ -1,0 +1,169 @@
+<html>
+
+<head>
+    <title>销售订单</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="../mui/css/mui.min.css" rel="stylesheet" />
+    <script src="../mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="../fonts/iconfont_centent.css">
+    <link rel="stylesheet" href="../mui/css/mui.picker.min.css">
+    <script src="../mui/js/mui.picker.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/loading.css">
+    <script src="../js/loading.js"></script>
+    <link rel="stylesheet" href="../list/all_css/all_bj.css">
+    <link rel="stylesheet" href="../list/all_css/all_popup.css">
+    <link rel="stylesheet" href="../list/all_css/RFM.css">
+</head>
+
+<body class="suoke">
+    <!-- 头部 -->
+    <header class="mui-bar mui-bar-nav  white_color suoke_header">
+        <a class="mui-icon mui-icon-back mui-action-back" style="color:white;"></a>
+        <h1 class="mui-title white_color">RFM</h1>
+    </header>
+    <div class="mui-content">
+        <div class="mui-row rfm">
+            <div class="mui-col-xs-12 mui-col-sm-12">
+                活跃度:
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 rem_operation" type="R" mechanism="company">
+                公司模型
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 rem_operation" type="R" mechanism="store">
+                门店模型
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 rem_operation" type="R" mechanism="organization">
+                组织模型
+            </div>
+        </div>
+        <div class="mui-row rfm">
+            <div class="mui-col-xs-12 mui-col-sm-12">
+                回购率:
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 rem_operation" type="F" mechanism="company">
+                公司模型
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 rem_operation" type="F" mechanism="store">
+                门店模型
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 rem_operation" type="F" mechanism="organization">
+                组织模型
+            </div>
+        </div>
+        <div class="mui-row rfm">
+            <div class="mui-col-xs-12 mui-col-sm-12">
+                贡献度:
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 rem_operation" type="M" mechanism="company">
+                公司模型
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 rem_operation" type="M" mechanism="store">
+                门店模型
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 rem_operation" type="M" mechanism="organization">
+                组织模型
+            </div>
+        </div>
+        <div class="mui-row rfm">
+            <div class="mui-col-xs-12 mui-col-sm-12 ">
+                忠诚度:
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 rem_operation" type="I" mechanism="company">
+                公司模型
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 rem_operation" type="I" mechanism="store">
+                门店模型
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 rem_operation" type="I" mechanism="organization">
+                组织模型
+            </div>
+        </div>
+        <div class="mui-row rfm">
+            <div class="mui-col-xs-12 mui-col-sm-12">
+                高件数:
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 rem_operation" type="N" mechanism="company">
+                公司模型
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 rem_operation" type="N" mechanism="store">
+                门店模型
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 rem_operation" type="N" mechanism="organization">
+                组织模型
+            </div>
+        </div>
+        <div class="mui-row rfm">
+            <div class="mui-col-xs-12 mui-col-sm-12">
+                高客单:
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 rem_operation" type="P" mechanism="company">
+                公司模型
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 rem_operation" type="P" mechanism="store">
+                门店模型
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 rem_operation" type="P" mechanism="organization">
+                组织模型
+            </div>
+        </div>
+        <div class="mui-row rfm">
+            <div class="mui-col-xs-12 mui-col-sm-12">
+                高件单:
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 rem_operation" type="A" mechanism="company">
+                公司模型
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 rem_operation" type="A" mechanism="store">
+                门店模型
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 rem_operation" type="A" mechanism="organization">
+                组织模型
+            </div>
+        </div>
+        <div class="mui-row rfm">
+            <div class="mui-col-xs-12 mui-col-sm-12">
+                高连带:
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 rem_operation" type="J" mechanism="company">
+                公司模型
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 rem_operation" type="J" mechanism="store">
+                门店模型
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 rem_operation" type="J" mechanism="organization">
+                组织模型
+            </div>
+        </div>
+        <div class="mui-row rfm">
+            <div class="mui-col-xs-12 mui-col-sm-12">
+                高消费:
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 rem_operation" type="C" mechanism="company">
+                公司模型
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 rem_operation" type="C" mechanism="store">
+                门店模型
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 rem_operation" type="C" mechanism="organization">
+                组织模型
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    mui(".mui-content").on('tap', '.rem_operation', function () {
+        //获取id
+        let rfm_type = this.getAttribute("type");
+        let rfm_mechanism = this.getAttribute("mechanism");
+       localStorage.setItem("rfm_type", rfm_type);
+       localStorage.setItem("rfm_mechanism", rfm_mechanism);
+        location.href='./RFM_models.html';
+    })
+</script>
+
+</html>

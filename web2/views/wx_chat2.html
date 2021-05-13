@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../mui/css/mui.css">
+    
+    <link rel="stylesheet" href="../fonts/chat_iconfont.css">
+    <script src="../mui/js/mui.js"></script>
+    <script src="../js/vconsole.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <!-- <script src="../js/jquery.qq_min.js"></script> -->
+    <!-- <script src="../js/jquery.qqFace2.js"></script> -->
+    <link rel="stylesheet" href="../list/all_css/wx_chat2.css">
+    <script src="../js/TB.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+
+    <title>聊天</title>
+</head>
+
+<body>
+    <!-- <header class="mui-bar mui-bar-nav">
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+            <h1 class="mui-title">chat (聊天窗口)</h1>
+        </header> -->
+    <!-- 内容 -->
+    <div class="picture_div display" id="picture_div">
+        <div style="width: 90%;margin: 0 auto;margin-top:100px;overflow-y: scroll; height: 70%;">
+            <img id="picture_div_img" src="" alt="" width="100%">
+        </div>
+    </div>
+
+    <div class="mui-content" id="content_chat">
+        <br>
+        <!-- <button onclick="kop()">暂停</button> -->
+        <!-- 反馈收到数据框 -->
+        <!-- <div class="answer">
+            <div class="left">
+                <div class="heard_huida">
+                    <img src="../images/account.png">
+                </div>
+                <div class="answer_Name">东皇太一</div>
+            </div>
+            <div class="answer_text clear" style="max-width: 70%;">
+                <p>
+                    <audio id="myAudio" controls style="width:200px;">
+                       
+                        <source src="../js/horse.mp3" type="audio/mp3">
+                    </audio>
+                </p>
+                <i></i>
+            </div>
+        </div> -->
+        <!-- <p style="text-align: center;">2018-12-09</p> -->
+        <!-- 提出发送的数据 -->
+        <!-- <div class="question">
+            <div class="right">
+                <div class="heard_img">
+                    <img src="../images/up.png">
+                </div>
+                <div class="question_Name">东皇太一</div>
+            </div>
+            <div class="question_text clear" style="max-width: 70%;">
+                <p><img src="../arclist/46.gif" border="0" />
+                    三方科技空间即可连接空间就看见看见看见看见了看见骷髅精灵看见了看见了看见了看见家家户户炬华科技第三方科技空间即可连接空间就看见看见看见看见了看见骷髅精灵看见了看见了看见了看见
+                </p>
+                <i></i>
+            </div>
+        </div> -->
+
+    </div>
+    <!-- 底部 -->
+    <footer id="footer_bottom">
+        <section id="section_bottom">
+            <div class="footer-left">
+                <i id='msg-mic' class="iconfont icon-yuyin" style="display: none;"></i>
+                <i id='msg-bars' class="iconfont icon-jianpan" style="display: none;"></i>
+            </div>
+            <div class="footer-center">
+                <textarea id='msg-text' type="text" class='input-text' name="msg-text"
+                    style="overflow-y:visible;"></textarea>
+                <button id='msg-sound' type="button" class='input-sound' style="display: none;">按住说话</button>
+            </div>
+            <div for="" class="footer-right">
+                <i id='msg-pengyouquan' class="iconfont icon-xiaolian"></i>&nbsp;
+                <i id='msg-image' class="iconfont icon-jiahao"></i>
+                <button id='msg-send' type="button" class="mui-btn mui-btn-success"
+                    style="padding: 4px 5px 4px 5px;position: relative;bottom: 5px; display: none;">发送</button>
+            </div>
+        </section>
+        <!-- 表情容器 -->
+        <section id="section_bq" class="display" style="background-color: #fafafa;">
+            <table border="0" id="facebox" cellspacing="0" cellpadding="0" style="width:100%;">
+                <tr>
+                    <td style="width:10%;"><img src="../arclist/1.gif" value="[/::)]" /></td>
+                    <td style="width:10%;"><img src="../arclist/2.gif" value="[/::~]" /></td>
+                    <td style="width:10%;"><img src="../arclist/3.gif" value="[/::B]" /></td>
+                    <td style="width:10%;"><img src="../arclist/4.gif" value="[/::|]" /></td>
+                    <td style="width:10%;"><img src="../arclist/5.gif" value="[/::<]" /></td>
+                    <td style="width:10%;"><img src="../arclist/6.gif" value="[/::$]" /></td>
+                    <td style="width:10%;"><img src="../arclist/7.gif" value="[/::X]" /></td>
+                    <td style="width:10%;"><img src="../arclist/8.gif" value="[/::Z]" /></td>
+                    <td style="width:10%;"><img src="../arclist/9.gif" value="[/::'(]" /></td>
+                    <td style="width:10%;"><img src="../arclist/10.gif" value="[/::-|]" /></td>
+                </tr>
+                <tr>
+                    <td style="width:10%;"><img src="../arclist/11.gif" value="[/::@]" /></td>
+                    <td style="width:10%;"><img src="../arclist/12.gif" value="[/::P]" /></td>
+                    <td style="width:10%;"><img src="../arclist/13.gif" value="[/::D]" /></td>
+                    <td style="width:10%;"><img src="../arclist/14.gif" value="[/::O]" /></td>
+                    <td style="width:10%;"><img src="../arclist/15.gif" value="[/::(]" /></td>
+                    <td style="width:10%;"><img src="../arclist/16.gif" value="[Blush]" /></td>
+                    <td style="width:10%;"><img src="../arclist/17.gif" value="[/::Q]" /></td>
+                    <td style="width:10%;"><img src="../arclist/18.gif" value="[/::T]" /></td>
+                    <td style="width:10%;"><img src="../arclist/19.gif" value="[/:,@P]" /></td>
+                    <td style="width:10%;"><img src="../arclist/20.gif" value="[/:,@-D]" /></td>
+                </tr>
+
+                <tr>
+                    <td style="width:10%;"><img src="../arclist/21.gif" value="[/::d]" /></td>
+                    <td style="width:10%;"><img src="../arclist/22.gif" value="[/:,@o]" /></td>
+                    <td style="width:10%;"><img src="../arclist/23.gif" value="[/::g]" /></td>
+                    <td style="width:10%;"><img src="../arclist/24.gif" value="[/:|-)]" /></td>
+                    <td style="width:10%;"><img src="../arclist/25.gif" value="[/::!]" /></td>
+                    <td style="width:10%;"><img src="../arclist/26.gif" value="[/::L]" /></td>
+                    <td style="width:10%;"><img src="../arclist/27.gif" value="[/::>]" /></td>
+                    <td style="width:10%;"><img src="../arclist/28.gif" value="[/::,@]" /></td>
+                    <td style="width:10%;"><img src="../arclist/29.gif" value="[/:,@f]" /></td>
+                    <td style="width:10%;"><img src="../arclist/30.gif" value="[/::-S]" /></td>
+                </tr>
+                <tr>
+                    <td style="width:10%;"><img src="../arclist/31.gif" value="[/:?]" /></td>
+                    <td style="width:10%;"><img src="../arclist/32.gif" value="[/:,@x]" /></td>
+                    <td style="width:10%;"><img src="../arclist/33.gif" value="[/:,@@]" /></td>
+                    <td style="width:10%;"><img src="../arclist/34.gif" value="[/::8]" /></td>
+                    <td style="width:10%;"><img src="../arclist/35.gif" value="[/:,@!]" /></td>
+                    <td style="width:10%;"><img src="../arclist/36.gif" value="[/:xx]" /></td>
+                    <td style="width:10%;"><img src="../arclist/37.gif" value="[/:bye]" /></td>
+                    <td style="width:10%;"><img src="../arclist/38.gif" value="[/:wipe]" /></td>
+                    <td style="width:10%;"><img src="../arclist/39.gif" value="[/:dig]" /></td>
+                    <td style="width:10%;"><img src="../arclist/40.gif" value="[/:&-(]" /></td>
+                </tr>
+                <tr>
+                    <td style="width:10%;"><img src="../arclist/41.gif" value="[/:B-)]" /></td>
+                    <td style="width:10%;"><img src="../arclist/42.gif" value="[/:<@]" /></td>
+                    <td style="width:10%;"><img src="../arclist/43.gif" value="[/:@>]" /></td>
+                    <td style="width:10%;"><img src="../arclist/44.gif" value="[/::-O]" /></td>
+                    <td style="width:10%;"><img src="../arclist/45.gif" value="[/:>-|]" /></td>
+                    <td style="width:10%;"><img src="../arclist/46.gif" value="[/:P-(]" /></td>
+                    <td style="width:10%;"><img src="../arclist/47.gif" value="[/::'|]" /></td>
+                    <td style="width:10%;"><img src="../arclist/48.gif" value="[/:X-)]" /></td>
+                    <td style="width:10%;"><img src="../arclist/49.gif" value="[/::*]" /></td>
+                    <td style="width:10%;"><img src="../arclist/50.gif" value="[/:@x]" /></td>
+                </tr>
+                <tr>
+                    <td style="width:10%;"><img src="../arclist/51.gif" value="[/:8*]" /></td>
+                    <td style="width:10%;"><img src="../arclist/52.gif" value="[/:hug]" /></td>
+                    <td style="width:10%;"><img src="../arclist/53.gif" value="[/:moon]" /></td>
+                    <td style="width:10%;"><img src="../arclist/54.gif" value="[/:sun]" /></td>
+                    <td style="width:10%;"><img src="../arclist/55.gif" value="[/:bome]" /></td>
+                    <td style="width:10%;"><img src="../arclist/56.gif" value="[/:!!!]" /></td>
+                    <td style="width:10%;"><img src="../arclist/57.gif" value="[/:pd]" /></td>
+                    <td style="width:10%;"><img src="../arclist/58.gif" value="[/:pig]" /></td>
+                    <td style="width:10%;"><img src="../arclist/59.gif" value="[/:<W>]" /></td>
+                    <td style="width:10%;"><img src="../arclist/60.gif" value="[/:coffee]" /></td>
+                </tr>
+                <tr>
+                    <td style="width:10%;"><img src="../arclist/61.gif" value="[/:eat]" /></td>
+                    <td style="width:10%;"><img src="../arclist/62.gif" value="[/:heart]" /></td>
+                    <td style="width:10%;"><img src="../arclist/63.gif" value="[/:strong]" /></td>
+                    <td style="width:10%;"><img src="../arclist/64.gif" value="[/:weak]" /></td>
+                    <td style="width:10%;"><img src="../arclist/65.gif" value="[/:share]" /></td>
+                    <td style="width:10%;"><img src="../arclist/66.gif" value="[/:v]" /></td>
+                    <td style="width:10%;"><img src="../arclist/67.gif" value="[/:@)]" /></td>
+                    <td style="width:10%;"><img src="../arclist/68.gif" value="[/:jj]" /></td>
+                    <td style="width:10%;"><img src="../arclist/69.gif" value="[/:ok]" /></td>
+                    <td style="width:10%;"><img src="../arclist/70.gif" value="[/:no]" /></td>
+                </tr>
+                <tr>
+                    <td style="width:10%;"><img src="../arclist/71.gif" value="[/:rose]" /></td>
+                    <td style="width:10%;"><img src="../arclist/72.gif" value="[/:fade]" /></td>
+                    <td style="width:10%;"><img src="../arclist/73.gif" value="[/:showlove]" /></td>
+                    <td style="width:10%;"><img src="../arclist/74.gif" value="[/:love]" /></td>
+                    <td style="width:10%;"><img src="../arclist/75.gif" value="[/:<L>]" /></td>
+                </tr>
+            </table>
+
+        </section>
+
+    </footer>
+
+    <!-- 发送图片 -->
+    <div id="img_sheet2" class="mui-popover mui-popover-bottom mui-popover-action ">
+        <input type="file" accept="image/*" multiple id="upload_picture" style="display: none;"
+            onchange="uploadImageHandle(this,0.5)">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">
+                <a href="#img_sheet2" style="text-align: left;color: #8f8f94; font-size: 14px;">发送图片<span
+                        class="mui-icon mui-icon-closeempty" style=" float: right;"></span></a>
+            </li>
+        </ul>
+        <!-- 可选择菜单 -->
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">
+                <!-- <textarea name="" cols="30" rows="5" id="add_text" style="color: black;"></textarea> -->
+                <img id="img__show" src="../images/2.jpg" alt="" width="80%">
+            </li>
+        </ul>
+        <!-- 立即添加 -->
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell add_beizhu">
+                <b onclick="send_true()">确定发送</b>
+            </li>
+        </ul>
+    </div>
+    <script src="../list/all_js/wx_chat2.js"></script>
+
+</html>

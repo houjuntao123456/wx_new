@@ -1,0 +1,49 @@
+.mui-media-body {
+    color: white;
+}
+
+.mui-media-body p {
+    /* padding-top: 5px; */
+    color: #DBDBDE;
+}
+
+.mui-table-view .mui-media-object {
+    /* line-height: 42px;
+    max-width: 42px;
+    height: 42px; */
+    max-width: 65px;
+    height: 65px;
+    margin-top: 10px;
+    border-radius: 21px;
+}
+
+.mui-table-view:after {
+    left: 90px;
+}
+
+.mui-table-view:before {
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 0px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #c8c7cc;
+    top: -1px;
+}
+
+.datas {
+    font-size: 14px;
+    color: #DBDBDE;
+}
+
+.jsr {
+    border: 1px solid rgba(255, 255, 255, 0.363);
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+    background-color: rgba(171, 171, 171, 0.29);
+}

@@ -1,0 +1,147 @@
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="./mui/css/mui.min.css" rel="stylesheet" />
+    <script src="./mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="./fonts/iconfont_centent.css">
+    <link rel="stylesheet" href="./mui/css/mui.picker.min.css">
+    <script src="./mui/js/mui.picker.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/loading.css">
+    <script src="./js/loading.js"></script>
+    <link rel="stylesheet" href="./list/all_css/all_bj.css">
+    <link rel="stylesheet" href="./list/all_css/all_popup.css">
+    <link rel="stylesheet" href="./list/all_css/member_profile.css">
+</head>
+
+<body class="suoke">
+    <!-- 头部 -->
+    <header class="mui-bar mui-bar-nav  white_color suoke_header">
+        <h1 class="mui-title white_color">我的</h1>
+    </header>
+    <div class="mui-content">
+        <br>
+        <div class="me_all">
+            <div style="text-align: center;">
+
+                <span>
+                    <img src="./images/upT.png" alt="">
+                    <span class="iconfont icon-weixin2"></span>
+                </span>
+
+            </div>
+            <br>
+            <div class="mui-row">
+                <div class="mui-col-xs-4 mui-col-sm-4">
+                    登录账号:
+                </div>
+                <div class="mui-col-xs-8 mui-col-sm-8">
+                    suoke
+                </div>
+            </div>
+            <div class="mui-row">
+                <div class="mui-col-xs-4 mui-col-sm-4">
+                    手机号码:
+                </div>
+                <div class="mui-col-xs-8 mui-col-sm-8">
+                    suoke
+                </div>
+            </div>
+            <div class="mui-row">
+                <div class="mui-col-xs-4 mui-col-sm-4">
+                    登录员姓名:
+                </div>
+                <div class="mui-col-xs-8 mui-col-sm-8">
+                    suoke
+                </div>
+            </div>
+            <div class="mui-row">
+                <div class="mui-col-xs-4 mui-col-sm-4">
+                    所属门店:
+                </div>
+                <div class="mui-col-xs-8 mui-col-sm-8">
+                    suoke
+                </div>
+            </div>
+
+
+        </div>
+        <div class="mui-row mima">
+            <div class="mui-col-xs-6 mui-col-sm-6">
+                <div class="xg" val="mima">
+                    修改密码
+                </div>
+            </div>
+            <div class="mui-col-xs-6 mui-col-sm-6">
+                <div  class="xg" val="qiehuan">
+                    切换账号
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 搜索 -->
+    <div id="sheet3" class="suoke sheet3 mui-popover mui-popover-centers mui-popover-action"
+        style="height: 100%;position: fixed;max-height: 200px !important;">
+        <div class="mui-scroll-wrapper" style="bottom: 50px;">
+            <div class="mui-scroll">
+                <br>
+                <!-- 可选择菜单 -->
+                <div class="mui-input-group transparent">
+                    <div class="mui-input-row">
+                        <label><span>旧密码:</span></label>
+                    <input type="password" class="mui-input-password" placeholder="输入编号" style="width: 58%;color:#D0DFE7">
+                    </div>
+                   
+                </div>
+                <div class="mui-input-group transparent">
+                    <div class="mui-input-row">
+                        <label><span>新密码:</span></label>
+                        <input type="password" class="mui-input-password" placeholder="输入编号" style="width: 58%;color:#D0DFE7">
+                    </div>
+                
+                </div>
+                <div class="mui-input-group transparent">
+                    <div class="mui-input-row">
+                        <label><span>新密码:</span></label>
+                        <input type="password" class="mui-input-password" placeholder="输入编号" style="width: 58%;color:#D0DFE7">
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        <!-- <div class="div_small_y pp"></div>-->
+        <p class="ppps">
+            <button type="button" class="mui-btn" onclick="selects(this)">修改</button>
+        </p>
+    
+    </div>
+</body>
+<script>
+
+    mui(".mima").on('tap', '.xg', function () {
+            let val = this.getAttribute("val");
+            // console.log(4444);
+            switch (val) {
+                case 'mima':
+                    mui('#sheet3').popover('toggle');
+                    break;
+                case 'qiehuan':
+                    top.location.href = 'index.html'
+                    break;
+                default:
+                    break;
+            }
+
+        })
+        function selects(){
+               mui('#sheet3').popover('toggle');
+        }
+</script>
+</html>

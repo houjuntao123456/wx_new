@@ -1,0 +1,187 @@
+<html>
+
+<head>
+    <title>销售订单</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="../mui/css/mui.min.css" rel="stylesheet" />
+    <script src="../mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="../fonts/iconfont_centent.css">
+    <link rel="stylesheet" href="../mui/css/mui.picker.min.css">
+    <script src="../mui/js/mui.picker.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/loading.css">
+    <script src="../js/loading.js"></script>
+    <link rel="stylesheet" href="../list/all_css/all_bj.css">
+    <link rel="stylesheet" href="../list/all_css/all_popup.css">
+    <link rel="stylesheet" href="../list/all_css/CRM_marketing.css">
+</head>
+
+<body class="suoke">
+    <!-- 头部 -->
+    <header class="mui-bar mui-bar-nav  white_color suoke_header">
+        <a class="mui-icon mui-icon-back mui-action-back" style="color:white;"></a>
+        <h1 class="mui-title white_color">消费画像</h1>
+    </header>
+    <div class="mui-content">
+        <div class="mui-row">
+            <br>
+            <div class="mui-col-xs-12 mui-col-sm-12 opopss boders" val="all" onclick="classification(this)">
+                总部
+            </div>
+            <!-- <div class="mui-col-xs-6 mui-col-sm-6 opopss" val="guwen" onclick="classification(this)">
+                形象顾问
+            </div> -->
+        </div>
+        <br>
+        <div class="mui-row" style="width: 90%; margin-left: auto;margin-right: auto;padding: 20px 0 20px 0;">
+            <div class="div_small_y pp"></div>
+            <div class="div_small_y pp2"></div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <span class="tixing">89</span>
+                    <a href="./screen_member.html">
+                       
+                        <span class="iconfont icon-yujing   span_size">
+                            <!-- <span class="number mui-badge mui-badge-danger">89</span> -->
+                        </span>
+                        <p>休眠预警</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./screen_member.html">
+                        <span class="iconfont icon-xiumianzhanghujihuo span_size"></span>
+                        <p>睡眠激活</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./screen_member.html">
+                        <span class="iconfont icon-jihuohuoqijiesuo   span_size"></span>
+                        <p>回购激活</p>
+                    </a>
+                </li>
+            </div>
+
+            <div class="mui-col-xs-12 mui-col-sm-12">
+                <div class="div_small_x"></div>
+                <br>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./screen_member.html">
+                        <span class="iconfont icon-tubiao-   span_size"></span>
+                        <p>高价值关注</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./screen_member.html">
+                        <span class="iconfont icon-shangpinyuji  span_size"></span>
+                        <p>低价值预警</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./screen_member.html">
+                        <span class="iconfont icon-wenjian   span_size"></span>
+                        <p>高件数关注</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-12 mui-col-sm-12">
+                <div class="div_small_x"></div>
+                <br>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./screen_member.html">
+                        <span class="iconfont icon-ziyuan1  span_size"></span>
+                        <p>低件数预警</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./screen_member.html">
+                        <span class="iconfont icon-wj-pj    span_size"></span>
+                        <p>高客单关注</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./screen_member.html">
+                        <span class="iconfont icon-ziyuan3    span_size"></span>
+                        <p>低客单预警</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-12 mui-col-sm-12">
+                <div class="div_small_x"></div>
+                <br>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./screen_member.html">
+                        <span class="iconfont icon-zhishu  span_size"></span>
+                        <p>高件单关注</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./screen_member.html">
+                        <span class="iconfont icon-shebeiyunweiyujing  span_size"></span>
+                        <p>低件单预警</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./screen_member.html">
+                        <span class="iconfont icon-lianjiexian    span_size"></span>
+                        <p>高连带关注</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-12 mui-col-sm-12">
+                <div class="div_small_x"></div>
+                <br>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./screen_member.html">
+                        <span class="iconfont icon-ziyuan2  span_size"></span>
+                        <p>低连带预警</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./screen_member.html">
+                        <span class="iconfont icon-gaoxiaofei    span_size"></span>
+                        <p>高消费关注</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./screen_member.html">
+                        <span class="iconfont icon-dixiaofei  span_size"></span>
+                        <p>低消费提升</p>
+                    </a>
+                </li>
+            </div>
+</body>
+<script src="../list/all_js/CRM_marketing.js"></script>
+
+</html>

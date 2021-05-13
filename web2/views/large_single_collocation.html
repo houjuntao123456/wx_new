@@ -1,0 +1,343 @@
+<html>
+
+<head>
+    <title>大单搭配</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="../mui/css/mui.min.css" rel="stylesheet" />
+    <script src="../mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="../mui/css/mui.dtpicker.css">
+    <link rel="stylesheet" href="../mui/css/mui.picker.min.css">
+    <script src="../mui/js/mui.dtpicker.js"></script>
+    <script src="../mui/js/mui.picker.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="./../list/all_css/all_bj.css">
+    <link rel="stylesheet" href="../list/all_css/all_popup.css">
+    <link rel="stylesheet" href="../list/all_css/refund_plan.css">
+
+</head>
+
+<body class="suoke">
+    <!-- 手势mui-draggable -->
+    <div class="mui-off-canvas-wrap   mui-slide-in mui-content ">
+        <!-- 主页面容器 -->
+        <div class="mui-inner-wrap">
+            <!-- 菜单容器 -->
+            <aside class="mui-off-canvas-right suoke ">
+                <header class="mui-bar mui-bar-nav white_color suoke_header">
+                    <a class="mui-icon mui-icon-back " style="color:white;" id="close_moban"></a>
+                    <h1 class="mui-title" style="color:white;">选择会员</h1>
+                </header>
+                <div id="pullrefresh" class="mui-scroll-wrapper display_none" style="top:44px">
+                    <div class="mui-scroll">
+                        <!--这里放置真实显示的DOM内容-->
+                        <div class="mui-input-row mui-search searchss">
+                            <input type="search" class="transparent" placeholder="">
+                        </div>
+                        <ul class="mui-table-view transparent" style="margin-top: 0px;">
+                            <li class="mui-table-view-cell mui-media transparent">
+                                <a href="javascript:;">
+                                    <img class="mui-media-object mui-pull-left" src="../images/suokewhite2.png">
+                                    <div class="mui-media-body">
+                                        幸福
+                                        <p class="mui-ellipsis">9999天未消费,9999天未回访</p>
+                                    </div>
+                                    <span class="select_txt" name="幸福">选择会员</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="pullrefresh2" class="mui-scroll-wrapper display_none" style="top:44px">
+                    <div class="mui-scroll">
+                        <!--这里放置真实显示的DOM内容-->
+                        <div class="mui-input-row mui-search searchss">
+                            <input type="search" class="transparent" placeholder="">
+                        </div>
+                        <div class="mui-row boder-bott">
+                            <div class="mui-col-sm-4 mui-col-xs-4">
+                                <img src="../images/mark.png" alt="" width="100px" height="100px"
+                                    style="margin-top:52px;">
+                            </div>
+                            <div class="mui-col-sm-8 mui-col-xs-8 ctxt">
+                                <p>名称：雪尼尔外套</p>
+                                <p>货号：20154658789746544654</p>
+                                <p>条码：74546546</p>
+                                <p>规格：褐色 xl</p>
+                                <p>售价：888.88</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- 主页面标题 -->
+            <!--  头部-->
+            <header class="mui-bar mui-bar-nav white_color suoke_header">
+                <a class="mui-icon mui-icon-back mui-action-back" style="color:white;"></a>
+                <h1 class="mui-title white_color header_title">大单搭配</h1>
+                <span class="header_right_txt">保存</span>
+            </header>
+            <!-- 主页面内容容器 -->
+            <input type="file" accept="image/*" multiple id="upload_picture" style="display: none;"
+                onchange="uploadImageHandle(this,0.5)">
+            <div class="mui-scroll-wrapper mui_radios">
+                <div class="mui-scroll" style="top: 44px;">
+                    <!--这里放置真实显示的DOM内容-->
+                    <div class="mui-input-group transparent">
+                        <div class="mui-input-row">
+                            <label><span>*</span> <span>搭配客户:</span></label>
+                            <label class="opop color_bbb labels xzkh" id="choice_kh">选择客户</label>
+                        </div>
+                        <div class="mui-input-row">
+                            <label><span>*</span><span>执行时间:</span></label>
+                            <label class="opop color_bbb labels timess">选择时间</label>
+                        </div>
+                        <div class="mui-input-row">
+                            <label><span>*</span><span>执行导购:</span></label>
+                            <label class="opop color_bbb labels xzdg" id="choice_dg" >选择导购</label>
+                        </div>
+                    </div>
+                    <div class="mui-row genjin">
+                        <div class="mui-col-xs-3 mui-col-sm-3 fats"><span>方案推送</span></div>
+                        <div class="mui-col-xs-3 mui-col-sm-3 fdgj"><span>返单跟进</span></div>
+                        <div class="mui-col-xs-3 mui-col-sm-3 xzfa"><span>新增方案</span></div>
+                        <div class="mui-col-xs-3 mui-col-sm-3 scfa"><span>删除方案</span></div>
+                    </div>
+                    <!-- 方案 -->
+                    <br>
+                    <div id="suoke_fangan">
+
+
+                        <!-- <div id="suoke_programme">
+                            <div class="programme">
+                                <p>方案一</p>
+                                <div>
+                                    <img class="imgss" src="../images/fangan.png" alt="">
+                                </div>
+
+                                <p class="add_shop">添加商品</p>
+                            </div>
+                            <div>
+                                <div class="mui-row boder-bott">
+                                    <div class="mui-col-sm-4 mui-col-xs-4">
+                                        <img src="../images/mark.png" alt="" width="100px" height="100px"
+                                            style="margin-top:52px;">
+                                    </div>
+                                    <div class="mui-col-sm-8 mui-col-xs-8 ctxt">
+                                        <p>名称：雪尼尔外套</p>
+                                        <p>货号：20154658789746544654</p>
+                                        <p>条码：74546546</p>
+                                        <p>规格：褐色 xl</p>
+                                        <p>售价：888.88</p>
+                                    </div>
+                                </div>
+                                <div class="mui-row boder-bott">
+                                    <div class="mui-col-sm-4 mui-col-xs-4">
+                                        <img src="../images/mark.png" alt="" width="100px" height="100px"
+                                            style="margin-top:52px;">
+                                    </div>
+                                    <div class="mui-col-sm-8 mui-col-xs-8 ctxt">
+                                        <p>名称：雪尼尔外套</p>
+                                        <p>货号：20154658789746544654</p>
+                                        <p>条码：74546546</p>
+                                        <p>规格：褐色 xl</p>
+                                        <p>售价：888.88</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="core">
+                                <div>核心卖点</div>
+                                <div>
+                                    <textarea id="suoke_core" class="textArea" name=""
+                                        placeholder="填写每个产品的核心卖点"></textarea>
+                                </div>
+                                <div>TOP(时间,地点,场合)</div>
+                                <div>
+                                    <textarea id="suoke_top" class="textArea" name=""
+                                        placeholder="填写搭配适合的时间,地点,场合,给顾客营造一种穿着场景"></textarea>
+                                </div>
+                                <div>整体搭配(上,中,下,里,外)</div>
+                                <div>
+                                    <textarea id="suoke_collocation" class="textArea" name=""
+                                        placeholder="写出搭配顺序及搭配方案给顾客,一种身临其境的搭配效果"></textarea>
+                                </div>
+                                <div>顾客可能问题</div>
+                                <div>
+                                    <textarea id="suoke_question" class="textArea" name=""
+                                        placeholder="填写顾客可能提出的异议"></textarea>
+                                </div>
+                                <div>回答话术</div>
+                                <div>
+                                    <textarea id="suoke_answer" class="textArea" name=""
+                                        placeholder="填写异议解答话术"></textarea>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <br><br><br><br>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- 搜索 -->
+        <div id="sheet3" class="suoke sheet3 mui-popover mui-popover-centers mui-popover-action" style="height: 100%;position: fixed;max-height: 350px !important; z-index: 999 !important;max-width: 90% !important;
+    left: 5% !important;padding-top: 15px;">
+            <div class="mui-input-row mui-search searchss" style="width: 95%;">
+                <input type="search" class="transparent" placeholder="">
+            </div>
+            <div class="mui-scroll-wrapper" style="top: 50px;">
+                <div class="mui-scroll">
+                    <div id="stionTbale">
+                        <table class="gridtable">
+                            <tr>
+                                <th>工号</th>
+                                <th>姓名</th>
+                                <th>操作</th>
+                            </tr>
+                            <tr>
+                                <td> 0000 </td>
+                                <td> 张三 </td>
+                                <td style="padding-right: 0px;padding-left: 0px;"> <span class="queren" name="张三">确认</span></td>
+                            </tr>
+                           
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+<script>
+
+    mui('.mui-scroll-wrapper').scroll({
+        deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+    });
+    mui(".mui-input-group").on('tap', '.xzkh', function () {
+        document.getElementById("pullrefresh").classList.remove("display_none");
+        document.getElementById("pullrefresh2").classList.add("display_none");
+        mui('.mui-off-canvas-wrap').offCanvas().show();
+    })
+    mui(".suoke_header").on('tap', '#close_moban', function () {
+        mui('.mui-off-canvas-wrap').offCanvas().close();
+    })
+
+    mui(".mui-input-group").on('tap', '.xzdg', function () {
+        mui('#sheet3').popover('toggle');
+    })
+
+    var add_shop_ids='';
+    mui(".mui_radios").on('tap', '.add_shop', function () {
+        add_shop_ids=this.getAttribute("ids");
+        document.getElementById("pullrefresh").classList.add("display_none");
+        document.getElementById("pullrefresh2").classList.remove("display_none");
+        mui('.mui-off-canvas-wrap').offCanvas().show();
+    })
+
+    mui(".mui-input-group").on('tap', '.timess', function () {
+        let val = this;
+        let dtpicker1 = new mui.DtPicker({
+            type: "date",//设置日历初始视图模式 
+            // beginDate: new Date('2000-01-01'),//设置开始日期 
+            // endDate: new Date(Now_tims),//设置结束日期 
+            labels: ['年', '月', '日'],//设置默认标签区域提示语 
+        })
+        dtpicker1.show(function (e) {
+            val.innerHTML = e.text;
+        })
+    })
+    mui(".genjin").on('tap', '.fdgj', function () {
+        location.href = './add_rebate.html'
+
+    })
+
+
+    mui(".genjin").on('tap', '.fats', function () {
+        location.href = './scheme_push.html'
+
+    })
+    mui(".genjin").on('tap', '.xzfa', function () {
+        mui.prompt('', '输入新增方案名称', '新增方案', ['取消', '确定'], function (e) {
+            console.log(e);
+            if (e.index == 0) {
+
+
+            } else if (e.index == 1) {
+                S_programme(e.value)
+            }
+
+
+        });
+
+    })
+
+   
+
+    mui('.mui-scroll-wrapper').scroll({
+        deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+    });
+
+    mui("#pullrefresh").pullRefresh({
+        up: {
+            contentrefresh: '正在加载...',
+            auto: false,//可选,默认false.首次加载自动上拉刷新一次
+            callback: pullupRefresh
+        }
+    })
+
+
+
+    /**
+     * 上拉加载具体业务实现
+     */
+    // 重新开启加载
+    // mui('#pullrefresh').pullRefresh().refresh(true);
+    // 分页计数
+    var count = 0;
+    // 分的条数
+    var limit_num = 30;
+
+    function pullupRefresh() {
+        setTimeout(function () {
+            mui('#pullrefresh').pullRefresh().endPullupToRefresh((count > (count / limit_num))); //参数为true代表没有更多数据了。
+            console.log('加载');
+        }, 1000);
+    }
+    mui.init({
+        pullRefresh: {
+            container: '#pullrefresh2',
+            up: {
+                contentrefresh: '正在加载...',
+                auto: false,//可选,默认false.首次加载自动上拉刷新一次
+                callback: pullupRefresh2
+            }
+        }
+    })
+
+
+    mui("#pullrefresh2").pullRefresh({
+        up: {
+            contentrefresh: '正在加载...',
+            auto: false,//可选,默认false.首次加载自动上拉刷新一次
+            callback: pullupRefresh2
+        }
+    })
+    function pullupRefresh2() {
+        setTimeout(function () {
+            mui('#pullrefresh2').pullRefresh().endPullupToRefresh((count > (count / limit_num))); //参数为true代表没有更多数据了。
+            console.log('加载2222');
+        }, 1000);
+    }
+
+
+
+</script>
+<script src="../list/all_js/large_single_collocation.js"></script>
+
+</html>

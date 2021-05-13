@@ -1,0 +1,94 @@
+/* 机构业绩,门店业绩,员工业绩 */
+table.gridtable {
+    border-left: 0px;
+    border-right: 0px;
+}
+
+table.gridtable th:nth-child(1) {
+    border-left: 0px;
+
+}
+
+table.gridtable th:nth-child(5) {
+    border-right: 0px;
+}
+
+table.gridtable tr:nth-child(2n) td {
+    border: 0px;
+    text-align: left;
+}
+
+table.gridtable tr:nth-child(2n+1) td {
+    border: 1px solid rgba(255, 255, 255, 0.34);
+}
+
+table.gridtable tr:nth-child(2n+1) td:nth-child(1) {
+    border-left: 0px;
+}
+
+table.gridtable tr:nth-child(2n+1) td:nth-child(5) {
+    border-right: 0px;
+}
+
+.labels {
+    width: 50% !important;
+    padding-left: 0px !important;
+}
+
+.opop::after {
+    content: '\e581';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    display: inline-block;
+    font-family: Muiicons;
+    font-size: inherit;
+    line-height: 1;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-font-smoothing: antialiased;
+}
+
+.color_bbb {
+    color: #D0DFE7;
+}
+
+.mui-input-row label {
+    width: 39%;
+    color: #D0DFE7;
+}
+
+input::-webkit-input-placeholder {
+    color: #D0DFE7;
+}
+
+input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #D0DFE7;
+}
+
+input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #D0DFE7;
+}
+
+input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #D0DFE7;
+}
+
+.mui-input-group::before {
+    background-color: rgb(255, 255, 255);
+    ;
+}
+
+.mui-input-group::after {
+    height: 0px;
+}
+
+#sheet3 {
+    max-width: 90% !important;
+    left: 5% !important;
+}

@@ -1,0 +1,51 @@
+.mui-row{
+    padding:10px;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.479);
+}
+.mui-row div:nth-child(1){
+    padding-left: 10px;
+}
+
+.mui-row div:nth-child(2) {
+    text-align: center;
+}
+.mui-row div:nth-child(2) .xz {
+   border: 1px solid white;
+   border-radius:5px;
+   padding: 4px 8px 4px 8px;
+}
+
+#textArea {
+    border: 1px solid rgba(255, 255, 255, 0.29);
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    margin-bottom: 10px;
+    /* height: 120px; */
+}
+
+ #textArea::-webkit-input-placeholder {
+    
+     color: rgba(255, 255, 255, 0.726);
+ }
+
+ /* 使用webkit内核的浏览器 */
+ #textArea:-moz-placeholder {
+     
+     color: rgba(255, 255, 255, 0.726);
+     ;
+ }
+
+ /* Firefox版本4-18 */
+ #textArea::-moz-placeholder {
+    
+     color: rgba(255, 255, 255, 0.726);
+     ;
+ }
+
+ /* Firefox版本19+ */
+ #textArea:-ms-input-placeholder {
+    
+     color: rgba(255, 255, 255, 0.726);
+     ;
+ }

@@ -1,0 +1,108 @@
+/* 公司,组织,门店畅销排行 */
+header div:nth-child(1) {
+    color: white;
+    font-size: 15px;
+    float: left;
+    line-height: 44px;
+}
+
+header div:nth-child(2) {
+    color: white;
+    float: right;
+    line-height: 44px;
+}
+
+.iconfont {
+    font-size: 18px;
+}
+.mui-media-body{
+    color: white;
+}
+.mui-media-body p{
+    padding-top: 5px;
+    color: #ffffff;
+    padding-left: 10px;
+}
+/* .mui-table-view:after {
+    left: 68px;
+} */
+
+.mui-table-view .mui-media-object {
+    line-height: 65px;
+    max-width: 65px;
+    height: 65px;
+    margin-top: 18px;
+}
+.see{
+        position: absolute;
+        top: 37%;
+        right: 10px;
+        color: white;
+        border: 1px solid white;
+        padding: 5px 13px 5px 13px;
+        border-radius: 9px;
+        font-size: 14px;
+}
+
+.labels {
+    width: 50% !important;
+    padding-left: 0px !important;
+}
+
+.opop::after {
+    content: '\e581';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    display: inline-block;
+    font-family: Muiicons;
+    font-size: inherit;
+    line-height: 1;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-font-smoothing: antialiased;
+}
+
+.color_bbb {
+    color: #D0DFE7;
+}
+
+.mui-input-row label {
+    width: 39%;
+    color: #D0DFE7;
+}
+
+input::-webkit-input-placeholder {
+    color: #D0DFE7;
+}
+
+input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #D0DFE7;
+}
+
+input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #D0DFE7;
+}
+
+input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #D0DFE7;
+}
+
+.mui-input-group::before {
+    background-color: rgb(255, 255, 255);
+    ;
+}
+
+.mui-input-group::after {
+    height: 0px;
+}
+
+#sheet3 {
+    max-width: 90% !important;
+    left: 5% !important;
+}

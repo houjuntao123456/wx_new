@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title></title>
+    <link href="../mui/css/mui.min.css" rel="stylesheet" />
+    <script src="../mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="../mui/css/mui.picker.min.css">
+    <script src="../mui/js/mui.picker.min.js"></script>
+    <link rel="stylesheet" href="../fonts/hou/hou_icon.css">
+    <script src="../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/loading.css">
+    <script src="../js/loading.js"></script>
+    <script src="../list/all_js/all.js"></script>
+    <link rel="stylesheet" href="../list/all_css/all_bj.css">
+    <link rel="stylesheet" href="../list/all_css/all_popup.css">
+    <link rel="stylesheet" href="../list/all_css/TAG_query_zy.css">
+</head>
+
+<body class="suoke">
+    <!-- 手势动作 mui-draggable  -->
+    <div class="mui-off-canvas-wrap  mui-slide-in mui-content">
+        <!-- 主页面容器 -->
+        <div class="mui-inner-wrap">
+            <!-- 菜单容器 -->
+            <aside class="mui-off-canvas-right suoke">
+                <header class="mui-bar mui-bar-nav white_color suoke_header">
+                    <a class="mui-icon mui-icon-back" style="color:white;" id="close_moban"></a>
+                    <h1 class="mui-title" style="color:white;">V票查询</h1>
+                </header>
+                <div class="mui-scroll zlzi" style="top: 44px;">
+                    <div class="all_co_but" style="width: 98%;">兑换记录</div>
+                    <table class="gridtable">
+                        <tr>
+                            <th>奖励数量:</th>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <th>奖励标准:</th>
+                            <td>连带销售第一名</td>
+                        </tr>
+
+                       
+                        <tr>
+                            <th>奖励时间:</th>
+                            <td>2020.12.12-12:12:12</td>
+                        </tr>
+                        <tr>
+                            <th>操作员:</th>
+                            <td>000-何石磊</td>
+                        </tr>
+
+                    </table>
+                   
+                </div>
+            </aside>
+            <!-- 主页面标题 -->
+            <!--  头部-->
+            <header class="mui-bar mui-bar-nav  white_color suoke_header Tag_tbs">
+                <a class="mui-icon mui-icon-back mui-action-back" style="color:white; float: left;"></a>
+                <h1 class="mui-title white_color" style="width: 30%; margin: 0 auto;" id="TAG_title">V票查询</h1>
+                <span class="iconfont icon-qiehuan2 "
+                    style="float: right;line-height: 44px;color: white;padding-left: 40px;" id="TAG_tb"></span>
+
+            </header>
+            <!-- 主页面内容容器 -->
+            <div class="header_daohang">
+                <div class="all_co_but" style="width: 98%;">奖励记录</div>
+            </div>
+            <div class="mui-scroll-wrapper mui_radios">
+                <div class="mui-scroll" style="top: 80px; ">
+                    <!-- 主界面具体展示内容 -->
+
+                    <div id="stionTbale" class="zlzi">
+                        <table class="gridtable">
+                            <tr>
+                                <th>兑换数量:</th>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <th>兑换备注:</th>
+                                <td>连带销售第一名</td>
+                            </tr>
+
+                            <tr>
+                                <th>兑换时间</th>
+                                <td>2021年3月29日11:31:33</td>
+                            </tr>
+                            <tr>
+                                <th>操作员:</th>
+                                <td>000-何石磊</td>
+                            </tr>
+                        </table>
+                        <br>
+                        <table class="gridtable">
+                            <tr>
+                                <th>兑换数量:</th>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <th>兑换备注:</th>
+                                <td>连带销售第一名</td>
+                            </tr>
+                        
+                            <tr>
+                                <th>兑换时间</th>
+                                <td>2021年3月29日11:31:33</td>
+                            </tr>
+                            <tr>
+                                <th>操作员:</th>
+                                <td>000-何石磊</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+<script>
+    mui('.mui-scroll-wrapper').scroll({
+        deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+    });
+
+    // window.onload = function () {
+    //     document.getElementById("TAG_title").innerHTML = decodeURIComponent(getQueryVariable("type"));
+
+    // }
+
+    mui(".pk_centerss").on('tap', '.details', function () {
+        //获取id
+        // var id = this.getAttribute("id");
+        location.href = "./TAG_query_zy.html";
+    })
+    mui(".mui-off-canvas-right").on('tap', '#close_moban', function () {
+        //获取id
+        mui('.mui-off-canvas-wrap').offCanvas().close();
+    })
+    mui(".Tag_tbs").on('tap', '#TAG_tb', function () {
+        //获取id
+        mui('.mui-off-canvas-wrap').offCanvas().show();
+    })
+    mui("#stionTbale").on('tap', '.xqing', function () {
+        //获取id
+        mui('.mui-off-canvas-wrap').offCanvas().show();
+        location.href = "./TAG_query_zy.html";
+    })
+
+
+
+</script>
+
+</html>

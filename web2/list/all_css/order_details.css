@@ -1,0 +1,16 @@
+.border_bottom{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.363);
+}
+.text_align{
+    text-align: right;
+}
+.mui-row{
+    color: white;
+    padding: 8px;
+}
+.mui-row p {
+    padding-top: 5px;
+    margin: 0;
+    color: white;
+    font-size: 16px;
+}

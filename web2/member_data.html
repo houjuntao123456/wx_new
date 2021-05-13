@@ -1,0 +1,214 @@
+<html>
+
+<head>
+    <title>销售订单</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="./mui/css/mui.min.css" rel="stylesheet" />
+    <script src="./mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="./fonts/iconfont_centent.css">
+    <link rel="stylesheet" href="./mui/css/mui.picker.min.css">
+    <script src="./mui/js/mui.picker.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/loading.css">
+    <script src="./js/loading.js"></script>
+    <link rel="stylesheet" href="./list/all_css/all_bj.css">
+    <!-- <link rel="stylesheet" href="./list/all_css/all_popup.css"> -->
+    <link rel="stylesheet" href="./list/all_css/member_data.css">
+</head>
+
+<body class="suoke">
+    <!-- 头部 -->
+    <header class="mui-bar mui-bar-nav  white_color suoke_header">
+        <a class="mui-icon mui-icon-back mui-action-back" style="color:white;"></a>
+        <h1 class="mui-title white_color">会员档案</h1>
+        <span style="float: right;line-height: 44px;">搭配</span>
+    </header>
+    <div class="mui-content">
+        <br>
+        <div class="mui-row">
+            <div class="mui-col-xs-3 mui-col-sm-3">
+                <li class="mui-table-view-cell transparent">
+                    <a href="###">
+                        <span class="iconfont icon-dianhua1  span_size"></span>
+                        <p>语音电话*</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-3 mui-col-sm-3">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./views/SMS_marketing.html">
+                        <span class="iconfont icon-duanxin1 span_size"></span>
+                        <p>发送短信</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-3 mui-col-sm-3">
+                <li class="mui-table-view-cell transparent">
+                    <a onclick="javascript: top.location.href='./views/wx_chat2.html'">
+                        <span class="iconfont icon-weixin span_size"></span>
+                        <p>发送微信</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-3 mui-col-sm-3">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./views/View_marketing.html">
+                        <span class="iconfont icon-shipin  span_size"></span>
+                        <p>发送视图</p>
+                    </a>
+                </li>
+            </div>
+        </div>
+        <br>
+        <div class="photo_Apple" id="picture">
+            <div style="color: #ffffff;">
+                <h2>Boss <span style="font-size: 18px;">/男</span>
+                </h2>
+
+            </div>
+
+            <img src="./images/nan.png" width="60px" height="60px">
+        </div>
+        <br>
+        <div class="mui-row" style="width: 90%; margin-left: auto;margin-right: auto;padding: 20px 0 60px 0;">
+
+            <div class="div_small_y pp"></div>
+            <div class="div_small_y pp2"></div>
+
+            <div class="mui-col-xs-4 mui-col-sm-4 div_small_li">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./views/customer_information.html">
+                        <span class="iconfont icon-ziyuan   span_size"></span>
+                        <p>顾客资料</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 div_small_li">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./views/information_aggregation.html">
+                        <span class="iconfont icon-huizong   span_size"></span>
+                        <p>信息汇总</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 div_small_li">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./views/consumption_snapshot.html">
+                        <span class="iconfont icon-xiaofei3   span_size"></span>
+                        <p>消费快照</p>
+                    </a>
+                </li>
+            </div>
+
+
+            <div class="mui-col-xs-4 mui-col-sm-4 div_small_li">
+                <li class="mui-table-view-cell transparent">
+                    <a href="###">
+                        <span class="iconfont icon-yigui   span_size"></span>
+                        <p>顾客衣柜*</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 div_small_li">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./views/customer_portrait.html">
+                        <span class="iconfont icon-huaxiang   span_size"></span>
+                        <p>顾客画像</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 div_small_li">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./views/Card_details.html">
+                        <span class="iconfont icon-qiaquan  span_size"></span>
+                        <p>卡劵详情</p>
+                    </a>
+                </li>
+            </div>
+
+            <div class="mui-col-xs-4 mui-col-sm-4 div_small_li">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./views/stored_value_record.html">
+                        <span class="iconfont icon-chuzhijilu   span_size"></span>
+                        <p>储值记录</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 div_small_li">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./views/points_record.html">
+                        <span class="iconfont icon-jifen1   span_size"></span>
+                        <p>积分记录</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 div_small_li">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./views/Introduce_the_relationship.html">
+                        <span class="iconfont icon-woshou   span_size"></span>
+                        <p>介绍关系</p>
+                    </a>
+                </li>
+            </div>
+
+            <div class="mui-col-xs-4 mui-col-sm-4 div_small_li">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./views/service_record.html">
+                        <span class="iconfont icon-fuwujilu   span_size"></span>
+                        <p>服务记录</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 div_small_li">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./views/Interactive_footprints.html">
+                        <span class="iconfont icon-zuji2  span_size"></span>
+                        <p>互动足迹</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 div_small_li">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./views/exclusive_information.html">
+                        <span class="iconfont icon-zhuanshu1   span_size"></span>
+                        <p>专属信息</p>
+                    </a>
+                </li>
+            </div>
+
+            <div class="mui-col-xs-4 mui-col-sm-4 div_small_li">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./views/family_information.html">
+                        <span class="iconfont icon-jiashutanshi  span_size"></span>
+                        <p>家属信息</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 div_small_li">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./views/collocation_record.html">
+                        <span class="iconfont icon-jihua   span_size"></span>
+                        <p>搭配记录</p>
+                    </a>
+                </li>
+            </div>
+            <div class="mui-col-xs-4 mui-col-sm-4 div_small_li">
+                <li class="mui-table-view-cell transparent">
+                    <a href="./views/grade_change.html">
+                        <span class="iconfont icon-dengji1   span_size"></span>
+                        <p>等级变更</p>
+                    </a>
+                </li>
+            </div>
+
+
+        </div>
+        <br><br>
+    </div>
+</body>
+
+</html>

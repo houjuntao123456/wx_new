@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>会员列表</title>
+    <link href="../mui/css/mui.min.css" rel="stylesheet" />
+    <script src="../mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="../mui/css/mui.picker.min.css">
+    <script src="../mui/js/mui.picker.min.js"></script>
+    <link rel="stylesheet" href="../fonts/iconfont_centent.css">
+    <script src="../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/loading.css">
+    <script src="../js/loading.js"></script>
+    <script src="../list/all_js/all.js"></script>
+    <link rel="stylesheet" href="../list/all_css/all_bj.css">
+    <link rel="stylesheet" href="../list/all_css/all_popup.css">
+    <link rel="stylesheet" href="../list/all_css/TAG_pk.css">
+</head>
+
+<body class="suoke">
+    <header class="mui-bar mui-bar-nav  white_color suoke_header">
+        <a class="mui-icon mui-icon-back mui-action-back" style="color:white; float: left;"></a>
+        <h1 class="mui-title white_color" style="width: 30%; margin: 0 auto;" id="TAG_title">会员列表</h1>
+    </header>
+    <div class="mui-content" id="ppppp">
+        <div class="mui-input-group transparent">
+            <div class="mui-input-row">
+                <label class="color_bbb"><span>排名方式:</span></label>
+                <label class="opop color_bbb labels" val="P" id="v_organization" onclick="classification(this)">
+                选择排名方式</label>
+            </div>
+            <div class="mui-input-row">
+                <label class="color_bbb"><span>查询方式:</span></label>
+                <label class="opop color_bbb labels" val="C" onclick="classification(this)">选择查询方式</label>
+            </div>
+            <div class="mui-input-row">
+                <div class="mui-row" style="line-height: 40px;text-align: center; color: #D0DFE7;">
+                    <div class="mui-col-xs-5 mui-col-sm-5 opop" style="text-align: left;padding-left: 15px;"
+                        onclick="classification(this)" val="time_s">撒地方</div>
+                    <div class="mui-col-xs-2 mui-col-sm-2">至</div>
+                    <div class="mui-col-xs-5 mui-col-sm-5 opop" style="text-align: left;padding-left: 15px;"
+                        onclick="classification(this)" val="time_e">发斯蒂芬</div>
+                </div>
+            </div>
+            <div class="all_co_but" style="margin-top: 13px;">
+                查询
+            </div>
+        </div>
+        <div id="pullrefresh" class="mui-scroll-wrapper" style="top:216px">
+            <div class="mui-scroll">
+                <!--这里放置真实显示的DOM内容-->
+                <div class="TAG_pk_border">
+                    <div class="mui-row" style=" padding-left: 10px; line-height: 34px;">
+                        <div class="mui-col-xs-10 mui-col-sm-10">0000-天天:9999</div>
+                        <div class="mui-col-xs-2 mui-col-sm-2"><span
+                                style="padding: 5px 9px;border: 1px solid white; border-radius: 16px;">1</span></div>
+                    </div>
+                    <div class="mui-row">
+                        <div class="mui-col-xs-6 mui-col-sm-6">
+                            <p>基础完成率:55.55%</p>
+                        </div>
+                        <div class="mui-col-xs-6 mui-col-sm-6">
+                            <p>件数:55</p>
+                        </div>
+                    </div>
+                    <div class="mui-row">
+                        <div class="mui-col-xs-6 mui-col-sm-6">
+                            <p>挑战完成率:55.55%</p>
+                        </div>
+                        <div class="mui-col-xs-6 mui-col-sm-6">
+                            <p>单数:55</p>
+                        </div>
+                    </div>
+                    <div class="mui-row">
+                        <div class="mui-col-xs-6 mui-col-sm-6">
+                            <p>冲刺完成率:55.55%</p>
+                        </div>
+                        <div class="mui-col-xs-6 mui-col-sm-6">
+                            <p>连带率:55</p>
+                        </div>
+                    </div>
+                    <div class="mui-row">
+                        <div class="mui-col-xs-6 mui-col-sm-6">
+                            <p>极限完成率:55.55%</p>
+                        </div>
+                        <div class="mui-col-xs-6 mui-col-sm-6">
+                            <p>平均客单价:55</p>
+                        </div>
+                    </div>
+                    <div class="mui-row">
+                        <div class="mui-col-xs-6 mui-col-sm-6">
+                            <p>无限完成率:55.55%</p>
+                        </div>
+                        <div class="mui-col-xs-6 mui-col-sm-6">
+                            <p>平均件单价:55</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="TAG_pk_border">
+                    <div class="mui-row" style=" padding-left: 10px; line-height: 34px;">
+                        <div class="mui-col-xs-10 mui-col-sm-10">0000-天天:9999</div>
+                        <div class="mui-col-xs-2 mui-col-sm-2"><span
+                                style="padding: 5px 9px;border: 1px solid white; border-radius: 16px;">1</span></div>
+                    </div>
+                    <div class="mui-row">
+                        <div class="mui-col-xs-6 mui-col-sm-6">
+                            <p>基础完成率:55.55%</p>
+                        </div>
+                        <div class="mui-col-xs-6 mui-col-sm-6">
+                            <p>件数:55</p>
+                        </div>
+                    </div>
+                    <div class="mui-row">
+                        <div class="mui-col-xs-6 mui-col-sm-6">
+                            <p>挑战完成率:55.55%</p>
+                        </div>
+                        <div class="mui-col-xs-6 mui-col-sm-6">
+                            <p>单数:55</p>
+                        </div>
+                    </div>
+                    <div class="mui-row">
+                        <div class="mui-col-xs-6 mui-col-sm-6">
+                            <p>冲刺完成率:55.55%</p>
+                        </div>
+                        <div class="mui-col-xs-6 mui-col-sm-6">
+                            <p>连带率:55</p>
+                        </div>
+                    </div>
+                    <div class="mui-row">
+                        <div class="mui-col-xs-6 mui-col-sm-6">
+                            <p>极限完成率:55.55%</p>
+                        </div>
+                        <div class="mui-col-xs-6 mui-col-sm-6">
+                            <p>平均客单价:55</p>
+                        </div>
+                    </div>
+                    <div class="mui-row">
+                        <div class="mui-col-xs-6 mui-col-sm-6">
+                            <p>无限完成率:55.55%</p>
+                        </div>
+                        <div class="mui-col-xs-6 mui-col-sm-6">
+                            <p>平均件单价:55</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+</body>
+<script>
+    mui('.mui-scroll-wrapper').scroll({
+        deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+    });
+
+    window.onload = function () {
+        document.getElementById("TAG_title").innerHTML = decodeURIComponent(getQueryVariable("type"));
+
+    }
+    var paiming = ''
+    var paimings = [{
+        value: "first",
+        text: "全部会员"
+    }, {
+        value: "second",
+        text: "会员二号"
+    }]
+    var chaxun = ''
+    var chaxuns = [{
+        value: "first",
+        text: "年度目标"
+    }, {
+        value: "second",
+        text: "月度目标"
+    }]
+    function classification(val) {
+
+        switch (val.getAttribute("val")) {
+            case "P":
+                let TAG_paiming = new mui.PopPicker();
+                TAG_paiming.setData(paimings);
+                TAG_paiming.pickers[0].setSelectedValue(paiming, 2000);
+                TAG_paiming.show(function (SelectedItem) {
+                    paiming = SelectedItem[0].value;
+                    val.innerHTML = SelectedItem[0].text;
+                })
+                break;
+            case "C":
+                let TAG_chaxun = new mui.PopPicker();
+                TAG_chaxun.setData(chaxuns);
+                TAG_chaxun.pickers[0].setSelectedValue(chaxun, 2000);
+                TAG_chaxun.show(function (SelectedItem) {
+                    chaxun = SelectedItem[0].value;
+                    val.innerHTML = SelectedItem[0].text;
+                })
+                break;
+            case "time_s":
+                let dtpicker2 = new mui.DtPicker({
+                    type: "date",//设置日历初始视图模式 
+                    labels: ['年', '月', '日'],//设置默认标签区域提示语 
+                })
+                dtpicker2.show(function (e) {
+                    console.log(e);
+                    val.innerHTML = e.text;
+                })
+                break;
+            case "time_e":
+                let dtpicker3 = new mui.DtPicker({
+                    type: "date",//设置日历初始视图模式 
+                    labels: ['年', '月', '日'],//设置默认标签区域提示语 
+                })
+                dtpicker3.show(function (e) {
+                    console.log(e);
+                    val.innerHTML = e.text;
+                })
+                break;
+
+            default:
+                break;
+        }
+    }
+
+</script>
+
+</html>

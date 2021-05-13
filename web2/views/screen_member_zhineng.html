@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>会员列表</title>
+  <link href="../mui/css/mui.min.css" rel="stylesheet" />
+  <script src="../mui/js/mui.min.js"></script>
+  <link rel="stylesheet" href="../mui/css/mui.picker.min.css">
+  <script src="../mui/js/mui.picker.min.js"></script>
+  <link rel="stylesheet" href="../fonts/iconfont_centent.css">
+  <link rel="stylesheet" href="../css/Animate.css">
+  <script src="../js/jquery.min.js"></script>
+  <link rel="stylesheet" href="../css/loading.css">
+  <script src="../js/loading.js"></script>
+  <link rel="stylesheet" href="../list/all_css/all_bj.css">
+  <link rel="stylesheet" href="../list/all_css/all_popup.css">
+  <link rel="stylesheet" href="../list/all_css/customer_portrait.css">
+  <link rel="stylesheet" href="../list/all_css/membership.css">
+</head>
+
+<body class="suoke">
+  <header class="mui-bar mui-bar-nav  white_color suoke_header">
+    <a class="mui-icon mui-icon-back mui-action-back" style="color:white;float: left;"></a>
+    <div style="float:left !important;"><span class="iconfont icon-person"></span>9999</div>
+    <div style="float:right !important;">
+      <span class="all_member">全部会员</span>
+      <span class="iconfont icon-qunfa1"></span>
+    </div>
+    <h1 class="mui-title white_color" style="width: 30%; margin: 0 auto;">会员列表</h1>
+    <!-- 浮动显示 -->
+    <div class="group_tj animated flipInY transparent suoke_header">
+      <input type="number" class="numbers transparent">
+      -
+      <input type="number" class="numbers transparent">天未消费
+      <span class="butts">搜索</span>
+      <span class="butts" onclick="huaxiang()">画像</span>
+    </div>
+  </header>
+  <div class="mui-content" id="ppppp">
+    <br><br><br><br>
+    <div id="pullrefresh" class="mui-scroll-wrapper" style="top:115px">
+      <div class="mui-scroll">
+        <ul class="mui-table-view transparent secteds">
+          <li class="mui-table-view-cell mui-media transparent">
+            <a href="javascript:;">
+              <img class="mui-media-object mui-pull-left" src="../images/suokewhite2.png">
+              <div class="mui-media-body">
+                幸福
+                <p class='mui-ellipsis'>9999天未消费,9999天未回访</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div id="sheet4" class="suoke sheet3 mui-popover mui-popover-centers mui-popover-action" style="height: 100%;position: fixed;max-height: 280px !important; width: 80%;
+        left: 10%;
+        border-radius: 10px;">
+    <h4 style="text-align: center; color: white;padding: 10px 0px;">精准营销工具</h4>
+    <div class="div_small_x"></div>
+    <div class="marketing" val="duanxin"
+      style="color: white;text-align: center;line-height: 40px;width: 80%;margin:10px auto;border: 1px solid rgba(255, 255, 255, 0.329);">
+      短信营销</div>
+    <div class="marketing" val="weixin"
+      style="color: white;text-align: center;line-height: 40px;width: 80%;margin:10px auto;border: 1px solid rgba(255, 255, 255, 0.329);">
+      微信营销</div>
+    <div class="marketing" val="shitu"
+      style="color: white;text-align: center;line-height: 40px;width: 80%;margin:10px auto;border: 1px solid rgba(255, 255, 255, 0.329);">
+      视图营销</div>
+    <div class="marketing" val="kajuan"
+      style="color: white;text-align: center;line-height: 40px;width: 80%;margin:10px auto;border: 1px solid rgba(255, 255, 255, 0.329);">
+      卡劵营销</div>
+  </div>
+  <div id="sheet5" class="suoke sheet3 mui-popover mui-popover-centers mui-popover-action" 
+  style="height: 100%;position: fixed;max-height: 380px !important; max-width: 90% !important;
+          left: 5% !important;
+          border-radius: 10px;">
+    <div class="mui-scroll-wrapper" style="bottom: 50px;">
+      <div class="mui-scroll">
+        <!-- 可选择菜单 -->
+        <fieldset>
+          <legend style="color: white;">基本信息</legend>
+          <div class="checkboxStyle">
+            <div class="mui-row">
+              <!-- <p>自我评价:</p> -->
+              <div class="mui-col-sm-4 mui-col-xs-4">
+                <input type="checkbox" id="love1" name="chexkbox_test" value="阳光开朗" onclick="checkboxOnclick(this)" />
+                <label for="love1">阳光开朗</label>
+              </div>
+              <div class="mui-col-sm-4 mui-col-xs-4">
+                <input type="checkbox" id="love2" name="chexkbox_test" value="成熟稳重" onclick="checkboxOnclick(this)" />
+                <label for="love2">成熟稳重</label>
+              </div>
+              <div class="mui-col-sm-4 mui-col-xs-4">
+                <input type="checkbox" id="love3" name="chexkbox_test" value="雷厉风行" onclick="checkboxOnclick(this)" />
+                <label for="love3">雷厉风行</label>
+              </div>
+              <div class="mui-col-sm-4 mui-col-xs-4">
+                <input type="checkbox" id="love4" name="chexkbox_test" value="执行力强" onclick="checkboxOnclick(this)" />
+                <label for="love4">执行力强</label>
+              </div>
+            </div>
+
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend style="color: white;">其他信息</legend>
+          <div class="checkboxStyle">
+            <div class="mui-row">
+              <!-- <p>自我评价:</p> -->
+              <div class="mui-col-sm-4 mui-col-xs-4">
+                <input type="checkbox" id="aove1" name="chexkbox_test" value="阳光开朗" onclick="checkboxOnclick(this)" />
+                <label for="aove1">阳光开朗</label>
+              </div>
+              <div class="mui-col-sm-4 mui-col-xs-4">
+                <input type="checkbox" id="aove2" name="chexkbox_test" value="成熟稳重" onclick="checkboxOnclick(this)" />
+                <label for="aove2">成熟稳重</label>
+              </div>
+              <div class="mui-col-sm-4 mui-col-xs-4">
+                <input type="checkbox" id="aove3" name="chexkbox_test" value="雷厉风行" onclick="checkboxOnclick(this)" />
+                <label for="aove3">雷厉风行</label>
+              </div>
+              <div class="mui-col-sm-4 mui-col-xs-4">
+                <input type="checkbox" id="aove4" name="chexkbox_test" value="执行力强" onclick="checkboxOnclick(this)" />
+                <label for="aove4">执行力强</label>
+              </div>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <p class="ppps">
+      <button type="button" class="mui-btn" onclick="selects(this)">保存</button>
+    </p>
+  </div>
+</body>
+<script src="../list/all_js/screen_member_zhineng.js"></script>
+</html>

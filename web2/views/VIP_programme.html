@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>会员列表</title>
+  <link href="../mui/css/mui.min.css" rel="stylesheet" />
+  <script src="../mui/js/mui.min.js"></script>
+  <link rel="stylesheet" href="../mui/css/mui.picker.min.css">
+  <script src="../mui/js/mui.picker.min.js"></script>
+  <link rel="stylesheet" href="../fonts/iconfont_centent.css">
+  <script src="../js/jquery.min.js"></script>
+  <link rel="stylesheet" href="../js/jquery-ztree/3.5/css/simple/zTreeStyle.css">
+  <link rel="stylesheet" href="../js/jquery-ztree/3.5/css/metro/zTreeStyle.css">
+  <link rel="stylesheet" href="../js/jquery-ztree/3.5/css/default/zTreeStyle.css">
+  <script src="../js/jquery-ztree/3.5/js/jquery.ztree.all-3.5.js"></script>
+  <link rel="stylesheet" href="../css/loading.css">
+  <script src="../js/loading.js"></script>
+  <script src="../list/all_js/all.js"></script>
+  <link rel="stylesheet" href="../list/all_css/all_bj.css">
+  <link rel="stylesheet" href="../list/all_css/all_popup.css">
+  <link rel="stylesheet" href="../list/all_css/VIP_programme.css">
+</head>
+
+<body class="suoke">
+  <header class="mui-bar mui-bar-nav  white_color suoke_header">
+    <a class="mui-icon mui-icon-back mui-action-back" style="color:white; float: left;"></a>
+    <div style="float:left !important;"><span class="iconfont icon-person"></span>9999</div>
+    <div style="float:right !important;">
+      <span class="all_member display_none" id="vip_all_member">全部会员</span>
+      <span class="iconfont vip_all_title icon-shaixuan display_none" id="vip_all_shaixuan"></span>
+      <span class="iconfont icon-qunfa1"></span>
+    </div>
+    <h1 class="mui-title white_color" style="width: 30%; margin: 0 auto;" id="vip_title">会员列表</h1>
+  </header>
+  <div class="mui-content" id="ppppp">
+    <div id="cover"></div>
+    <div id="wuxian" class="jqban display_none">
+      <ul id="treeDemo" class="ztree"></ul>
+    </div>
+    <div id="pullrefresh" class="mui-scroll-wrapper" style="top:44px">
+      <div class="mui-scroll">
+        <!--这里放置真实显示的DOM内容-->
+
+        <ul class="mui-table-view transparent secteds" style="margin-top: 0px;">
+          <li class="mui-table-view-cell  mui-media transparent " name="vip_select">
+            <a href="javascript:;">
+              <img class="mui-media-object mui-pull-left" src="../images/suokewhite2.png">
+              <div class="mui-media-body">
+                幸福
+                <p class='mui-ellipsis'>9999天未消费,9999天未回访</p>
+              </div>
+            </a>
+          </li>
+          <li class="mui-table-view-cell  mui-media transparent " name="vip_select">
+            <a href="javascript:;">
+              <img class="mui-media-object mui-pull-left" src="../images/suokewhite2.png">
+              <div class="mui-media-body">
+                幸福
+                <p class='mui-ellipsis'>9999天未消费,9999天未回访</p>
+              </div>
+            </a>
+          </li>
+          <li class="mui-table-view-cell  mui-media transparent " name="vip_select">
+            <a href="javascript:;">
+              <img class="mui-media-object mui-pull-left" src="../images/suokewhite2.png">
+              <div class="mui-media-body">
+                幸福
+                <p class='mui-ellipsis'>9999天未消费,9999天未回访</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="footers">
+      <div class="mui-input-row mui-checkbox mui-left" style="width: 120px; float: right;">
+        <label style="width: 100%;">全选</label>
+        <input name="checkbox1" value="Item 1" type="checkbox" onclick="check(this)">
+      </div>
+    </div>
+  </div>
+
+  <!-- 搜索 -->
+  <div id="sheet4" class="suoke sheet3 mui-popover mui-popover-centers mui-popover-action" style="height: 100%;position: fixed;max-height: 280px !important; width: 80%;
+      left: 10%;
+      border-radius: 10px;">
+    <h4 style="text-align: center; color: white;padding: 10px 0px;">精准营销工具</h4>
+    <div class="div_small_x"></div>
+    <div class="marketing" val="duanxin"
+      style="color: white;text-align: center;line-height: 40px;width: 80%;margin:10px auto;border: 1px solid rgba(255, 255, 255, 0.329);">
+      短信营销</div>
+    <div class="marketing" val="weixin"
+      style="color: white;text-align: center;line-height: 40px;width: 80%;margin:10px auto;border: 1px solid rgba(255, 255, 255, 0.329);">
+      微信营销</div>
+    <div class="marketing" val="shitu"
+      style="color: white;text-align: center;line-height: 40px;width: 80%;margin:10px auto;border: 1px solid rgba(255, 255, 255, 0.329);">
+      视图营销</div>
+    <div class="marketing" val="kajuan"
+      style="color: white;text-align: center;line-height: 40px;width: 80%;margin:10px auto;border: 1px solid rgba(255, 255, 255, 0.329);">
+      卡劵营销</div>
+
+
+  </div>
+
+
+  <!-- 跟进方案,专场方案 ,互动方案-->
+  <div id="vip_all" class="suoke sheet3 mui-popover mui-popover-centers mui-popover-action" style="height: 100%;position: fixed;max-height: 320px !important; max-width: 90% !important;
+        left: 5% !important;
+        border-radius: 10px;">
+    <div class="mui-scroll-wrapper" style="bottom: 50px;">
+      <div class="mui-scroll">
+        <br>
+        <!-- 可选择菜单 -->
+        <div class="mui-input-group transparent" style="padding-top: 9px;">
+
+          <div class="mui-input-row display_none" id="vip_xiaofei_data">
+            <label><span>未消费天数:</span></label>
+            <label class="color_bbb" style="padding-top: 5px; width: 59%;padding-left: 0px;">
+              <input class="vip_input" type="text"> -
+              <input class="vip_input" type="text">
+            </label>
+          </div>
+          <div class="mui-input-row">
+            <label><span>选择组织:</span></label>
+            <label class="opop color_bbb labels" val="organization" id="v_organization"
+              onclick="classification(this)">按组织查询</label>
+          </div>
+          <div class="mui-input-row">
+            <label><span>选择门店:</span></label>
+            <label class="opop color_bbb labels" val="store" onclick="classification(this)">按门店查询</label>
+          </div>
+          <div class="mui-input-row">
+            <label><span>选择员工:</span></label>
+            <label class="opop color_bbb labels" val="staff" onclick="classification(this)">按员工查询</label>
+          </div>
+          <div class="mui-input-row display_none" id="vip_xuan_choose">
+            <label><span>选择专场:</span></label>
+            <label class="opop color_bbb labels" val="choose_zhuanchang" onclick="classification(this)">选择专场</label>
+          </div>
+          <div class="mui-input-row">
+            <label><span>会员类型:</span></label>
+            <label class="opop color_bbb labels" val="all_members" onclick="classification(this)">全部会员</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="div_small_y pp"></div>-->
+    <p class="ppps">
+      <button type="button" class="mui-btn" onclick="selects(this)">查询</button>
+    </p>
+  </div>
+  <!--  --->
+
+</body>
+<script src="../list/all_js/jq_tree.js"></script>
+<script>
+  switch (decodeURIComponent(getQueryVariable("type"))) {
+    case "G":
+      document.getElementById("vip_title").innerHTML = '跟进方案';
+      document.getElementById("vip_all_shaixuan").classList.remove("display_none");
+      document.getElementById("vip_xiaofei_data").classList.remove("display_none");
+      break;
+    case "H":
+      document.getElementById("vip_title").innerHTML = '互动方案';
+      document.getElementById("vip_all_shaixuan").classList.remove("display_none");
+      document.getElementById("vip_xiaofei_data").classList.remove("display_none");
+
+      break;
+    case "Z":
+      document.getElementById("vip_title").innerHTML = '专场方案';
+      document.getElementById("vip_all_shaixuan").classList.remove("display_none");
+      document.getElementById("vip_xuan_choose").classList.remove("display_none");
+      break;
+    default:
+      break;
+  }
+
+  mui(".suoke_header").on('tap', '.icon-shaixuan', function () {
+    mui('#vip_all').popover('toggle');
+  })
+  mui(".secteds").on('tap', '.mui-table-view-cell', function () {
+    let val = this;
+    if (this.classList.contains("stars")) {
+      this.classList.remove("stars")
+    } else {
+      this.classList.add("stars")
+    }
+
+  })
+
+  var shop = '';
+  var shops = [{
+    value: "first",
+    text: "会员1"
+  }, {
+    value: "second",
+    text: "会员2"
+  }]
+  mui(".suoke_header").on('tap', '.all_member', function () {
+    let val = this;
+    let picker5 = new mui.PopPicker();
+    picker5.setData(shops);
+    picker5.pickers[0].setSelectedValue(shop, 2000);
+    picker5.show(function (SelectedItem) {
+
+      console.log(SelectedItem);
+      shop = SelectedItem[0].value;
+      val.innerHTML = SelectedItem[0].text;
+    })
+  })
+  mui('.mui-scroll-wrapper').scroll({
+    deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+  });
+
+  mui.init({
+    pullRefresh: {
+      container: '#pullrefresh',
+      up: {
+        contentrefresh: '正在加载...',
+        auto: false,//可选,默认false.首次加载自动上拉刷新一次
+        callback: pullupRefresh
+      }
+    }
+  });
+  /**
+   * 上拉加载具体业务实现
+   */
+  // 重新开启加载
+  // mui('#pullrefresh').pullRefresh().refresh(true);
+  // 分页计数
+  var count = 0;
+  // 分的条数
+  var limit_num = 30;
+
+  function pullupRefresh() {
+    setTimeout(function () {
+      mui('#pullrefresh').pullRefresh().endPullupToRefresh((count > (count / limit_num))); //参数为true代表没有更多数据了。
+      console.log('加载');
+    }, 1000);
+  }
+
+
+  mui(".suoke_header").on('tap', '.icon-qunfa1', function () {
+    console.log(4444);
+    mui('#sheet4').popover('toggle');
+  })
+
+
+
+  mui("#sheet4").on('tap', '.marketing', function () {
+    let val = this.getAttribute("val");
+    // console.log(4444);
+    switch (val) {
+      case 'duanxin':
+        location.href = '../views/SMS_marketing.html'
+        break;
+      case 'weixin':
+        location.href = '../views/Wechat_marketing.html'
+        break;
+      case 'shitu':
+        location.href = '../views/View_marketing.html'
+        break;
+      case 'kajuan':
+        location.href = '../views/Credit_marketing.html'
+        break;
+
+      default:
+        break;
+    }
+
+  })
+
+  var store = '';
+  var stores = [{
+    value: "first",
+    text: "华北一店"
+  }, {
+    value: "second",
+    text: "华北二店"
+  }]
+  var staff = '';
+  var staffs = [{
+    value: "first",
+    text: "王朝"
+  }, {
+    value: "second",
+    text: "马汉"
+  }]
+  var mode = '';
+  var modes = [{
+    value: "first",
+    text: "华北专场"
+  }, {
+    value: "second",
+    text: "荣耀专场"
+  }]
+
+  var type_member = '';
+  var type_members = [{
+    value: "first",
+    text: "全部会员"
+  }, {
+    value: "second",
+    text: "会员二号"
+  }]
+  function classification(val) {
+    switch (val.getAttribute("val")) {
+      case 'organization':
+        document.getElementById("wuxian").classList.remove("display_none")
+        break;
+      case 'store':
+        document.getElementById("cover").classList.add("mengban")
+        let vip_store = new mui.PopPicker();
+        vip_store.setData(stores);
+        vip_store.pickers[0].setSelectedValue(store, 2000);
+        vip_store.show(function (SelectedItem) {
+          document.getElementById("cover").classList.remove("mengban")
+          console.log(SelectedItem);
+          store = SelectedItem[0].value;
+          val.innerHTML = SelectedItem[0].text;
+        })
+        break;
+      case 'staff':
+        document.getElementById("cover").classList.add("mengban")
+        let vip_staff = new mui.PopPicker();
+        vip_staff.setData(staffs);
+        vip_staff.pickers[0].setSelectedValue(staff, 2000);
+        vip_staff.show(function (SelectedItem) {
+          document.getElementById("cover").classList.remove("mengban")
+          console.log(SelectedItem);
+          staff = SelectedItem[0].value;
+          val.innerHTML = SelectedItem[0].text;
+        })
+        break;
+      case 'choose_zhuanchang':
+        document.getElementById("cover").classList.add("mengban")
+        let vip_choose = new mui.PopPicker();
+        vip_choose.setData(modes);
+        vip_choose.pickers[0].setSelectedValue(mode, 2000);
+        vip_choose.show(function (SelectedItem) {
+          document.getElementById("cover").classList.remove("mengban")
+          console.log(SelectedItem);
+          mode = SelectedItem[0].value;
+          val.innerHTML = SelectedItem[0].text;
+        })
+        break;
+      case 'all_members':
+        document.getElementById("cover").classList.add("mengban")
+        let vip_members = new mui.PopPicker();
+        vip_members.setData(type_members);
+        vip_members.pickers[0].setSelectedValue(type_member, 2000);
+        vip_members.show(function (SelectedItem) {
+          document.getElementById("cover").classList.remove("mengban")
+          console.log(SelectedItem);
+          type_member = SelectedItem[0].value;
+          val.innerHTML = SelectedItem[0].text;
+        })
+        break;
+
+      default:
+        console.log(9999);
+    }
+    mui(".mui-poppicker-header").on('tap', '.mui-poppicker-btn-cancel', function () {
+      document.getElementById("cover").classList.remove("mengban");
+    })
+  }
+  // 多选
+  let checkedss = document.getElementsByName("vip_select");
+  function check(val) {
+    if (val.checked==true) {
+      // 全选
+      console.log('全选');
+      for (let i = 0; i < checkedss.length; i++) {
+        checkedss[i].classList.add('stars');
+      }
+    } else {
+      console.log('单选');
+      for (let i = 0; i < checkedss.length; i++) {
+        checkedss[i].classList.remove('stars');
+      }
+    }
+  }
+</script>
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="../mui/css/mui.min.css">
+	<script src="../mui/js/mui.min.js"></script>
+	<script src="../js/vconsole.js"></script>
+	<!-- <script src="../js/hidden-titile.js"></script> -->
+	<link rel="stylesheet" href="../mui/css/mui.dtpicker.css">
+	<script src="../mui/js/mui.dtpicker.js"></script>
+	<link rel="stylesheet" href="../mui/css/mui.picker.min.css">
+	<script src="../mui/js/mui.picker.min.js"></script>
+	<link rel="stylesheet" href="../css/Animate.css">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/loading.js"></script>
+	<link rel="stylesheet" href="../css/loading.css">
+	<link rel="stylesheet" href="../list/all_css/all_bj.css">
+	<link rel="stylesheet" href="../list/all_css/all_popup.css">
+	<link rel="stylesheet" href="../list/all_css/wx_condition_group.css">
+	<title>顾客画像</title>
+</head>
+
+<body class="suoke">
+
+	<!-- 侧滑导航根容器 -->
+	<!-- 手势动作 mui-draggable -->
+	<div class="mui-off-canvas-wrap   mui-slide-in mui-content mui-draggable">
+		<!-- 主页面容器 -->
+		<div class="mui-inner-wrap">
+			<!-- 菜单容器 -->
+			<aside class="mui-off-canvas-right suoke">
+				<header class="mui-bar mui-bar-nav white_color suoke_header">
+					<a class="mui-icon mui-icon-back " style="color:white;" id="close_moban"></a>
+					<h1 class="mui-title" style="color:white;">画像模板</h1>
+				</header>
+				<!-- <div class="mui_radios"> -->
+					<div class="mui-scroll"style="top: 44px;">
+						<div id="stionTbale">
+							<table class="gridtable">
+								<tr>
+									<th style="width: 30%;">模板名称</th>
+									<th style="width: 70%;">上衣s码</th>
+								</tr>
+								<tr >
+									<td style="width: 30%;">操作按钮</td>
+									<td style="width: 70%;padding-left: 0px; padding-right: 0px;">
+										<span class="buttoss" type="s">筛选</span>
+										<span class="buttoss" type="x">详情</span>
+										<span class="buttoss" type="c">删除</span>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				<!-- </div> -->
+			</aside>
+			<!-- 主页面标题 -->
+			<!--  头部-->
+			<header class="mui-bar mui-bar-nav white_color suoke_header">
+				<a class="mui-icon mui-icon-back mui-action-back" style="color:white;"></a>
+				<h1 class="mui-title" style="color:white;">顾客画像</h1>
+				<span style="float:right;line-height:44px;color:white;" id="show_moban">模板</span>
+				<!-- 浮动显示 -->
+				<div class="group_tj animated flipInY transparent suoke_header">
+					<div class="mui-row" style="text-align: center;padding-bottom: 7px;">
+						<div class="mui-col-xs-4 mui-col-sm-4">
+							<button type="button" class="mui-btn mui-btn-warning transparent"
+								style="font-size: 12px;border: 1px solid rgba(255, 255, 255, 0.42);"
+								onclick="cancel()">重置筛选</button>
+						</div>
+						<div class="mui-col-xs-4 mui-col-sm-4">
+							<button type="button" class="mui-btn mui-btn-warning transparent"
+								style="font-size: 12px;border: 1px solid rgba(255, 255, 255, 0.42);"
+								onclick="preservation()">保存模板</button>
+						</div>
+						<div class="mui-col-xs-4 mui-col-sm-4">
+							<button type="button" class="mui-btn mui-btn-primary transparent"
+								style="font-size: 12px;border: 1px solid rgba(255, 255, 255, 0.42);"
+								onclick="javascript:location.href='screen_member.html'">确定筛选</button>
+						</div>
+					</div>
+				</div>
+			</header>
+			<!-- 主页面内容容器 -->
+			<div class="mui-scroll-wrapper mui_radios">
+				<div class="mui-scroll" style="padding-top: 120px;">
+
+					<!-- 主界面具体展示内容 -->
+					<!-- 消费相关 -->
+					<fieldset class="group_show" style="margin-top: 0px;">
+						<legend>消费相关</legend>
+						<div class="checkboxStyle2" id="members_data">
+							<!-- 消费金额 -->
+							<!-- <div class="opop">总消费额:</div>
+							<div class="mui-row">
+								<div class="mui-col-xs-4 mui-col-sm-4 s_radio ">
+									<p class="labsss">后端但是</p>
+								</div>
+							</div> -->
+						</div>
+
+						<!-- 商品状态 -->
+						<div class="mui-input-group transparent" style="color: white;">
+							<div class="mui-input-row mui-radio">
+								<label>性别:</label>
+								<input name="radio1" type="radio" value="789"><span>男</span>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<input name="radio1" type="radio"><span>女</span>
+							</div>
+							<div class="mui-input-row">
+								<label>级别:</label>
+								<label class="opop2 color_bbb labels classification">请选择分类</label>
+							</div>
+
+							<div class="mui-input-row">
+								<label>门店:</label>
+								<label class="opop2 color_bbb labels classification2">请选择分类</label>
+							</div>
+						</div>
+
+					</fieldset>
+
+					<div class="mui-row mui-table-view transparent" style="padding-top: 5px; padding-bottom: 15px;">
+
+						<fieldset class="group_show">
+							<legend>自我评价</legend>
+							<div class="checkboxStyle">
+								<div class="opop">总消费额:</div>
+								<div class="mui-row">
+									<div class="mui-col-sm-3 mui-col-xs-3">
+										<input type="checkbox" id="love1" name="chexkbox_test" value="阳光开朗"
+											onclick="checkboxOnclick(this)" />
+										<label for="love1">阳光开朗</label>
+									</div>
+									<div class="mui-col-sm-3 mui-col-xs-3">
+										<input type="checkbox" id="love2" name="chexkbox_test" value="成熟稳重"
+											onclick="checkboxOnclick(this)" />
+										<label for="love2">成熟稳重</label>
+									</div>
+									<div class="mui-col-sm-3 mui-col-xs-3">
+										<input type="checkbox" id="love3" name="chexkbox_test" value="雷厉风行"
+											onclick="checkboxOnclick(this)" />
+										<label for="love3">雷厉风行</label>
+									</div>
+									<div class="mui-col-sm-3 mui-col-xs-3">
+										<input type="checkbox" id="love4" name="chexkbox_test" value="执行力强"
+											onclick="checkboxOnclick(this)" />
+										<label for="love4">执行力强</label>
+									</div>
+								</div>
+
+							</div>
+						</fieldset>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+<script src="../list/all_js/wx_condition_group.js"></script>
+
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>会员列表</title>
+    <link href="../mui/css/mui.min.css" rel="stylesheet" />
+    <script src="../mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="../mui/css/mui.picker.min.css">
+    <script src="../mui/js/mui.picker.min.js"></script>
+    <link rel="stylesheet" href="../fonts/iconfont_centent.css">
+    <script src="../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/loading.css">
+    <script src="../js/loading.js"></script>
+    <script src="../list/all_js/all.js"></script>
+    <link rel="stylesheet" href="../list/all_css/all_bj.css">
+    <link rel="stylesheet" href="../list/all_css/all_popup.css">
+    <link rel="stylesheet" href="./list/css/member_card_details.css">
+    <style>
+        .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+            color: #ffffff !important;
+            border-bottom: 2px solid #EEEFEF;
+            background: 0 0;
+        }
+    </style>
+</head>
+
+<body class="suoke">
+    <header class="mui-bar mui-bar-nav  white_color suoke_header">
+        <a class="mui-icon mui-icon-back mui-action-back" style="color:white;"></a>
+        <h1 class="mui-title white_color" style="width: 30%; margin: 0 auto;" id="vip_title">我的卡劵</h1>
+    </header>
+    <div class="mui-content" id="ppppp">
+        <div class="mui-row">
+            <div id="sliderSegmentedControl"
+                class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                <a class="mui-control-item mui-active border-b" style="width: 1%;color: rgba(255, 255, 255, 0.74);"
+                    type="not">未使用</a>
+                <a class="mui-control-item" style="width: 1%;color: rgba(255, 255, 255, 0.74);" type="already">已使用</a>
+                <a class="mui-control-item" style="width: 1%;color: rgba(255, 255, 255, 0.74);" type="overdue">已过期</a>
+            </div>
+        </div>
+        <div id="pullrefresh" class="mui-scroll-wrapper" style="top:84px">
+            <div class="mui-scroll">
+                <!--这里放置真实显示的DOM内容-->
+                <div class="dat_query2" id="not">
+                    <div class="mui-row">
+                        <div class="mui-col-xs-6 mui-col-sm-6 lefts">
+                            <p>水杯</p>
+                        </div>
+                        <div class="mui-col-xs-6 mui-col-sm-6  rights">
+                            <p>水杯222</p>
+                        </div>
+                        <div class="mui-col-xs-8 mui-col-sm-8">
+                            <p>水杯</p>
+                        </div>
+                        <div class="mui-col-xs-4 mui-col-sm-4 rights">
+                            <p>礼品卷</p>
+                        </div>
+                        <div class="mui-col-xs-12 mui-col-sm-12">只限正品商品使用,特价商品和活动不可用</div>
+                        <div class="mui-col-xs-12 mui-col-sm-12">2021年4月9日09:57:32</div>
+                    </div>
+
+                </div>
+                <div class="dat_query2 display_none" id="already">
+                    <div class="mui-row">
+                        <div class="mui-col-xs-6 mui-col-sm-6 lefts">
+                            <p>水杯2</p>
+                        </div>
+                        <div class="mui-col-xs-6 mui-col-sm-6  rights">
+                            <p>水杯222</p>
+                        </div>
+                        <div class="mui-col-xs-8 mui-col-sm-8">
+                            <p>水杯</p>
+                        </div>
+                        <div class="mui-col-xs-4 mui-col-sm-4 rights">
+                            <p>礼品卷</p>
+                        </div>
+                        <div class="mui-col-xs-12 mui-col-sm-12">只限正品商品使用,特价商品和活动不可用</div>
+                        <div class="mui-col-xs-12 mui-col-sm-12">2021年4月9日09:57:32</div>
+                    </div>
+                </div>
+                <div class="dat_query2 display_none" id="overdue">
+                    <div class="mui-row">
+                        <div class="mui-col-xs-6 mui-col-sm-6 lefts">
+                            <p>水杯3</p>
+                        </div>
+                        <div class="mui-col-xs-6 mui-col-sm-6  rights">
+                            <p>水杯222</p>
+                        </div>
+                        <div class="mui-col-xs-8 mui-col-sm-8">
+                            <p>水杯</p>
+                        </div>
+                        <div class="mui-col-xs-4 mui-col-sm-4 rights">
+                            <p>礼品卷</p>
+                        </div>
+                        <div class="mui-col-xs-12 mui-col-sm-12">只限正品商品使用,特价商品和活动不可用</div>
+                        <div class="mui-col-xs-12 mui-col-sm-12">2021年4月9日09:57:32</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script>
+
+    mui("#pullrefresh").on('tap', '.mui-row', function () {
+        console.log(9999);
+        location.href = "./member_card_details_xiangqing.html"
+    })
+    mui("#sliderSegmentedControl").on('tap', '.mui-control-item', function () {
+        console.log(9999);
+        document.getElementById("not").classList.add("display_none");
+        document.getElementById("already").classList.add("display_none");
+        document.getElementById("overdue").classList.add("display_none");
+        let type = this.getAttribute("type");
+        switch (type) {
+            case 'not':
+                document.getElementById("not").classList.remove("display_none");
+                break;
+            case 'already':
+                document.getElementById("already").classList.remove("display_none")
+                break;
+            case 'overdue':
+                document.getElementById("overdue").classList.remove("display_none")
+                break;
+            default:
+                break;
+        }
+    })
+
+
+    mui('.mui-scroll-wrapper').scroll({
+        deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+    });
+
+    mui.init({
+        pullRefresh: {
+            container: '#pullrefresh',
+            up: {
+                contentrefresh: '正在加载...',
+                auto: false,//可选,默认false.首次加载自动上拉刷新一次
+                callback: pullupRefresh
+            }
+        }
+    });
+    /**
+     * 上拉加载具体业务实现
+     */
+    // 重新开启加载
+    // mui('#pullrefresh').pullRefresh().refresh(true);
+    // 分页计数
+    var count = 0;
+    // 分的条数
+    var limit_num = 30;
+
+    function pullupRefresh() {
+        setTimeout(function () {
+            mui('#pullrefresh').pullRefresh().endPullupToRefresh((count > (count / limit_num))); //参数为true代表没有更多数据了。
+            console.log('加载');
+        }, 1000);
+    }
+
+
+    mui(".suoke_header").on('tap', '.icon-qunfa1', function () {
+        console.log(4444);
+        mui('#sheet4').popover('toggle');
+    })
+
+
+
+
+</script>
+
+</html>

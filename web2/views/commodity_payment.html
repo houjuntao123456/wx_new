@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximu-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="../mui/css/mui.min.css">
+    <script src="../mui/js/mui.js"></script>
+    <script src="../fonts/iconfont/iconfont.js"></script>
+    <link rel="stylesheet" href="../mui/css/mui.picker.min.css">
+    <script src="../mui/js/mui.picker.min.js"></script>
+    <link rel="stylesheet" href="../mui/css/icons-extra.css">
+    <link rel="stylesheet" href="../mui/fonts/mui-icons-extra.ttf">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery-qrcode.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="../css/loading.css">
+    <link rel="stylesheet" href="./../list/all_css/all_bj.css">
+    <link rel="stylesheet" href="./../list/all_css/commodity_payment.css">
+    <script src="../js/loading.js"></script>
+    <title>消费收银</title>
+</head>
+
+
+<body class="suoke">
+    <!-- 侧滑导航根容器mui-draggable -->
+    <div class="mui-off-canvas-wrap mui-slide-in suoke">
+        <!-- 菜单容器 -->
+        <aside class="mui-off-canvas-right">
+            <header class="mui-bar mui-bar-nav mui-bar-nav-bg transparent suoke_header">
+                <a href="" class="mui-icon mui-icon-back" style="color:white;" id="back_kjWrite"></a>
+                <h1 class="mui-title" style="color:white;">添加商品</h1>
+                <span class="mui-icon mui-icon-search" style="float: right;color: white;" id="searchs"></span>
+            </header>
+            <div id="pullrefresh" class="mui-scroll-wrapper suoke_header" style="top: 44px;">
+                <div class="mui-scroll">
+                    <ul class="mui-table-view" id="add_shoppings_center" style="background-color: rgba(255, 255, 255, 0.16); color:rgba(255, 255, 255, 0.7);">
+                        <li class="mui-table-view-cell mui-media transparent">
+                            <a href="javascript:;">
+                                <img class="mui-media-object mui-pull-left"
+                                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1604657237294&di=3c7f506d2c832f352bc41e972305228d&imgtype=0&src=http%3A%2F%2Fa1.att.hudong.com%2F05%2F00%2F01300000194285122188000535877.jpg">
+                                <div class="mui-media-body">
+                                    <span>小猫咪</span>
+                                    <p class='mui-ellipsis'>
+                                    <p>IGX-6531300126</p>
+                                    <p>红色</p>
+                                    <p>999元</p>
+                                    </p>
+                                    <button type="button" class="mui-btn mui-btn-primary"
+                                        style="position: absolute;top: 33%;right: 10px;"
+                                        onclick="add_shop(this)"
+                                        img="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1604657237294&di=3c7f506d2c832f352bc41e972305228d&imgtype=0&src=http%3A%2F%2Fa1.att.hudong.com%2F05%2F00%2F01300000194285122188000535877.jpg"
+                                        name="小猫咪"
+                                        color="黄色"
+                                        sizes="28"
+                                        price="12.9"
+                                        >添加</button>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <!-- 主页面容器 -->
+        <div class="mui-inner-wrap transparent">
+            <header class="mui-bar mui-bar-nav mui-bar-nav-bg suoke_header">
+                <a href="" class="mui-icon mui-icon-back mui-action-back" style="color:white;"></a>
+                <h1 class="mui-title" style="color:white;">消费收银</h1>
+            </header>
+            <div class="mui-content mui-scroll-wrapper transparent" style="bottom: 108px;">
+                <div class="mui-scroll">
+                    <!-- 主界面具体展示内容 -->
+                    <ul class="mui-table-view mui-tell_bg transparent" style="border-radius: 12px;">
+                        <li id="member_ziliao" class="mui-table-view-cell mui-collapse mui-active xinxi"
+                            style="border-radius: 12px 12px 0px 0px;">
+                            <a href="#">会员信息
+                                <span class="switch_member"
+                                    style="float: right; color: #D85959;font-size: medium;text-decoration:underline;">
+                                    切换会员
+                                </span></a>
+                            <div class="mui-collapse-content">
+
+                                <form class="mui-input-group suoke_header">
+                                    <div class="mui-input-row">
+                                        <label>会员卡号</label>
+                                        <input type="text" disabled id="member_code">
+                                    </div>
+                                    <div class="mui-input-row">
+                                        <label>会员姓名</label>
+                                        <input type="text" disabled id="member_username">
+                                    </div>
+                                    <div class="mui-input-row">
+                                        <label>会员级别</label>
+                                        <input type="text" disabled id="member_vlname" class="input_style_left">
+                                        <input type="text" id="member_discount" class="input_style_right">
+                                        </span>
+
+
+                                    </div>
+                                    <!-- <div class="mui-input-row">
+                                        <label>级别折扣</label>
+                                        <input type="text" disabled id="member_discount">
+                                    </div> -->
+                                    <div class="mui-input-row">
+                                        <label>手机号</label>
+                                        <input type="text" disabled id="member_phone">
+                                    </div>
+                                    <div class="mui-input-row">
+                                        <label>会员钱包</label>
+                                        <input type="text" disabled id="member_money">
+                                    </div>
+                                    <div class="mui-input-row">
+                                        <label>会员生日</label>
+                                        <input type="text" disabled id="member_birthday" class="input_style_left">
+                                        <input type="text" disabled id="member_bir_a" class="input_style_right">
+                                    </div>
+                                    <!-- <div class="mui-input-row">
+                                        <label>生日专享</label>
+                                        <input type="text" disabled id="member_bir_a">
+                                    </div> -->
+
+
+                                </form>
+                            </div>
+                        </li>
+                        <li class="mui-table-view-cell mui-collapse xinxi" style="border-radius: 0px 0px 12px 12px;"
+                            id="shangpin">
+                            <a href="#">商品信息
+                                <span class="add_shoping"
+                                    style="float: right; color: #D85959;font-size: medium;text-decoration:underline;">
+                                    添加商品
+                                </span></a>
+
+                            <div class="mui-collapse-content" style="background-color: rgba(255, 255, 255, 0);">
+                                <ul class="mui-table-view" style="background-color: rgba(255, 255, 255, 0);"
+                                    id="add_shoppings_look">
+                                    <li class="mui-table-view-cell mui-media" style="padding-left: 15px;">
+                                        <a href="javascript:;">
+                                            <img class="mui-media-object mui-pull-left"
+                                                src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1604657237294&di=3c7f506d2c832f352bc41e972305228d&imgtype=0&src=http%3A%2F%2Fa1.att.hudong.com%2F05%2F00%2F01300000194285122188000535877.jpg">
+                                            <div class="mui-media-body" style="padding-top: 10px;">
+                                                <span>小猫咪</span>
+                                                <p class='mui-ellipsis'>
+                                                <p>IGX-6531300126</p>
+                                                <p>红色</p>
+                                                <p>999元</p>
+                                                </p>
+                                                <button type="button" class="mui-btn mui-btn-primary"
+                                                    style="position: absolute;top: 33%;right: 10px;">删除</button>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- 结算方式和支付方式 -->
+                    <div class="transparent" id="id_pay_result" style="width: 100%; z-index: 5;padding-top: 10px;">
+                        <div class="pay_reuslt">
+
+                            <h4 class="result" style="color: rgba(255, 255, 255, 0.7);">结算信息:
+                                <span id="span_wx_show"
+                                    style="color: #D85959;font-size: medium;text-decoration: underline;">(微信支付)</span>
+
+                                <span id="span_zfb_show" class="dis"
+                                    style="color: #D85959;font-size: medium;text-decoration: underline;">(支付宝支付)</span>
+
+                                <span id="span_qt_show" class="dis"
+                                    style="color: #D85959;font-size: medium;text-decoration: underline;">(会员钱包)</span>
+
+                                <span id="span_cash_show" class="dis"
+                                    style="color: #D85959;font-size: medium;text-decoration: underline;">(现金)</span>
+                            </h4>
+                            <ul class="ui_class">
+                                <li class="yhk_pay">卡劵: <span id="yh_card">0.00</span> <span class="mui-icon mui-icon-arrowdown"
+                                        style="float: right;"></span></li>
+                                <li class="">储值: <input type="number" id="stored" class="text_style" placeholder="0.00"> <span id="storeds"></span> </li>
+                                <li class="">积分: <input type="number" id="integral" class="text_style" placeholder="0.00"> <span id="integrals"></span> </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+            <div style="border-top: 1px solid #CAC3C3; 
+                position: absolute;bottom: 0px;width: 100%;
+                   background-color: rgba(240, 248, 255, 0.13);
+                border-top: 1px solid #ccc;">
+                <div>
+                    <!-- <p class="yansghi1">
+                        <span>总计:<span id="result_price">0.00</span></span>
+                    </p> -->
+                    <p class="yansghi2">
+                        <span>应付: <span style="color: red;font-size: 20px;">¥</span> <span id="result_result"
+                                style="color: red;font-size: 24px;">0.00</span></span>
+                    </p>
+
+                </div>
+                <div class="but">
+                    <!-- 微信支付(1888.88元) -->
+                    <div id="wx_pays">
+                        <p class="but_ps" name="wx_saoma" onclick="javascript:top.location.href='payment.html'"><span class="mui-icon mui-icon-weixin"></span>微信支付</p>
+                        <p class="but_ps" name="wx_money" onclick="JavaScript:top.location.href='scan_code_payment.html'"><span class="mui-icon-extra mui-icon-extra-prech"
+                                style="position: relative;top:3px"></span>直接结算</p>
+                    </div>
+                    <div id="zfb_pays" class="dis">
+                        <p class="but_ps" name="zfb_saoma"><span class="mui-icon-extra mui-icon-extra-alipay"
+                                style="position: relative;top:3px"></span>支付宝支付</p>
+                    </div>
+
+                    <div id="qt_pays" class="dis">
+                        <p class="but_ps" name="qt_money"><span class="mui-icon-extra mui-icon-extra-card"
+                                style="position: relative;top:1px;font-size: 28px;"></span>会员钱包</p>
+                    </div>
+                    <div id="cash_pays" class="dis">
+                        <p class="but_ps" name="cash_money">
+                            <span class="mui-icon-extra mui-icon-extra-gold"
+                                style="position: relative;top:4px;font-size: 28px;"></span>
+                            现金
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+<script src="../list/all_js/commodity_payment.js"></script>
+</html>

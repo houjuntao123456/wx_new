@@ -1,0 +1,45 @@
+        .span_size {
+            color: white;
+            font-size: 2.5rem;
+          
+        }
+        li {
+            list-style: none;
+            background-color: white;
+            text-align: center;
+        }
+        p {
+            color: white;
+            padding-top: 10px;
+            /* font-size: 17px; */
+        }
+         .mui-table-view-cell p{
+            letter-spacing: 0px;
+            font-size: 10px;
+        }
+         .div_small_y::after{
+            height: 906px;
+            top: -250px;
+        }
+        .pp::after{
+            left: 25%;
+        }
+         .pp2::after{
+            left: 75%;
+        }
+        .mui-table-view-cell {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        .mui-col-xs-3,mui-col-sm-3{
+            padding-bottom: 30px;
+        }
+        .xx::after{
+            top: 95px;
+        }
+        .xx2::after{
+            top: 206px;
+        }
+        .xx3::after{
+            top: 318px;
+        }

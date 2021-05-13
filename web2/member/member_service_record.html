@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <title>服务记录</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="../mui/css/mui.min.css" rel="stylesheet" />
+    <script src="../mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="../mui/css/mui.picker.min.css">
+    <link rel="stylesheet" href="./../list/all_css/all_bj.css">
+    <link rel="stylesheet" href="./list/css/member_service_record.css">
+</head>
+
+<body class="suoke">
+    <!-- 头部 -->
+    <header class="mui-bar mui-bar-nav  white_color suoke_header">
+        <a class="mui-icon mui-icon-back mui-action-back" style="color:white;"></a>
+        <h1 class="mui-title white_color">服务记录</h1>
+    </header>
+    <div class="mui-content">
+        <!-- 规格信息图表 -->
+        <div id="pullrefresh" class="mui-scroll-wrapper" style="top:44px">
+            <div class="mui-scroll">
+                <div class="jl">
+                    <div class="mui-row">
+                        <div class="mui-col-xs-6 mui-col-sm-6">免费打包包打理:</div>
+                        <div class="mui-col-xs-6 mui-col-sm-6"><button type="button" class="mui-btn buts">查看</button>
+                        </div>
+                    </div>
+                    <div class="mui-row">
+                        <div class="mui-col-xs-5 mui-col-sm-5">免费次数:10次</div>
+                        <div class="mui-col-xs-7 mui-col-sm-7">剩余次数:10次</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    mui("#pullrefresh").on('tap', '.buts', function () {
+        console.log(9999);
+        location.href = "./member_service_record_see.html"
+    })
+    mui('.mui-scroll-wrapper').scroll({
+        deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+    });
+
+    mui.init({
+        pullRefresh: {
+            container: '#pullrefresh',
+            up: {
+                contentrefresh: '正在加载...',
+                auto: false,//可选,默认false.首次加载自动上拉刷新一次
+                callback: pullupRefresh
+            }
+        }
+    });
+    /**
+     * 上拉加载具体业务实现
+     */
+    // 重新开启加载
+    // mui('#pullrefresh').pullRefresh().refresh(true);
+    // 分页计数
+    var count = 0;
+    // 分的条数
+    var limit_num = 30;
+
+    function pullupRefresh() {
+        setTimeout(function () {
+            mui('#pullrefresh').pullRefresh().endPullupToRefresh((count > (count / limit_num))); //参数为true代表没有更多数据了。
+            console.log('加载');
+        }, 1000);
+    }
+
+</script>
+
+</html>

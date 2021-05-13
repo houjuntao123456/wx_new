@@ -1,0 +1,123 @@
+/* 销售类别分析,组织,门店类别占比和分析 */
+.kkk {
+    padding: 10px;
+}
+
+h5 {
+    color: white;
+    overflow: hidden;
+    line-height: 27px;
+}
+
+.c_red {
+    color: rgb(245, 72, 72);
+}
+
+.c_green {
+    color: rgb(4, 196, 4);
+}
+
+.jll {
+    border: 1px solid rgba(255, 255, 255, 0.363);
+    border-radius: 5px;
+    text-align: left;
+    color: white;
+    padding: 20px 0px 20px 10px;
+}
+
+.labels {
+    width: 50% !important;
+    padding-left: 0px !important;
+}
+
+.opop::after {
+    content: '\e581';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    display: inline-block;
+    font-family: Muiicons;
+    font-size: inherit;
+    line-height: 1;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-font-smoothing: antialiased;
+}
+
+.color_bbb {
+    color: #D0DFE7;
+}
+
+.mui-input-row label {
+    width: 39%;
+    color: #D0DFE7;
+}
+
+input::-webkit-input-placeholder {
+    color: #D0DFE7;
+}
+
+input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #D0DFE7;
+}
+
+input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #D0DFE7;
+}
+
+input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #D0DFE7;
+}
+
+.mui-input-group::before {
+    background-color: rgb(255, 255, 255);
+    ;
+}
+
+.mui-input-group::after {
+    height: 0px;
+}
+
+#sheet3 {
+    max-width: 90% !important;
+    left: 5% !important;
+}
+
+.all {
+    color: white;
+    padding: 10px 0 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.37);
+}
+.all div:nth-child(1) {
+    padding-left: 15px;
+}
+.all div:nth-child(2) {
+    padding-right: 15px;
+    text-align: right;
+}
+
+
+.fenlei {
+    color: white;
+    padding: 5px 0 5px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.37);
+}
+.fenlei div:nth-child(1) {
+   padding-left: 25px;
+   padding-top: 15px;
+   padding-bottom: 10px;
+}
+.plefts p {
+    color: white;
+     padding-left: 25px;
+}
+.prights p{
+     color: white;
+      padding-left: 25px;
+     
+}

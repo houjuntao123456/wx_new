@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./../mui/css/mui.min.css" rel="stylesheet" />
+    <!-- <link href="./../mui/css/mui.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="../mui/css/mui.picker.min.css">
+    <script src="../mui/js/mui.js"></script>
+    <script src="../mui/js/mui.picker.min.js"></script>
+    <script src="../js/vconsole.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <!-- <script src="../js/hidden-titile.js"></script> -->
+    <link rel="stylesheet" href="../list/all_css/all_bj.css">
+    <link rel="stylesheet" href="../list/all_css/product_addition.css">
+    <title>添加商品</title>
+</head>
+
+<body class="suoke">
+    <header class="mui-bar mui-bar-nav  white_color suoke_header">
+        <a class="mui-icon mui-icon-back mui-action-back" style="color:white;"></a>
+        <h1 class="mui-title" style="color:white;">添加商品</h1>
+        <span style="float:right;line-height:44px;color:white;" id="show_moban">保存</span>
+    </header>
+    <div class="mui-content">
+        <div class="mui-input-group transparent">
+            <div class="mui-input-row">
+                <label><span>*</span> <span>商品名称:</span></label>
+                <input type="text" class="mui-input-clear" placeholder="请输入商品名称">
+            </div>
+            <div class="mui-input-row">
+                <label><span>*</span><span>商品货号:</span></label>
+                <input type="text" class="mui-input-clear" placeholder="请输入商品货号">
+            </div>
+            <div class="mui-input-row">
+                <label><span>*</span><span>商品售价:</span></label>
+                <input type="text" class="mui-input-clear" placeholder="请输入商品售价">
+            </div>
+            <div class="mui-input-row">
+                <label><span>*</span><span>选择分类:</span></label>
+                <label class="opop color_bbb labels" onclick="classification(this)">请选择分类</label>
+            </div>
+            <!-- <div class="mui-input-row">
+                <label><span>*</span><span>规格信息</span></label>
+                <label class="opop2 color_bbb labels2">请选择商品规格</label>
+                <button type="button" class="mui-btn mui-btn-primary button_style">重置</button>
+            </div> -->
+            <div class="mui-input-row mui-radio">
+                <label for="hjkahjf">&nbsp;&nbsp;<span>状态:</span></label>
+                <label>
+                    <span>
+                        <input id="zhengjia" name="radio1" type="radio" value="789">
+                        <label for="zhengjia" style="display:inline-block,">正价</label>
+                    </span>
+                    &nbsp;
+                    <span>
+                        <input id="tejia" name="radio1" type="radio">
+                        <label for="tejia">特价</label></span>
+                </label>
+                <div>
+                    <span class="xuanzeguige">选择规格</span>
+                    <span class="upTupian">上传图片</span>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <!-- 规格信息图表 -->
+        <div id="stionTbale">
+            <table class="gridtable">
+                <tr>
+                    <th>规格</th>
+                    <th>规格条码</th>
+                </tr>
+                <tr>
+                    <td>Text 1B</td>
+                    <td>Text 1C</td>
+                </tr>
+                <tr>
+                    <td>Text 2B</td>
+                    <td>Text 2C</td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <!-- 商品图片 -->
+        <input type="file" accept="image/*" multiple id="upload_picture" style="display: none;"
+            onchange="uploadImageHandle(this,0.5)">
+        <div class="upPhoto" style="text-align: center;">
+            <img src="../images/upT.png" alt="" height="250" width="250" id="photoUp">
+        </div>
+        <div class="mui-row mui-table-view transparent" style="padding-top: 15px; padding-bottom: 15px;">
+            <fieldset>
+                <legend></legend>
+                <div class="checkboxStyle">
+                    <div class="mui-row">
+                        <p>自我评价:</p>
+                        <div class="mui-col-sm-3 mui-col-xs-3">
+                            <input type="checkbox" id="love1" name="chexkbox_test" value="阳光开朗"
+                                onclick="checkboxOnclick(this)" />
+                            <label for="love1">阳光开朗</label>
+                        </div>
+                        <div class="mui-col-sm-3 mui-col-xs-3">
+                            <input type="checkbox" id="love2" name="chexkbox_test" value="成熟稳重"
+                                onclick="checkboxOnclick(this)" />
+                            <label for="love2">成熟稳重</label>
+                        </div>
+                        <div class="mui-col-sm-3 mui-col-xs-3">
+                            <input type="checkbox" id="love3" name="chexkbox_test" value="雷厉风行"
+                                onclick="checkboxOnclick(this)" />
+                            <label for="love3">雷厉风行</label>
+                        </div>
+                        <div class="mui-col-sm-3 mui-col-xs-3">
+                            <input type="checkbox" id="love4" name="chexkbox_test" value="执行力强"
+                                onclick="checkboxOnclick(this)" />
+                            <label for="love4">执行力强</label>
+                        </div>
+                    </div>
+
+                </div>
+            </fieldset>
+        </div>
+
+        <!-- 添加备注 -->
+        <div id="sheet3" class="suoke mui-popover mui-popover-centers mui-popover-action"
+            style="height: 100%;position: fixed;">
+            <div class="mui-scroll-wrapper" style="bottom: 50px;">
+                <div class="mui-scroll">
+                    <!-- 可选择菜单 -->
+                    <ul class="mui-table-view transparent" id="ccai">
+                        <li class="mui-table-view-cell">
+                            <div class="mui-input-row mui-checkbox mui-left">
+                                <label>侯军涛</label>
+                                <input name="checkbox1" value="Item 1" type="checkbox" checked>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="div_small_y pp"></div>
+            <p class="ppps">
+                <button type="button" class="mui-btn" onclick="selects(this)">全选</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+              
+                <button type="button" class="mui-btn mui-btn-success">确定</button>
+            </p>
+
+        </div>
+</body>
+<script src="../list/all_js/product_addition.js"></script>
+
+</html>

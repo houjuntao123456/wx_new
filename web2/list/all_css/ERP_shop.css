@@ -1,0 +1,194 @@
+/* 组织回购查询*/
+.labels {
+	width: 50% !important;
+	padding-left: 0px !important;
+}
+
+.opop::after {
+	content: '\e581';
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	display: inline-block;
+	font-family: Muiicons;
+	font-size: inherit;
+	line-height: 1;
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	-webkit-font-smoothing: antialiased;
+}
+
+.color_bbb {
+	color: #D0DFE7;
+}
+
+.mui-input-row label {
+	width: 39%;
+	color: #D0DFE7;
+}
+
+input::-webkit-input-placeholder {
+	color: #D0DFE7;
+}
+
+input::-moz-placeholder {
+	/* Mozilla Firefox 19+ */
+	color: #D0DFE7;
+}
+
+input:-moz-placeholder {
+	/* Mozilla Firefox 4 to 18 */
+	color: #D0DFE7;
+}
+
+input:-ms-input-placeholder {
+	/* Internet Explorer 10-11 */
+	color: #D0DFE7;
+}
+
+.mui-input-group::before {
+	background-color: rgb(255, 255, 255);
+	;
+}
+
+.mui-input-group::after {
+	height: 0px;
+}
+
+#sheet3 {
+	max-width: 90% !important;
+	left: 5% !important;
+}
+
+.dat_query .mui-row {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.336);
+
+}
+
+.dat_query .mui-row .mui-col-xs-12,
+.dat_query2 .mui-row .mui-col-xs-12,
+.dat_query3 .mui-row .mui-col-xs-12 {
+	color: white;
+	font-size: 16px;
+	padding-left: 20px;
+	line-height: 40px;
+
+}
+
+.dat_query .mui-row .mui-col-xs-4 p {
+	color: white;
+	font-size: 15px;
+	text-align: center;
+
+}
+
+.dat_query2 {
+	width: 95%;
+	margin: auto;
+}
+
+.dat_query2 .mui-row {
+	border: 1px solid rgba(255, 255, 255, 0.342);
+	border-radius: 5px;
+	margin-top: 10px;
+}
+
+.dat_query2 .mui-row .mui-col-xs-6 p {
+	color: white;
+	font-size: 15px;
+	text-align: center;
+
+}
+.dat_query3 {
+	width: 95%;
+	margin: auto;
+}
+
+.dat_query3 .mui-row {
+	border: 1px solid rgba(255, 255, 255, 0.342);
+	border-radius: 5px;
+	margin-top: 10px;
+}
+.dat_query3 .mui-row .mui-col-xs-6 p {
+	padding-bottom: 8px;
+	color: white;
+	font-size: 15px;
+	text-align: center;
+}
+.dat_query3 .mui-row .mui-col-xs-6 p:nth-child(2n) {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.308);
+	border-top: 1px solid rgba(255, 255, 255, 0.308);
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.dat_query_card .mui-row {
+	padding-bottom: 12px;
+}
+.dat_query_card .mui-row .mui-col-xs-6 p {
+	width: 80%;
+	border: 1px solid white;
+	border-radius: 5px;
+	margin: 10px auto;
+	padding: 3px 0px;
+
+}
+
+.dat_query_card .mui-row .mui-col-xs-6 .wcl {
+	color: white;
+	line-height: 88px;
+	padding-left: 30px
+}
+
+.dat_query_card .mui-row .mui-col-xs-6 .circle {
+	text-align: center;
+	color: white;
+	position: absolute;
+	top: 15px;
+	right: 28px;
+}
+
+table.gridtable tr td span {
+	padding: 5px 18px;
+	border: 1px solid white;
+	border-radius: 5px;
+}
+table.gridtable{
+	width: 100%;
+	font-size: 14px;
+	    letter-spacing: 0px;
+}
+table.gridtable td {
+	text-align: center;
+}
+table.gridtable tr td {
+	padding: 8px 0px !important;
+	background-color: #dedede00;
+	border: 1px solid rgba(255, 255, 255, 0.34);
+}
+/* table.gridtable th:nth-child(1) {
+	text-align: center;
+	width: 40%;
+}
+table.gridtable th:nth-child(2) {
+	text-align: center;
+	width: 30%;
+}
+table.gridtable th:nth-child(3) {
+	text-align: center;
+	width: 30%;
+}
+
+table.sees tr td:nth-child(1) {
+	width: 25%;
+}
+table.sees tr td:nth-child(2) {
+	width: 50%;
+}
+table.sees tr td:nth-child(3) {
+	width: 25%;
+} */

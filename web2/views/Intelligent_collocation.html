@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./../mui/css/mui.min.css" rel="stylesheet" />
+    <script src="../mui/js/mui.js"></script>
+    <script src="../js/vconsole.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/loading.js"></script>
+    <link rel="stylesheet" href="../css/loading.css">
+    <link rel="stylesheet" href="../list/all_css/all_bj.css">
+    <link rel="stylesheet" href="../list/all_css/commodity_management.css">
+    <title>智能搭配</title>
+    <style>
+        .mui-search .mui-placeholder {
+            right: 0px;
+            text-align: center;
+            color: #E4E4E4;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body class="suoke">
+    <header class="mui-bar mui-bar-nav white_color suoke_header">
+        <a href="javascript:history.go(-1)" class="mui-icon mui-icon-back" style="color:white;"></a>
+        <h1 class="mui-title" style="color:white;margin: 0 auto; width: 50%;">智能搭配</h1>
+    </header>
+
+    <div class="mui-content">
+        <div class="mui-input-row mui-search searchss">
+            <input type="search" class="transparent" placeholder="输入货号或条码号">
+        </div>
+        <div id="pullrefresh" class="mui-scroll-wrapper" style="top:80px">
+            <div class="mui-scroll">
+                <!--这里放置真实显示的DOM内容-->
+
+                <ul class="mui-table-view transparent" style="margin-top: 0px;">
+                    <li class="mui-table-view-cell transparent">
+                        <div class="mui-row">
+                            <div class="mui-col-sm-4 mui-col-xs-4">
+                                <img src="../images/mark.png" alt="" width="100px" height="100px" style="margin-top: 15px;">
+                            </div>
+                            <div class="mui-col-sm-5 mui-col-xs-5 ctxt">
+                                <p>名称：雪尼尔外套</p>
+                                <p>货号：20154658789746544654</p>
+                                <p>条码：74546546</p>
+                                <p>规格：褐色 xl</p>
+                                <p>售价：888.88</p>
+                                <p>状态：正价/特价</p>
+                            </div>
+                            <div class="mui-col-sm-3 mui-col-xs-3 buts">
+                                <p class="memberp">会员</p>
+                                <p class="rfm">RFM</p>
+                            </div>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+<script src="../list/all_js/commodity_management.js">
+
+</script>
+<script>
+    mui(".buts").on('tap', '.memberp', function () {
+            //获取id
+            // var id = this.getAttribute("id");
+          location.href = 'screen_member_zhineng.html';
+        })
+         mui(".buts").on('tap', '.rfm', function () {
+                //获取id
+                // var id = this.getAttribute("id");
+                location.href = 'RFM.html';
+            })
+</script>
+</html>

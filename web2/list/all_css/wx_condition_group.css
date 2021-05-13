@@ -1,0 +1,212 @@
+.mui-off-canvas-left,
+.mui-off-canvas-right {
+    width: 100%;
+}
+
+body {
+    background-color: #fdfeff;
+
+}
+
+.group_tj {
+    padding-top: 3px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    box-shadow: #cecbcb 0px 0px 5px;
+    -webkit-box-shadow: #cecbcb 0px 0px 5px;
+    -moz-box-shadow: #cecbcb 0px 0px 5px;
+    background-color: #fdfeff;
+}
+
+.group_sx {
+    font-size: 10px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 4px;
+
+}
+
+.group_show {
+    /* padding-top: 20px;
+		border-bottom: 0px; */
+    border: 1px solid rgba(255, 255, 255, 0.29);
+    margin: 15px;
+}
+
+.group_show legend {
+    font-size: 17px;
+    font-family: fantasy;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+.jsdkaf {
+    overflow: hidden;
+    /*自动隐藏文字*/
+    text-overflow: ellipsis;
+    /*文字隐藏后添加省略号*/
+    white-space: nowrap;
+    -webkit-line-clamp: 1;
+    /*想要显示的行数*/
+    -webkit-box-orient: vertical;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+.checkboxStyle2 p {
+    padding: 5px;
+    width: 90%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.31);
+}
+
+.labsss {
+    background: url(../../images/ico_checkon.svg) no-repeat right bottom;
+    background-size: 25px 25px;
+    border: 1px solid #00a4ff !important;
+    border-radius: 5px !important;
+    background-color: #D4E7F5;
+    color: #00a4ff !important;
+}
+
+.labsss2 {
+    /* background: url(../../images/ico_checkon.svg) no-repeat right bottom; */
+    background-size: 25px 25px;
+    border: 1px solid #00a4ff !important;
+    border-radius: 5px !important;
+    background-color: #D4E7F5;
+    color: #00a4ff !important;
+}
+
+.opop {
+    font-size: smaller;
+    color: #ffffff;
+    padding-bottom: 8px;
+}
+
+.mui-radio label {
+    padding-right: 15px;
+    width: 30%;
+}
+
+.mui-radio input[type='radio'] {
+    position: relative !important;
+    float: none;
+    right: 0px;
+    top: 4px;
+}
+
+.color_bbb {
+    color: #ECECEC
+}
+
+.opop2::after {
+    content: '\e581';
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    display: inline-block;
+    font-family: Muiicons;
+    font-size: inherit;
+    line-height: 1;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-font-smoothing: antialiased;
+}
+
+.labels {
+    width: 50% !important;
+    padding-left: 0px !important;
+}
+
+.RadioStyle input,
+.checkboxStyle input {
+    display: none
+}
+
+.checkboxStyle label {
+    padding: 2px 5px 2px 5px;
+    line-height: 28px;
+    min-width: 75px;
+    text-align: center;
+    float: left;
+    margin: 0px;
+    border-radius: 5px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.74);
+    /* background: white; */
+    border: 1px solid rgba(255, 255, 255, 0.863);
+}
+
+.checkboxStyle input:checked+label {
+    background: url(../../images/ico_checkon.svg) no-repeat right bottom;
+    background-size: 18px 18px;
+    color: #00a4ff;
+    border-radius: 5px;
+    border: 1px solid #00a4ff;
+    background-color: #D4E7F5;
+    /* background: #d4e5f6; */
+}
+
+.mui-checkbox input[type=checkbox]:checked:before,
+.mui-radio input[type=radio]:checked:before {
+    color: #FFFFFF;
+}
+
+.inputss {
+    width: 40% !important;
+    height: 33px !important;
+    line-height: 36px !important;
+    margin: 10px 5px 2px 5px !important;
+    padding: 4px 8px 4px 8px !important;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.44) !important;
+    background-color: rgba(255, 255, 255, 0) !important;
+
+}
+
+ /* gridtable */
+ table.gridtable {
+     width: 95%;
+     /* font-family: verdana, arial, sans-serif; */
+     font-size: 16px;
+     letter-spacing: 3px;
+     color: white;
+     margin: 0 auto;
+     border: 1px solid rgba(255, 255, 255, 0.34);
+     border-collapse: collapse;
+ }
+
+ table.gridtable th {
+     padding: 8px;
+     border: 1px solid rgba(255, 255, 255, 0.34);
+     background-color: #dedede00;
+ }
+
+ table.gridtable td {
+     border: 1px solid rgba(255, 255, 255, 0.34);
+     padding: 10px;
+     text-align: center;
+     background-color: #ffffff00;
+ }
+.buttoss{
+    padding: 5px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.329);
+    border-radius: 5px;
+}

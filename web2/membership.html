@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>会员列表</title>
+  <link href="./mui/css/mui.min.css" rel="stylesheet" />
+  <script src="./mui/js/mui.min.js"></script>
+  <link rel="stylesheet" href="./mui/css/mui.picker.min.css">
+  <script src="./mui/js/mui.picker.min.js"></script>
+  <link rel="stylesheet" href="./fonts/iconfont_centent.css">
+  <script src="./js/jquery.min.js"></script>
+  <link rel="stylesheet" href="./js/jquery-ztree/3.5/css/simple/zTreeStyle.css">
+  <link rel="stylesheet" href="./js/jquery-ztree/3.5/css/metro/zTreeStyle.css">
+  <link rel="stylesheet" href="./js/jquery-ztree/3.5/css/default/zTreeStyle.css">
+  <script src="./js/jquery-ztree/3.5/js/jquery.ztree.all-3.5.js"></script>
+  <link rel="stylesheet" href="./css/loading.css">
+  <script src="./js/loading.js"></script>
+  <link rel="stylesheet" href="./list/all_css/all_bj.css">
+  <link rel="stylesheet" href="./list/all_css/all_popup.css">
+  <link rel="stylesheet" href="./list/all_css/membership.css">
+</head>
+
+<body class="suoke">
+  <header class="mui-bar mui-bar-nav  white_color suoke_header">
+    <div><span class="iconfont icon-person"></span>9999</div>
+    <div>
+      <span class="iconfont icon-shaixuan"></span>
+      <span class="iconfont icon-qunfa1"></span>
+    </div>
+    <h1 class="mui-title white_color" style="width: 50%;margin-left: auto;margin-right: auto;">会员列表</h1>
+  </header>
+  <div class="mui-content" id="ppppp">
+    <div id="cover"></div>
+    <div id="wuxian" class="jqban display_none">
+      <ul id="treeDemo" class="ztree"></ul>
+    </div>
+    <div id="pullrefresh" class="mui-scroll-wrapper" style="top:44px">
+      <div class="mui-scroll">
+        <ul class="mui-table-view transparent" style="margin-top: 0px;">
+          <li class="mui-table-view-cell mui-media transparent">
+            <a href="javascript:;">
+              <img class="mui-media-object mui-pull-left" src="./images/suokewhite2.png">
+              <div class="mui-media-body">
+                幸福
+                <p class='mui-ellipsis'>9999天未消费,9999天未回访</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+  </div>
+  <!-- 搜索 -->
+  <div id="sheet3" class="suoke sheet3 mui-popover mui-popover-centers mui-popover-action"
+    style="height: 100%;position: fixed;max-height: 244px !important;">
+    <div class="mui-scroll-wrapper" style="bottom: 50px;">
+      <div class="mui-scroll">
+        <br>
+        <!-- 可选择菜单 -->
+        <div class="mui-input-group transparent">
+          <div class="mui-input-row">
+            <label><span>选择组织:</span></label>
+            <label class="opop color_bbb labels" val="organization" id="v_organization"
+              onclick="classification(this)">请选择分类</label>
+          </div>
+          <div class="mui-input-row">
+            <label><span>选择门店:</span></label>
+            <label class="opop color_bbb labels" val="store" onclick="classification(this)">请选择分类</label>
+          </div>
+          <div class="mui-input-row">
+            <label><span>选择员工:</span></label>
+            <label class="opop color_bbb labels" val="staff" onclick="classification(this)">请选择分类</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="div_small_y pp"></div>-->
+    <p class="ppps">
+      <button type="button" class="mui-btn" onclick="selects(this)">查询</button>
+    </p>
+
+  </div>
+
+  <!-- 搜索 -->
+  <div id="sheet4" class="suoke sheet3 mui-popover mui-popover-centers mui-popover-action" style="height: 100%;position: fixed;max-height: 280px !important; width: 80%;
+    left: 10%;
+    border-radius: 10px;">
+    <h4 style="text-align: center; color: white;padding: 10px 0px;">精准营销工具</h4>
+    <div class="div_small_x"></div>
+    <div class="marketing" val="duanxin"
+      style="color: white;text-align: center;line-height: 40px;width: 80%;margin:10px auto;border: 1px solid rgba(255, 255, 255, 0.329);">
+      短信营销</div>
+    <div class="marketing" val="weixin"
+      style="color: white;text-align: center;line-height: 40px;width: 80%;margin:10px auto;border: 1px solid rgba(255, 255, 255, 0.329);">
+      微信营销</div>
+    <div class="marketing" val="shitu"
+      style="color: white;text-align: center;line-height: 40px;width: 80%;margin:10px auto;border: 1px solid rgba(255, 255, 255, 0.329);">
+      视图营销</div>
+    <div class="marketing" val="kajuan"
+      style="color: white;text-align: center;line-height: 40px;width: 80%;margin:10px auto;border: 1px solid rgba(255, 255, 255, 0.329);">
+      卡劵营销</div>
+  </div>
+</body>
+<script src="./list/all_js/jq_tree.js"></script>
+<script src="./list/all_js/new_data.js"></script>
+<script src="./list/all_js/membership.js"></script>
+
+</html>

@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>服务记录</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="../mui/css/mui.min.css" rel="stylesheet" />
+    <script src="../mui/js/mui.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../mui/css/mui.picker.min.css">
+    <link rel="stylesheet" href="./../list/all_css/all_bj.css">
+    <link rel="stylesheet" href="./../list/all_css/SMS_marketing.css">
+</head>
+
+<body class="suoke">
+    <!-- 头部 -->
+    <header class="mui-bar mui-bar-nav  white_color suoke_header">
+        <a class="mui-icon mui-icon-back mui-action-back" style="color:white;"></a>
+        <h1 class="mui-title white_color">短信群发</h1>
+    </header>
+    <div class="mui-content">
+        <!-- 规格信息图表 -->
+        <div style="height: 305px;position: relative;" id="xinxi">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+                    <div class="mui-row">
+                        <div class="mui-col-xs-10 mui-col-sm-10">模板名称:30分钟感谢回访</div>
+                        <div class="mui-col-xs-2 mui-col-sm-2 "> <span class="xz" value="30分钟感谢回访">选择</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footers_teach">
+            <textarea id="textArea" name="" cols="30" rows="5" placeholder="输入内容"></textarea>
+            <p style="padding-left: 15px; color: rgba(236, 235, 235, 0.932);">提示:67个字符算一条短信</p>
+        </div>
+        <div class="footers" style="line-height: 44px;">&nbsp;&nbsp;已输入 <span id="zishu">0</span> 个字 <span
+                class="button_style" style="float: right;">确定发送</span></div>
+    </div>
+</body>
+<script src="../list/all_js/SMS_marketing.js"></script>
+</html>

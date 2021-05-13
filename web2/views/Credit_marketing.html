@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <title>卡劵营销</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="../mui/css/mui.min.css" rel="stylesheet" />
+    <script>window.FastClick = true;</script>
+    <script src="../mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="../mui/css/mui.picker.min.css">
+    <script src="../mui/js/mui.picker.min.js"></script>
+    <link rel="stylesheet" href="./../list/all_css/all_bj.css">
+    <link rel="stylesheet" href="../list/all_css/Credit_marketing.css">
+    <style>
+        .mui-poppicker {
+            border: 0px;
+            z-index: 99999;
+        }
+    </style>
+</head>
+
+<body class="suoke">
+    <!-- 头部 -->
+    <header class="mui-bar mui-bar-nav  white_color suoke_header">
+        <a class="mui-icon mui-icon-back mui-action-back" style="color:white;"></a>
+        <h1 class="mui-title white_color">卡劵营销</h1>
+    </header>
+    <div class="mui-content">
+        <!-- 规格信息图表 -->
+        <div class="mui-input-group transparent">
+            <div class="mui-input-row">
+                <label><span style="color: red;">*</span><span>卡劵类型:</span></label>
+                <label class="opop color_bbb labels" onclick="classification(this)" val="type">请选择分类</label>
+            </div>
+            <div class="mui-input-row">
+                <label><span style="color: red;">*</span><span>选择卡劵:</span></label>
+                <label class="opop color_bbb labels" onclick="classification(this)" val="fenlei">请选择分类</label>
+            </div>
+        </div>
+        <div style="margin: auto;width: 90%;">
+            <p style="padding-left: 6px;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    padding-top: 15px;
+    font-family: 'STHeiti', 'SimHei';">通知内容:</p>
+            <!-- <input type="text" style="color: white;"> -->
+            <textarea name="" id="textArea" cols="30" rows="13"></textarea>
+            <p style="padding-left: 15px; color: rgba(236, 235, 235, 0.932);">提示:67个字符算一条短信</p>
+        </div>
+
+
+        <div class="footers" style="height: 110px; ">
+
+            <div class="mui-input-row mui-radio flex-container">
+                <span>
+                    <input id="zhengjia" name="radio1" type="radio">
+                    <label for="zhengjia">发送短信通知</label>
+                </span>
+                &nbsp;
+                <span>
+                    <input id="tejia" name="radio1" type="radio">
+                    <label for="tejia">发送微信通知</label></span>
+            </div>
+            <div>
+                <div>
+                    确定发送
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../list/all_js/Credit_marketing.js"></script>
+
+</html>

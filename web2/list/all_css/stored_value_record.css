@@ -1,0 +1,126 @@
+ /* 储值记录,积分记录,互动足迹,家属信息,等级变更,添加家属,跟进记录 */
+ /* gridtable */
+ table.gridtable {
+     width: 95%;
+     /* font-family: verdana, arial, sans-serif; */
+     font-size: 16px;
+     letter-spacing: 3px;
+     color: white;
+     margin: 0 auto;
+     border: 1px solid rgba(255, 255, 255, 0.34);
+     border-collapse: collapse;
+ }
+
+ table.gridtable th {
+     padding: 8px;
+     border: 1px solid rgba(255, 255, 255, 0.34);
+     background-color: #dedede00;
+ }
+
+ table.gridtable td:nth-child(1) {
+     border: 1px solid rgba(255, 255, 255, 0.34);
+     padding: 10px;
+     text-align: center;
+     background-color: #ffffff00;
+ }
+
+ table.gridtable td:nth-child(2) {
+     border: 1px solid rgba(255, 255, 255, 0.34);
+     padding: 10px;
+     text-align: left;
+     background-color: #ffffff00;
+ }
+
+ /* 家属信息宽度更改 */
+ .stwidth td:nth-child(1) {
+     width: 35%;
+ }
+
+ .stwidth td:nth-child(2) {
+     width: 63%;
+ }
+
+ .opopopop div {
+     border: 1px solid rgba(255, 255, 255, 0.34);
+     border-radius: 5px;
+     color: white;
+     text-align: center;
+     margin-left: 3%;
+     padding: 3px 0px;
+     font-size: 15px;
+ }
+
+ /* 添加家属输入 */
+ .td_sty {
+     padding: 0;
+     margin: 0;
+ }
+
+ .input_sty {
+     margin: 0 !important;
+     padding: 0 !important;
+     height: 30px !important;
+     background-color: rgba(255, 255, 255, 0) !important;
+     border: 1px solid rgba(0, 0, 0, 0) !important;
+ }
+
+ input::-webkit-input-placeholder {
+     color: white;
+     text-align: center;
+     /* font-size: 16px; */
+     font-family: "SimHei", "STHeiti";
+ }
+
+ input::-moz-placeholder {
+     /* Mozilla Firefox 19+ */
+     color: white;
+     /* font-size: 16px; */
+     text-align: center;
+     font-family: "SimHei", "STHeiti";
+ }
+
+ input:-moz-placeholder {
+     /* Mozilla Firefox 4 to 18 */
+     color: white;
+     /* font-size: 16px; */
+     text-align: center;
+     font-family: "SimHei", "STHeiti";
+ }
+
+ input:-ms-input-placeholder {
+     /* Internet Explorer 10-11 */
+     color: white;
+     /* font-size: 16px; */
+     text-align: center;
+     font-family: "SimHei", "STHeiti";
+ }
+
+ .opop::after {
+     content: '\e581';
+     position: absolute;
+     top: 50%;
+     right: 10%;
+     display: inline-block;
+     font-family: Muiicons;
+     font-size: inherit;
+     line-height: 1;
+     color: rgb(255, 255, 255);
+     text-decoration: none;
+     -webkit-transform: translateY(-50%);
+     transform: translateY(-50%);
+     -webkit-font-smoothing: antialiased;
+ }
+
+ .shuru {
+     margin-bottom: 0px !important;
+     border: 1px solid rgba(255, 255, 255, 0) !important;
+     background-color: rgba(255, 255, 255, 0) !important;
+ }
+ .chex {
+     background: url(../../images/ico_checkon.svg) no-repeat right bottom;
+     background-size: 18px 18px;
+     /* color: #00a4ff; */
+     border-radius: 5px;
+     border: 1px solid #00a4ff !important;
+     /* background-color: #D4E7F5; */
+ }

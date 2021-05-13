@@ -1,0 +1,50 @@
+.kkk {
+    border: 1px solid rgba(255, 255, 255, 0.363);
+    border-radius: 5px;
+    padding: 5px;
+    /* text-align: center; */
+    color: white;
+    margin-top: 10px;
+    /* width: 90%; */
+
+    padding: 20px 0px 20px 0px;
+    /* background-color: rgba(171, 171, 171, 0.29); */
+}
+
+.kkk .mui-row:nth-child(1) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.363);
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5px;
+}
+
+.kkk .mui-row:nth-child(1) div:nth-child(1) {
+    text-align: center;
+}
+
+.kkk .mui-row:nth-child(1) div:nth-child(2) p {
+    color: white;
+    margin-bottom: 5px;
+}
+
+.kkk .mui-row:nth-child(1) div:nth-child(2) p a {
+    color: white;
+    text-decoration: underline
+}
+.kkk .mui-row:nth-child(2){
+    padding-top: 5px;
+}
+.kkk .mui-row:nth-child(2) div p{
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+.kkk .mui-row:nth-child(3){
+    margin-top: 10px;
+}
+.kkk .mui-row:nth-child(3) p{
+     color: white;
+     margin: 0;
+     padding-left: 25px;
+}

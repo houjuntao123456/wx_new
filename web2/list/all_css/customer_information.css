@@ -1,0 +1,20 @@
+/* 顾客资料,信息汇总样式 */
+.www {
+    width: 90%;
+    margin: 0 auto;
+
+}
+.mui-row{
+     border: 1px solid rgba(255, 255, 255, 0.363);
+     border-radius: 4px;
+}
+.mui-content div .mui-row div:nth-child(1){
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.363);
+    color: white;
+    padding: 5px 0 5px 0;
+}
+.mui-content div .mui-row div:nth-child(2) {
+    color: white;
+    padding: 5px 0 5px 10px;
+}

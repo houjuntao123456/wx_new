@@ -1,0 +1,372 @@
+ /* 返单计划 */
+
+ /* gridtable */
+ table.gridtable {
+     width: 95%;
+     /* font-family: verdana, arial, sans-serif; */
+     font-size: 16px;
+     letter-spacing: 3px;
+     color: white;
+     margin: 0 auto;
+     border: 1px solid rgba(255, 255, 255, 0.34);
+     border-collapse: collapse;
+ }
+
+ table.gridtable th {
+     padding: 8px;
+     border: 1px solid rgba(255, 255, 255, 0.34);
+     background-color: #dedede00;
+ }
+
+ table.gridtable td {
+     border: 1px solid rgba(255, 255, 255, 0.34);
+     padding: 10px;
+     text-align: center;
+     background-color: #ffffff00;
+ }
+
+
+
+ .opop::after {
+     content: '\e581';
+     position: absolute;
+     top: 50%;
+     right: 10%;
+     display: inline-block;
+     font-family: Muiicons;
+     font-size: inherit;
+     line-height: 1;
+     color: rgb(255, 255, 255);
+     text-decoration: none;
+     -webkit-transform: translateY(-50%);
+     transform: translateY(-50%);
+     -webkit-font-smoothing: antialiased;
+ }
+
+ .ctxt {
+     padding-top: 6%;
+ }
+
+ .ctxt p {
+     text-align: left;
+     font-size: 16px;
+     color: white !important;
+ }
+
+ .buts {
+     padding-top: 6%;
+ }
+
+ .buts p:nth-child(1) {
+     padding-top: 5px;
+ }
+
+ .buts p:nth-child(1) span {
+     color: white;
+     padding: 5px 8px;
+     border: 1px solid rgba(255, 255, 255, 0.35);
+     border-radius: 5px;
+ }
+
+ .buts p:nth-child(2) {
+     color: white;
+ }
+
+ .buts p:nth-child(2) span {
+     color: white;
+     border-radius: 5px;
+     padding: 5px 20px;
+     border: 1px solid rgba(255, 255, 255, 0.35);
+ }
+
+ .dp {
+     text-align: center;
+
+ }
+
+ .dp p {
+     color: white;
+     font-size: 16px;
+ }
+
+ .time p {
+     color: white;
+     font-size: 16px;
+     padding-left: 20px;
+ }
+
+ .bod {
+     border: 1px solid rgba(255, 255, 255, 0.35);
+     border-radius: 5px;
+     width: 95%;
+     margin: 0 auto;
+
+ }
+
+ .border-top {
+     border-top: 1px solid rgba(255, 255, 255, 0.35);
+     padding-top: 10px;
+ }
+
+ input::-webkit-input-placeholder {
+     color: #D0DFE7;
+ }
+
+ input::-moz-placeholder {
+     /* Mozilla Firefox 19+ */
+     color: #D0DFE7;
+ }
+
+ input:-moz-placeholder {
+     /* Mozilla Firefox 4 to 18 */
+     color: #D0DFE7;
+ }
+
+ input:-ms-input-placeholder {
+     /* Internet Explorer 10-11 */
+     color: #D0DFE7;
+ }
+
+ .color_bbb {
+     color: #D0DFE7;
+ }
+
+ .labels {
+     width: 50% !important;
+     padding-left: 0px !important;
+ }
+
+ .labels2 {
+     width: 45% !important;
+     padding-left: 0px !important;
+ }
+
+ .mui-input-row label span {
+     color: white;
+ }
+
+ .genjin {
+     text-align: center;
+     padding-top: 15px;
+ }
+
+ .genjin span {
+     color: white;
+     padding: 6px 8px;
+     border: 1px solid rgba(255, 255, 255, 0.377);
+     border-radius: 5px;
+ }
+
+ .programme p:nth-child(1) {
+     text-align: center;
+     color: white;
+     background-color: rgba(255, 255, 255, 0.267);
+     padding-top: 10px;
+     padding-bottom: 10px;
+ }
+
+ .programme div:nth-child(2) {
+     text-align: center;
+     border: 1px solid rgba(255, 255, 255, 0.349);
+     border-radius: 5px;
+     padding: 10px;
+     width: 95%;
+     margin-left: auto;
+     margin-right: auto;
+
+ }
+
+
+ .programme p:nth-child(3) {
+     width: 90%;
+     margin: 10px auto;
+     text-align: center;
+     color: white;
+     background-color: rgba(255, 255, 255, 0.295);
+     padding-top: 10px;
+     padding-bottom: 10px;
+ }
+
+ .boder-bott {
+     border-bottom: 1px solid rgba(255, 255, 255, 0.301);
+ }
+
+ .core div:nth-child(2n-1) {
+     color: rgb(255, 255, 255);
+     padding-left: 20px;
+     padding-top: 10px;
+     padding-bottom: 5px;
+ }
+
+ .core div:nth-child(2n) {
+     text-align: center;
+ }
+
+ .core textarea {
+     color: white;
+     background-color: rgba(255, 255, 255, 0) !important;
+     border-color: rgba(255, 255, 255, 0.322);
+     width: 90%;
+     margin: auto;
+ }
+
+ .textArea {
+     height: 150px;
+ }
+
+ .textArea::-webkit-input-placeholder {
+     height: 150px;
+     margin-top: 50px;
+     padding-top: 50px;
+     text-align: center;
+     color: rgba(255, 255, 255, 0.726);
+ }
+
+ /* 使用webkit内核的浏览器 */
+ .textArea:-moz-placeholder {
+     height: 150px;
+     margin-top: 50px;
+     padding-top: 50px;
+     text-align: center;
+     color: rgba(255, 255, 255, 0.726);
+     ;
+ }
+
+ /* Firefox版本4-18 */
+ .textArea::-moz-placeholder {
+     height: 150px;
+     margin-top: 50px;
+     padding-top: 50px;
+     text-align: center;
+     color: rgba(255, 255, 255, 0.726);
+     ;
+ }
+
+ /* Firefox版本19+ */
+ .textArea:-ms-input-placeholder {
+     height: 150px;
+     margin-top: 50px;
+     padding-top: 50px;
+     text-align: center;
+     color: rgba(255, 255, 255, 0.726);
+     ;
+ }
+
+ /* 搜索框 */
+ .searchss {
+     width: 90%;
+     margin: 0 auto;
+ }
+
+ .searchss input {
+     border: 1px solid #D0DFE7;
+     color: white;
+ }
+
+ .mui-search .mui-placeholder .mui-icon {
+     font-size: 20px;
+     color: #D0DFE7;
+ }
+
+ .mui-search .mui-placeholder {
+     top: 6px;
+ }
+
+ .mui-search.mui-active:before {
+     font-size: 20px;
+     right: auto;
+     left: 5px;
+     display: block;
+     margin-right: 0;
+     color: #D0DFE7;
+ }
+.mui-media-body{
+    color: white;
+        padding-left: 15px;
+}
+.mui-media-body p{
+     color: rgba(255, 255, 255, 0.822);
+}
+ /* 标题右边文字样式 */
+ .select_txt {
+     position: absolute;
+     right: 5px;
+     top: 19%;
+     padding: 3px 15px;
+     margin-top: 8px;
+     line-height: 20px;
+     border: 1px solid rgba(255, 255, 255, 0.322);
+     color: white;
+     border-radius: 5px;
+ }
+ .mui-off-canvas-wrap {
+     position: initial;
+ }
+ .queren{
+     border: 1px solid white;
+     border-radius: 5px;
+     padding: 5px 16px;
+ }
+
+ .mui-checkbox input[type=checkbox],
+ .mui-radio input[type=radio] {
+     position: absolute;
+     top: 4px;
+     left: 20px;
+     display: inline-block;
+     width: 28px;
+     height: 26px;
+     border: 0;
+     outline: 0 !important;
+     background-color: transparent;
+     -webkit-appearance: none;
+ }
+
+ .mui-checkbox input[type=checkbox]:checked:before,
+ .mui-radio input[type=radio]:checked:before {
+     color: white;
+ }
+
+ .footerss span {
+     position: relative;
+ }
+
+ .footerss span label {
+     width: 100%;
+     color: white;
+     padding-right: 20px;
+     padding-left: 50px;
+ }
+.card_textarea {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0);
+    margin-top: 5px;
+    color: white;
+    width: 90%;
+    margin-left: 5%;
+}
+.card_textarea::-webkit-input-placeholder {
+
+    color: rgba(255, 255, 255, 0.726);
+}
+
+/* 使用webkit内核的浏览器 */
+.card_textarea:-moz-placeholder {
+
+    color: rgba(255, 255, 255, 0.726);
+    ;
+}
+
+/* Firefox版本4-18 */
+.card_textarea::-moz-placeholder {
+
+    color: rgba(255, 255, 255, 0.726);
+    ;
+}
+
+/* Firefox版本19+ */
+.card_textarea:-ms-input-placeholder {
+
+    color: rgba(255, 255, 255, 0.726);
+    ;
+}

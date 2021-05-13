@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../mui/css/mui.css">
+    <script src="../mui/js/mui.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../list/all_css/payment.css">
+    <title>订单管理-支付成功</title>
+</head>
+<body>
+    <div class="main">
+        <span>
+            <img src="../images/pay.png" alt="支付成功">
+        </span>
+        <h3>支付成功</h3>
+        <button type="button" class="mui-btn mui-btn-success">继续销售</button>
+        <button type="button" class="mui-btn mui-btn-outlined">回到首页</button>
+    </div>
+</body>
+<script>
+    mui(".main").on('tap', '.mui-btn-success', function () {
+    //    window.location = "commodity_payment.html" ;
+      history.go(-1);
+    })
+    mui(".main").on('tap', '.mui-btn-outlined', function () {
+    //   location.href = "../index_centent.html" ;
+    })
+</script>
+</html>

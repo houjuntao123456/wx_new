@@ -1,0 +1,128 @@
+        a:hover {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+            background-color: white;
+            text-align: center;
+        }
+
+        h2,
+        h4 {
+            font-weight: 100;
+        }
+
+        .span_size {
+            color: white;
+            font-size: 2.5rem;
+
+        }
+
+        .mui-table-view-cell p {
+            letter-spacing: 2px;
+        }
+
+        .div_mk {
+            background-color: white;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            font-size: 15px;
+            border-bottom: 1px solid #ebeaea;
+            margin-top: 20px;
+        }
+
+        .div3_mk {
+            background-color: white;
+            text-align: center;
+            /* height: 40px;
+            line-height: 40px; */
+            font-size: 15px;
+            border-bottom: 1px solid #ebeaea;
+        }
+
+        /* 控制模块的高度 */
+        li {
+            height: 80px;
+        }
+
+        p {
+            color: white;
+            padding-top: 10px;
+            /* font-size: 17px; */
+        }
+
+
+        .sdh {
+            text-align: center;
+            margin: 10px 0 0 0;
+        }
+
+        .sdh a {
+            color: black;
+        }
+
+        .photo_Apple {
+            height: 130px;
+            font-family: "黑体";
+            font-weight: bolder;
+        }
+
+        #picture {
+            width: 95%;
+            background: url(../../images/n2.png) no-repeat;
+            background-size: 100% 100%;
+            margin: 0 auto;
+            border-radius: 20px;
+            color: #ffffff;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .photo_Apple div {
+            position: absolute;
+            top: 18%;
+            left: 5%;
+        }
+
+        .photo_Apple img {
+            position: absolute;
+            top: 20%;
+            right: 8%;
+            border-radius: 30px;
+            border: 2px solid white;
+        }
+
+        .lett-spac-3 {
+            letter-spacing: 3px;
+            font-size: 24px;
+        }
+
+        .DH {
+            background-image: -webkit-linear-gradient(bottom, rgb(180, 179, 179), rgb(254, 254, 254));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            /* text-shadow: 2px 2px 4px #000; */
+        }
+
+        .dispay_none {
+            display: none;
+        }
+
+        .mui-row>.mui-col-xs-6,
+        .mui-col-sm-6 {
+            padding: 20px 0 20px 0;
+        }
+
+        .pp::after {
+            left: 33%;
+            height: 1023px;
+            top: -264px;
+        }
+
+        .pp2::after {
+            left: 66%;
+             height: 1023px;
+             top: -264px;
+        }

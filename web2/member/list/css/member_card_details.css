@@ -1,0 +1,76 @@
+.dat_query2 .mui-row {
+    padding: 10px 0px;
+
+}
+
+.dat_query2 .mui-row .mui-col-xs-12 {
+    color: white;
+    font-size: 16px;
+    padding-left: 20px;
+    line-height: 40px;
+
+}
+
+.dat_query2 .mui-row .mui-col-xs-8 p {
+    color: white;
+    font-size: 25px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.dat_query2 .mui-row .mui-col-xs-12 {
+    color: white;
+    font-size: 15px;
+    padding-left: 20px;
+    line-height: 21px;
+}
+
+.dat_query2 {
+    width: 95%;
+    margin: auto;
+}
+
+.dat_query2 .mui-row {
+    border: 1px solid rgba(255, 255, 255, 0.342);
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.dat_query2 .mui-row .mui-col-xs-6 p {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+
+}
+
+.lefts p {
+    text-align: left !important;
+    padding-left: 10px;
+}
+
+.rights p {
+    text-align: right !important;
+    padding-right: 10px;
+}
+
+
+.dat_query2 .mui-row .mui-col-xs-4 p {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+
+}
+.xiangqing{
+    padding-top: 15px;
+}
+.xiangqing p {
+    color: white;
+    font-size: 17px;
+}
+
+.xiangqing div {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 14px;
+    padding-left: 15px;
+}

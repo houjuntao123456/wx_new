@@ -1,0 +1,119 @@
+ .mui-input-row label span {
+     color: white;
+ }
+
+ .opop::after {
+     content: '\e581';
+     position: absolute;
+     top: 50%;
+     right: 10%;
+     display: inline-block;
+     font-family: Muiicons;
+     font-size: inherit;
+     line-height: 1;
+     color: rgb(255, 255, 255);
+     text-decoration: none;
+     -webkit-transform: translateY(-50%);
+     transform: translateY(-50%);
+     -webkit-font-smoothing: antialiased;
+ }
+
+ .opop2::after {
+     content: '\e581';
+     position: absolute;
+     top: 50%;
+     display: inline-block;
+     font-family: Muiicons;
+     font-size: inherit;
+     line-height: 1;
+     color: rgb(31, 92, 232);
+     text-decoration: none;
+     -webkit-transform: translateY(-50%);
+     transform: translateY(-50%);
+     -webkit-font-smoothing: antialiased;
+ }
+
+ .color_bbb {
+     color: #D0DFE7;
+ }
+
+ .labels {
+     width: 50% !important;
+     padding-left: 0px !important;
+ }
+
+ .footers span {
+     position: relative;
+ }
+
+ .footers span label {
+     width: 175px;
+     padding-right: 0px;
+     padding-left: 50px;
+ }
+
+ .flex-container {
+     display: -webkit-flex;
+     display: flex;
+     -webkit-justify-content: space-around;
+     justify-content: space-around;
+     ;
+ }
+
+ .mui-checkbox input[type=checkbox],
+ .mui-radio input[type=radio] {
+     position: absolute;
+     top: 4px;
+     left: 20px;
+     display: inline-block;
+     width: 28px;
+     height: 26px;
+     border: 0;
+     outline: 0 !important;
+     background-color: transparent;
+     -webkit-appearance: none;
+ }
+
+ .mui-checkbox input[type=checkbox]:checked:before,
+ .mui-radio input[type=radio]:checked:before {
+     color: white;
+ }
+
+ .footers div:nth-child(2) {
+     text-align: center;
+     color: white;
+     border-top: 1px solid rgba(255, 255, 255, 0.25);
+     padding: 5px;
+ }
+
+ .footers div:nth-child(2) div {
+     width: 80%;
+     line-height: 43px;
+     border: 1px solid rgba(255, 255, 255, 0.308);
+     border-radius: 5px;
+     margin: auto;
+ }
+
+ #textArea {
+     height: 200px;
+     border: 1px solid rgba(255, 255, 255, 0.29);
+     background-color: rgba(255, 255, 255, 0);
+     color: white;
+ }
+
+ #textArea::-webkit-input-placeholder {
+     height: 150px;
+     margin-top: 50px;
+     padding-top: 50px;
+     text-align: center;
+     color: rgba(255, 255, 255, 0.726);
+ }
+
+ .div_borde {
+     border-radius: 5px;
+     width: 90%;
+     margin:10px auto;
+     border: 1px solid rgba(255, 255, 255, 0.308);
+ }
+
+ 
